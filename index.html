@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجلس الشريعة للأسرة المسلمة في لندن - نور وحياة</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://via.placeholder.com/40x40/004d40/ffffff?text=مسجد" alt="Shariah Council Logo" class="rounded-circle me-2"> مجلس الشريعة
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#heroSection" id="navHome">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#aboutSection" id="navAbout">عن المجلس</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicesSection" id="navServices">خدماتنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#fatwasSection" id="navFatwas">فتاوى ومقالات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contactSection" id="navContact">تواصل معنا</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light ms-lg-3 language-toggle" onclick="toggleLanguage()" id="navLangToggle">English / العربية</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section" id="heroSection">
+        <div class="container">
+            <h1 id="heroTitle">مجلس الشريعة للأسرة المسلمة في لندن</h1>
+            <p id="heroText">إرشاد شرعي لحياة مستقرة في بيئة آمنة واحترافية.</p>
+            <a href="#" class="btn btn-light btn-lg" id="applyNowBtn">قدم طلبك الآن</a>
+        </div>
+    </header>
+
+    <section class="container my-5 text-center" id="aboutSection">
+        <h2 class="mb-4" id="introSectionTitle">لماذا تختار مجلس الشريعة؟</h2>
+        <p class="lead" id="introSectionText">نحن نقدم إرشادات شرعية موثوقة ونعمل ضمن إطار القانون البريطاني، ملتزمون بالشفافية والعدل في كل خدماتنا. فريقنا من العلماء والمختصين مكرس لخدمة مجتمعنا وتوفير الدعم الأسري اللازم.</p>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <i class="fas fa-handshake fa-3x text-success mb-3"></i>
+                <h5 class="text-dark" id="aboutFeature1Title">ثقة وموثوقية</h5>
+                <p id="aboutFeature1Text">نقدم إرشادات شرعية تستند إلى منهج إسلامي أصيل ومعاصر.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-balance-scale fa-3x text-info mb-3"></i>
+                <h5 class="text-dark" id="aboutFeature2Title">عدالة وشفافية</h5>
+                <p id="aboutFeature2Text">نلتزم بالعدل والشفافية في جميع إجراءاتنا وخدماتنا.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-gavel fa-3x text-danger mb-3"></i>
+                <h5 class="text-dark" id="aboutFeature3Title">التزام بالقانون البريطاني</h5>
+                <p id="aboutFeature3Text">نعمل بانسجام تام مع قوانين المملكة المتحدة ونظامها القضائي.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5" id="servicesSection">
+        <h2 class="text-center mb-5" id="servicesSectionTitle">خدماتنا الرئيسية</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card service-card">
+                    <i class="fas fa-ring"></i>
+                    <h4 id="service1Title">الزواج الإسلامي (النيكاح)</h4>
+                    <p id="service1Text">إتمام عقود الزواج الشرعية وفقًا لأحكام الشريعة الغراء، وتقديم الإرشاد للمقبلين على الزواج لبناء أسرة مستقرة.</p>
+                    <a href="#" class="btn btn-outline-dark" id="service1Btn">تعرف على المزيد</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card service-card">
+                    <i class="fas fa-gavel"></i>
+                    <h4 id="service2Title">الطلاق والخلع</h4>
+                    <p id="service2Text">المساعدة في إجراءات الطلاق والخلع الشرعية، والوساطة بين الطرفين، وتقديم النصائح لضمان حقوق الجميع.</p>
+                    <a href="#" class="btn btn-outline-dark" id="service2Btn">تعرف على المزيد</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card service-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4 id="service3Title">الاستشارات والفتاوى</h4>
+                    <p id="service3Text">إرشادات شرعية حول مسائل الأسرة، الميراث، المعاملات المالية، والعبادات، للإجابة على تساؤلاتكم الدينية.</p>
+                    <a href="#" class="btn btn-outline-dark" id="service3Btn">تعرف على المزيد</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5 text-center" id="fatwasSection">
+        <h2 class="mb-4" id="fatwasSectionTitle">فتاوى ومقالات حديثة</h2>
+        <p class="lead mb-5" id="fatwasSectionText">استكشف مكتبتنا المتنامية من الفتاوى والمقالات التي تغطي جوانب متعددة من حياة المسلم.</p>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card p-4 shadow-sm text-start h-100">
+                    <h5 class="text-primary" id="fatwaTitle1">أحكام الميراث في الإسلام</h5>
+                    <p id="fatwaText1">دليل مبسط لفهم توزيع الميراث وفق الشريعة الإسلامية.</p>
+                    <a href="#" class="btn btn-link text-success p-0" id="readMore1">اقرأ المزيد <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card p-4 shadow-sm text-start h-100">
+                    <h5 class="text-primary" id="fatwaTitle2">بناء أسرة سعيدة في الغرب</h5>
+                    <p id="fatwaText2">نصائح وإرشادات للتعامل مع التحديات الأسرية المعاصرة.</p>
+                    <a href="#" class="btn btn-link text-success p-0" id="readMore2">اقرأ المزيد <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn btn-info mt-4" id="viewAllFatwas">عرض جميع الفتاوى والمقالات</a>
+    </section>
+
+    <section class="container my-5" id="contactSection">
+        <h2 class="text-center mb-5" id="contactSectionTitle">تواصل معنا</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card p-4 shadow-lg border-0 text-center">
+                    <div class="card-body">
+                        <p class="lead mb-4" id="contactIntro">يمكنكم التواصل معنا مباشرةً للحصول على المساعدة والإرشاد الشرعي.</p>
+                        <p class="text-muted small mb-4" id="contactNote">ملاحظة: فريقنا يعمل حالياً عن بعد، ويتم تحويل المكالمات إلى الأجهزة المحمولة. نقدر صبركم وتفهمكم!</p>
+
+                        <div class="mb-4">
+                            <p class="mb-1 fs-5" id="directPhoneLabel">للتواصل عبر الهاتف:</p>
+                            <p class="fs-3 text-primary fw-bold">07404949128</p>
+                        </div>
+                        <div class="mb-4">
+                            <p class="mb-1 fs-5" id="directEmailLabel">للتواصل عبر البريد الإلكتروني:</p>
+                            <p class="fs-4 text-primary fw-bold">aahmedali11@gmail.com</p>
+                        </div>
+                       <p class="mt-4" id="contactClosingText">نتطلع إلى خدمتكم والرد على استفساراتكم بأسرع وقت ممكن.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p id="footerText">&copy; 2024 مجلس الشريعة للأسرة المسلمة في لندن. جميع الحقوق محفوظة.</p>
+            <div class="social-icons mt-3">
+                <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
