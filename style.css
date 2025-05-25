@@ -53,7 +53,7 @@ body {
   width: 100%;
 }
 .navbar .btn-outline-light {
-  border-color: #a7ffeb;
+  border-color: #0b0d0d;
   color: #a7ffeb;
   transition: all 0.3s ease;
   font-weight: 600;
@@ -63,28 +63,27 @@ body {
   color: #004d40;
 }
 
-/* Language Toggle Button */
+/* Language Toggle Button - Adjusted for Navbar positioning */
 .language-toggle {
-  position: fixed;
-  top: 25px;
-  left: 25px; /* Adjust for RTL direction */
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid #ccc;
+  background-color: #020202; /* لون الخلفية: Light Accent Color */
+  border: 1px solid #000000; /* لون الحدود: Light Accent Color */
+  color: #004d40; /* لون النص: Dark Teal (اللون الأساسي لشريط التنقل) */
   border-radius: 5px;
   padding: 8px 15px;
   font-size: 0.9rem;
   cursor: pointer;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: none;
   transition: all 0.3s ease;
+  margin-inline-start: 15px;
+  font-weight: 600; /* لجعل النص أكثر وضوحًا */
 }
-[dir="rtl"] .language-toggle {
-  left: auto;
-  right: 25px;
-}
+
 .language-toggle:hover {
-  background-color: #e9ecef;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  background-color: #0a0f0e; /* لون أفتح عند التمرير */
+  border-color: #e0f2f1; /* حدود أفتح عند التمرير */
+  color: #002b23; /* لون نص أغمق عند التمرير */
+  box-shadow: none;
 }
 
 /* Hero Section */
@@ -231,15 +230,15 @@ h2::after {
 .service-card p {
   font-size: 1rem;
   color: #555;
-  flex-grow: 1; /* Allow text to grow */
+  /* Removed flex-grow to better control height with overflow */
   transition: color 0.3s ease;
 }
 .service-card:hover p {
   color: #444;
 }
 .service-card .btn-outline-dark {
-  border-color: #004d40;
-  color: #004d40;
+  border-color: #88a8a3;
+  color: #506965;
   font-weight: 600;
   border-radius: 30px;
   padding: 10px 25px;
@@ -250,6 +249,40 @@ h2::after {
   background-color: #004d40;
   color: white;
 }
+
+/* --- Content Collapse/Expand Styling (for both services and fatwas) --- */
+.service-description,
+.fatwa-content {
+  max-height: 90px; /* Initial height for truncated content */
+  overflow: hidden;
+  transition: max-height 0.7s ease-out; /* Smooth transition for expand/collapse */
+  position: relative; /* For the fade effect */
+  padding-bottom: 15px; /* Space for fade effect */
+}
+
+.service-description.expanded,
+.fatwa-content.expanded {
+  max-height: 500px; /* Max height when expanded (adjust as needed) */
+}
+
+/* Fade effect at the bottom of truncated content */
+.service-description::after,
+.fatwa-content::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px; /* Height of the fade */
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  pointer-events: none; /* Allows clicks on elements underneath */
+  transition: opacity 0.3s ease;
+}
+.service-description.expanded::after,
+.fatwa-content.expanded::after {
+  opacity: 0; /* Hide fade when expanded */
+}
+
 
 /* Footer Styling */
 .footer {
@@ -297,6 +330,27 @@ h2::after {
   .service-card i { font-size: 3.5rem; }
   .service-card h4 { font-size: 1.5rem; }
   .navbar-brand { font-size: 1.5rem; }
-  .language-toggle { top: 15px; left: 15px; right: auto; }
-  [dir="rtl"] .language-toggle { left: auto; right: 15px; }
+  .language-toggle {
+      top: auto;
+      left: auto;
+      right: auto;
+      margin-inline-start: 0;
+      width: 100%;
+      padding: 10px 15px;
+      text-align: center;
+      background-color: #00332c;
+      border-color: #00332c;
+      color: #a7ffeb;
+      border-radius: 0;
+  }
+  .language-toggle:hover {
+      background-color: #004d40;
+      border-color: #004d40;
+  }
+
+  /* Content collapse adjustment for smaller screens */
+  .service-description,
+  .fatwa-content {
+      max-height: 80px; /* Reduced initial height on mobile */
+  }
 }
