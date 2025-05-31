@@ -159,7 +159,7 @@ function toggleLanguage() {
 
     document.querySelectorAll('.toggle-content, .toggle-fatwa').forEach(button => {
         const currentLang = document.documentElement.lang;
-        const buttonTextKey = button.id; // e.g., 'service1Btn', 'readMore2'
+        const buttonTextKey = button.id;
         button.innerHTML = `${translations[currentLang][buttonTextKey]} <i class="fas fa-arrow-right"></i>`;
     });
 }
@@ -199,7 +199,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Add event listener to close navbar when a nav-link is clicked on mobile
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.getElementById('navbarNav');
+            // Check if the navbar is currently expanded (on mobile)
+            if (navbarCollapse.classList.contains('show')) {
+                // Manually trigger the collapse (simulating a click on the toggler)
+                navbarToggler.click();
+            }
+        });
+    });
 });
+
 
 // Navbar Sticky and Scroll Animation
 document.addEventListener('scroll', () => {
@@ -250,7 +264,6 @@ window.addEventListener('scroll', () => {
         const sectionTop = section.offsetTop - navbarHeight;
         const sectionHeight = section.offsetHeight;
 
-        // Give a buffer of 50px so the active class changes slightly before the section reaches the very top
         if (scrollY >= sectionTop - 50 && scrollY < sectionTop + sectionHeight - 50) {
             current = section.getAttribute('id');
         }
