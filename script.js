@@ -5,7 +5,7 @@ const translations = {
         navFatwas: "Fatwas & Articles", navContact: "Contact Us",
         heroTitle: "Shariah Council for the Muslim Family in London",
         heroText: "Islamic guidance for a stable life in a safe and professional environment.",
-        applyNowBtn: "Apply Now",
+        applyNowBtn: "Contact Us Now", // Added specific text for the button
         introSectionTitle: "Why Choose Our Shariah Council?",
         introSectionText: "We provide reliable Islamic guidance and operate within the framework of British law, committed to transparency and justice in all our services. Our team of scholars and specialists is dedicated to serving our community and providing the necessary family support.",
         aboutFeature1Title: "Trust & Reliability", aboutFeature1Text: "We offer authentic and contemporary Islamic guidance.",
@@ -49,7 +49,7 @@ const translations = {
         fatwaExtraText2: "We offer practical solutions for facing difficulties that Muslim families may encounter, such as reconciling Islamic values with the surrounding societal culture, and enhancing the role of mosques and Islamic centers in supporting the family and providing spiritual and social support. We also focus on the importance of Islamic upbringing for children amidst modern challenges, and ways to instill good values and ethics in them to become righteous individuals in society.",
         readMore2: "Read More",
         readLess2: "Show Less",
-        viewAllFatwas: "View All Fatwas & Articles",
+        viewAllFatwas: "View All Fatwas & Articles", // Added specific text for the button
         contactSectionTitle: "Contact Us",
         contactIntro: "You can contact us directly for assistance and Islamic guidance.",
         contactNote: "Note: Our team currently works remotely, and calls are redirected to mobile devices. We appreciate your patience and understanding!",
@@ -65,7 +65,7 @@ const translations = {
         navFatwas: "فتاوى ومقالات", navContact: "تواصل معنا",
         heroTitle: "مجلس الشريعة للأسرة المسلمة في لندن",
         heroText: "إرشاد شرعي لحياة مستقرة في بيئة آمنة واحترافية.",
-        applyNowBtn: "قدم طلبك الآن",
+        applyNowBtn: "تواصل معنا الآن", // Added specific text for the button
         introSectionTitle: "لماذا تختار مجلس الشريعة؟",
         introSectionText: "نحن نقدم إرشادات شرعية موثوقة ونعمل ضمن إطار القانون البريطاني، ملتزمون بالشفافية والعدل في كل خدماتنا. فريقنا من العلماء والمختصين مكرس لخدمة مجتمعنا وتوفير الدعم الأسري اللازم.",
         aboutFeature1Title: "ثقة وموثوقية", aboutFeature1Text: "نقدم إرشادات شرعية تستند إلى منهج إسلامي أصيل ومعاصر.",
@@ -109,7 +109,7 @@ const translations = {
         fatwaExtraText2: "نقدم حلولاً عملية لمواجهة الصعوبات التي قد تواجه الأسر المسلمة، مثل التوفيق بين القيم الإسلامية وثقافة المجتمع المحيط، وتعزيز دور المسجد والمراكز الإسلامية في دعم الأسرة وتوفير الدعم الروحي والاجتماعي. كما نركز على أهمية التربية الإسلامية للأبناء في ظل التحديات الحديثة، وسبل غرس القيم والأخلاق الحميدة في نفوسهم ليكونوا أفراداً صالحين في المجتمع.",
         readMore2: "اقرأ المزيد",
         readLess2: "أقل",
-        viewAllFatwas: "عرض جميع الفتاوى والمقالات",
+        viewAllFatwas: "عرض جميع الفتاوى والمقالات", // Added specific text for the button
         contactSectionTitle: "تواصل معنا",
         contactIntro: "يمكنكم التواصل معنا مباشرةً للحصول على المساعدة والإرشاد الشرعي.",
         contactNote: "ملاحظة: فريقنا يعمل حالياً عن بعد، ويتم تحويل المكالمات إلى الأجهزة المحمولة. نقدر صبركم وتفهمكم!",
@@ -153,30 +153,47 @@ function toggleLanguage() {
         content.classList.remove('expanded');
     });
 
-    // Reset "Learn More"/"Read More" button texts
-    document.querySelectorAll('.toggle-content').forEach(button => {
-        const serviceId = button.id.replace('Btn', ''); // e.g., 'service1Btn' -> 'service1'
+    // Reset "Learn More"/"Read More" button texts and icon direction
+    document.querySelectorAll('.toggle-content, .toggle-fatwa').forEach(button => {
         const currentLang = document.documentElement.lang;
-        const buttonTextKey = `${serviceId}Btn`; // 'service1Btn'
-        button.innerHTML = `${translations[currentLang][buttonTextKey]} <i class="fas fa-arrow-right"></i>`;
-    });
+        let buttonTextKey = button.id; // e.g., 'service1Btn', 'readMore2'
 
-    document.querySelectorAll('.toggle-fatwa').forEach(button => {
-        const fatwaId = button.id.replace('readMore', 'readMore'); // e.g., 'readMore2' -> 'readMore2'
-        const currentLang = document.documentElement.lang;
-        const buttonTextKey = fatwaId; // 'readMore2'
-        button.innerHTML = `${translations[currentLang][buttonTextKey]} <i class="fas fa-arrow-right"></i>`;
+        // Determine if it's a "Show Less" or "Read Less" state that needs to revert to "Learn More"/"Read More"
+        const isServiceBtn = button.classList.contains('toggle-content');
+        const isFatwaBtn = button.classList.contains('toggle-fatwa');
+
+        if (isServiceBtn && button.innerHTML.includes(translations[currentLang][`${button.id}Less`])) {
+            button.innerHTML = `${translations[currentLang][button.id]} <i class="fas fa-arrow-right"></i>`;
+        } else if (isFatwaBtn && button.innerHTML.includes(translations[currentLang][button.id.replace('readMore', 'readLess')])) {
+             button.innerHTML = `${translations[currentLang][button.id]} <i class="fas fa-arrow-right"></i>`;
+        } else {
+            // Default state or if it's already in the "Learn More"/"Read More" state
+            button.innerHTML = `${translations[currentLang][buttonTextKey]} <i class="fas fa-arrow-right"></i>`;
+        }
     });
 }
 
 // Initialize language on page load
 document.addEventListener('DOMContentLoaded', () => {
+    // Set initial language to Arabic
     document.documentElement.lang = 'ar';
     document.documentElement.dir = 'rtl';
     const langToggleButton = document.getElementById('navLangToggle');
     if (langToggleButton) {
         langToggleButton.textContent = 'English / العربية';
     }
+    // Set initial text for buttons (like applyNowBtn, viewAllFatwas)
+    for (const key in translations['ar']) {
+        const element = document.getElementById(key);
+        if (element && translations['ar'][key]) { // Check if translation exists for the element
+            if (element.id === 'navLangToggle') {
+                element.textContent = 'English / العربية';
+            } else {
+                element.textContent = translations['ar'][key];
+            }
+        }
+    }
+
 
     // Add event listeners for both "Learn More" (services) and "Read More" (fatwas) buttons
     document.querySelectorAll('.toggle-content, .toggle-fatwa').forEach(button => {
@@ -224,7 +241,8 @@ document.addEventListener('scroll', () => {
     sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top;
         const viewportHeight = window.innerHeight;
-        if (sectionTop < viewportHeight - 100) {
+        // Adjust trigger point for animation
+        if (sectionTop < viewportHeight - 150) { /* Changed from 100 to 150 */
             section.classList.add('animate-in');
         }
     });
@@ -253,13 +271,14 @@ const sections = document.querySelectorAll('section');
 
 window.addEventListener('scroll', () => {
     let current = '';
-    sections.forEach(section => {
-        const sectionRect = section.getBoundingClientRect();
-        const sectionTop = sectionRect.top + window.scrollY;
-        const sectionHeight = sectionRect.height;
-        const navbarHeight = document.getElementById('mainNavbar').offsetHeight;
+    const navbarHeight = document.getElementById('mainNavbar').offsetHeight;
+    const scrollY = window.pageYOffset;
 
-        if (pageYOffset >= sectionTop - navbarHeight && pageYOffset < sectionTop + sectionHeight - navbarHeight) {
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - navbarHeight; // Adjust sectionTop by navbar height
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
         }
     });
