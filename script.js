@@ -5,7 +5,7 @@ const translations = {
         navFatwas: "Fatwas & Articles", navContact: "Contact Us",
         heroTitle: "Shariah Council for the Muslim Family in London",
         heroText: "Islamic guidance for a stable life in a safe and professional environment.",
-        applyNowBtn: "Contact Us Now", // Added specific text for the button
+        applyNowBtn: "Contact Us Now",
         introSectionTitle: "Why Choose Our Shariah Council?",
         introSectionText: "We provide reliable Islamic guidance and operate within the framework of British law, committed to transparency and justice in all our services. Our team of scholars and specialists is dedicated to serving our community and providing the necessary family support.",
         aboutFeature1Title: "Trust & Reliability", aboutFeature1Text: "We offer authentic and contemporary Islamic guidance.",
@@ -16,32 +16,32 @@ const translations = {
         service1Text: "Completing Islamic marriage contracts according to the noble Shariah rulings, and providing guidance to couples for building a stable family.",
         service1ExtraText: "This includes documenting contracts, ensuring all pillars and conditions of Shariah are met, and offering essential advice to couples to ensure a happy and stable marital life in accordance with Islamic teachings and local laws.",
         service1Btn: "Learn More",
-        service1BtnLess: "Show Less", // New for services
+        service1BtnLess: "Show Less",
         service2Title: "Divorce & Khula",
         service2Text: "Assistance with Islamic divorce and Khula procedures, mediation between parties, and providing advice to ensure everyone's rights.",
         service2ExtraText: "We strive to minimize disputes and protect the interests of children if any. We offer Shariah and legal advice regarding spousal maintenance, child custody, and property division, while maintaining an amicable atmosphere as much as possible.",
         service2Btn: "Learn More",
-        service2BtnLess: "Show Less", // New for services
+        service2BtnLess: "Show Less",
         service3Title: "Consultations & Fatwas",
         service3Text: "Islamic guidance on family matters, inheritance, financial transactions, and acts of worship, to answer your religious inquiries.",
         service3ExtraText: "Our specialized scholars provide accurate and reliable fatwas based on evidence from the Quran, Sunnah, and consensus, considering the contemporary circumstances of Muslims in the West, to offer practical Islamic solutions for various daily life issues.",
         service3Btn: "Learn More",
-        service3BtnLess: "Show Less", // New for services
+        service3BtnLess: "Show Less",
         service4Title: "Ruqyah Shariah",
         service4Text: "Providing Ruqyah Shariah sessions adhering to the Quran and Sunnah for treating envy, evil eye, and magic, committed to the highest standards of safety and privacy.",
         service4ExtraText: "We perform Ruqyah Shariah according to the correct prophetic methodology, using verses from the Holy Quran and authentic supplications. We ensure a safe and respectful environment for beneficiaries, with guidance and necessary advice for self-follow-up.",
         service4Btn: "Learn More",
-        service4BtnLess: "Show Less", // New for services
+        service4BtnLess: "Show Less",
         service5Title: "Quranic Recitation & Ijazah Courses",
         service5Text: "Advanced courses in Tajweed (Quranic recitation) for adults, with the possibility of obtaining an Ijazah (authorized chain of narration) with a continuous chain to Hafs 'an 'Asim from the way of Shatibiyyah.",
         service5ExtraText: "Courses are held under the supervision of specialized and authorized scholars, teaching theoretical and applied Tajweed rules, and helping students master Quran recitation. We also provide Ijazah pathways for those wishing to master the narration with a continuous chain.",
         service5Btn: "Learn More",
-        service5BtnLess: "Show Less", // New for services
+        service5BtnLess: "Show Less",
         service6Title: "Arabic Language Courses",
         service6Text: "Comprehensive Arabic language courses for adults of all levels, aiming to enable them to understand the Holy Quran and Sunnah and communicate effectively.",
         service6ExtraText: "Courses include grammar, morphology, conversation, reading, and writing. We use modern and engaging teaching methods to ensure the best results, whether for beginners or those wishing to refine their skills.",
         service6Btn: "Learn More",
-        service6BtnLess: "Show Less", // New for services
+        service6BtnLess: "Show Less",
 
         fatwasSectionTitle: "Latest Fatwas & Articles", fatwasSectionText: "Explore our growing library of fatwas and articles covering various aspects of Muslim life.",
         fatwaTitle2: "Building a Happy Family in the West",
@@ -49,7 +49,7 @@ const translations = {
         fatwaExtraText2: "We offer practical solutions for facing difficulties that Muslim families may encounter, such as reconciling Islamic values with the surrounding societal culture, and enhancing the role of mosques and Islamic centers in supporting the family and providing spiritual and social support. We also focus on the importance of Islamic upbringing for children amidst modern challenges, and ways to instill good values and ethics in them to become righteous individuals in society.",
         readMore2: "Read More",
         readLess2: "Show Less",
-        viewAllFatwas: "View All Fatwas & Articles", // Added specific text for the button
+        viewAllFatwas: "View All Fatwas & Articles",
         contactSectionTitle: "Contact Us",
         contactIntro: "You can contact us directly for assistance and Islamic guidance.",
         contactNote: "Note: Our team currently works remotely, and calls are redirected to mobile devices. We appreciate your patience and understanding!",
@@ -65,7 +65,7 @@ const translations = {
         navFatwas: "فتاوى ومقالات", navContact: "تواصل معنا",
         heroTitle: "مجلس الشريعة للأسرة المسلمة في لندن",
         heroText: "إرشاد شرعي لحياة مستقرة في بيئة آمنة واحترافية.",
-        applyNowBtn: "تواصل معنا الآن", // Added specific text for the button
+        applyNowBtn: "تواصل معنا الآن",
         introSectionTitle: "لماذا تختار مجلس الشريعة؟",
         introSectionText: "نحن نقدم إرشادات شرعية موثوقة ونعمل ضمن إطار القانون البريطاني، ملتزمون بالشفافية والعدل في كل خدماتنا. فريقنا من العلماء والمختصين مكرس لخدمة مجتمعنا وتوفير الدعم الأسري اللازم.",
         aboutFeature1Title: "ثقة وموثوقية", aboutFeature1Text: "نقدم إرشادات شرعية تستند إلى منهج إسلامي أصيل ومعاصر.",
@@ -109,7 +109,7 @@ const translations = {
         fatwaExtraText2: "نقدم حلولاً عملية لمواجهة الصعوبات التي قد تواجه الأسر المسلمة، مثل التوفيق بين القيم الإسلامية وثقافة المجتمع المحيط، وتعزيز دور المسجد والمراكز الإسلامية في دعم الأسرة وتوفير الدعم الروحي والاجتماعي. كما نركز على أهمية التربية الإسلامية للأبناء في ظل التحديات الحديثة، وسبل غرس القيم والأخلاق الحميدة في نفوسهم ليكونوا أفراداً صالحين في المجتمع.",
         readMore2: "اقرأ المزيد",
         readLess2: "أقل",
-        viewAllFatwas: "عرض جميع الفتاوى والمقالات", // Added specific text for the button
+        viewAllFatwas: "عرض جميع الفتاوى والمقالات",
         contactSectionTitle: "تواصل معنا",
         contactIntro: "يمكنكم التواصل معنا مباشرةً للحصول على المساعدة والإرشاد الشرعي.",
         contactNote: "ملاحظة: فريقنا يعمل حالياً عن بعد، ويتم تحويل المكالمات إلى الأجهزة المحمولة. نقدر صبركم وتفهمكم!",
@@ -122,6 +122,26 @@ const translations = {
     }
 };
 
+// Function to apply translations
+function applyTranslations(lang) {
+    const t = translations[lang];
+    for (const key in t) {
+        const element = document.getElementById(key);
+        if (element) {
+            if (element.id === 'navLangToggle') {
+                element.textContent = lang === 'ar' ? 'English / العربية' : 'العربية / English';
+            } else {
+                element.textContent = t[key];
+            }
+        }
+    }
+
+    const logoImg = document.querySelector('.navbar-brand img');
+    if (logoImg) {
+        logoImg.alt = lang === 'ar' ? 'شعار مجلس الشريعة' : 'Shariah Council Logo';
+    }
+}
+
 // Function to toggle language
 function toggleLanguage() {
     const currentLang = document.documentElement.lang;
@@ -129,84 +149,39 @@ function toggleLanguage() {
     document.documentElement.lang = targetLang;
     document.documentElement.dir = targetLang === 'ar' ? 'rtl' : 'ltr';
 
-    const t = translations[targetLang];
-
-    for (const key in t) {
-        const element = document.getElementById(key);
-        if (element) {
-            if (element.id === 'navLangToggle') {
-                element.textContent = targetLang === 'ar' ? 'English / العربية' : 'العربية / English';
-            } else {
-                element.textContent = t[key];
-            }
-        }
-    }
-
-    // Update logo alt text based on language
-    const logoImg = document.querySelector('.navbar-brand img');
-    if (logoImg) {
-        logoImg.alt = targetLang === 'ar' ? 'شعار مجلس الشريعة' : 'Shariah Council Logo';
-    }
+    applyTranslations(targetLang);
 
     // After changing language, reset all expandable sections to their initial (collapsed) state
+    // and reset button texts and icons to 'Learn More' / 'Read More' with right arrow
     document.querySelectorAll('.service-description, .fatwa-content').forEach(content => {
         content.classList.remove('expanded');
     });
 
-    // Reset "Learn More"/"Read More" button texts and icon direction
     document.querySelectorAll('.toggle-content, .toggle-fatwa').forEach(button => {
         const currentLang = document.documentElement.lang;
-        let buttonTextKey = button.id; // e.g., 'service1Btn', 'readMore2'
-
-        // Determine if it's a "Show Less" or "Read Less" state that needs to revert to "Learn More"/"Read More"
-        const isServiceBtn = button.classList.contains('toggle-content');
-        const isFatwaBtn = button.classList.contains('toggle-fatwa');
-
-        if (isServiceBtn && button.innerHTML.includes(translations[currentLang][`${button.id}Less`])) {
-            button.innerHTML = `${translations[currentLang][button.id]} <i class="fas fa-arrow-right"></i>`;
-        } else if (isFatwaBtn && button.innerHTML.includes(translations[currentLang][button.id.replace('readMore', 'readLess')])) {
-             button.innerHTML = `${translations[currentLang][button.id]} <i class="fas fa-arrow-right"></i>`;
-        } else {
-            // Default state or if it's already in the "Learn More"/"Read More" state
-            button.innerHTML = `${translations[currentLang][buttonTextKey]} <i class="fas fa-arrow-right"></i>`;
-        }
+        const buttonTextKey = button.id; // e.g., 'service1Btn', 'readMore2'
+        button.innerHTML = `${translations[currentLang][buttonTextKey]} <i class="fas fa-arrow-right"></i>`;
     });
 }
 
-// Initialize language on page load
+// Initialize language and events on page load
 document.addEventListener('DOMContentLoaded', () => {
-    // Set initial language to Arabic
+    // Set initial language to Arabic and apply translations
     document.documentElement.lang = 'ar';
     document.documentElement.dir = 'rtl';
-    const langToggleButton = document.getElementById('navLangToggle');
-    if (langToggleButton) {
-        langToggleButton.textContent = 'English / العربية';
-    }
-    // Set initial text for buttons (like applyNowBtn, viewAllFatwas)
-    for (const key in translations['ar']) {
-        const element = document.getElementById(key);
-        if (element && translations['ar'][key]) { // Check if translation exists for the element
-            if (element.id === 'navLangToggle') {
-                element.textContent = 'English / العربية';
-            } else {
-                element.textContent = translations['ar'][key];
-            }
-        }
-    }
-
+    applyTranslations('ar');
 
     // Add event listeners for both "Learn More" (services) and "Read More" (fatwas) buttons
     document.querySelectorAll('.toggle-content, .toggle-fatwa').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
-            const targetId = this.dataset.target; // Get the ID of the content div (service-description or fatwa-content)
+            const targetId = this.dataset.target;
             const content = document.getElementById(targetId);
             const currentLang = document.documentElement.lang;
-            const buttonId = this.id; // e.g., service1Btn, readMore2
+            const buttonId = this.id;
 
             if (content.classList.contains('expanded')) {
                 content.classList.remove('expanded');
-                // Change text to 'Learn More' or 'Read More'
                 if (this.classList.contains('toggle-content')) {
                     this.innerHTML = `${translations[currentLang][buttonId]} <i class="fas fa-arrow-right"></i>`;
                 } else if (this.classList.contains('toggle-fatwa')) {
@@ -214,19 +189,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } else {
                 content.classList.add('expanded');
-                // Change text to 'Show Less' or 'Read Less'
                 if (this.classList.contains('toggle-content')) {
-                    const buttonLessKey = `${buttonId}Less`; // e.g., service1BtnLess
+                    const buttonLessKey = `${buttonId}Less`;
                     this.innerHTML = `${translations[currentLang][buttonLessKey]} <i class="fas fa-arrow-up"></i>`;
                 } else if (this.classList.contains('toggle-fatwa')) {
-                    const readLessKey = buttonId.replace('readMore', 'readLess'); // e.g., readLess2
+                    const readLessKey = buttonId.replace('readMore', 'readLess');
                     this.innerHTML = `${translations[currentLang][readLessKey]} <i class="fas fa-arrow-up"></i>`;
                 }
             }
         });
     });
 });
-
 
 // Navbar Sticky and Scroll Animation
 document.addEventListener('scroll', () => {
@@ -241,8 +214,7 @@ document.addEventListener('scroll', () => {
     sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top;
         const viewportHeight = window.innerHeight;
-        // Adjust trigger point for animation
-        if (sectionTop < viewportHeight - 150) { /* Changed from 100 to 150 */
+        if (sectionTop < viewportHeight - 150) {
             section.classList.add('animate-in');
         }
     });
@@ -275,10 +247,11 @@ window.addEventListener('scroll', () => {
     const scrollY = window.pageYOffset;
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - navbarHeight; // Adjust sectionTop by navbar height
+        const sectionTop = section.offsetTop - navbarHeight;
         const sectionHeight = section.offsetHeight;
 
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        // Give a buffer of 50px so the active class changes slightly before the section reaches the very top
+        if (scrollY >= sectionTop - 50 && scrollY < sectionTop + sectionHeight - 50) {
             current = section.getAttribute('id');
         }
     });
