@@ -1,8 +1,24 @@
+/* Color Palette */
+:root {
+    --primary-dark-teal: #004d40; /* Dark Teal - primary color */
+    --secondary-light-teal: #a7ffeb; /* Light Teal - accent color, brighter */
+    --dark-green: #00332c; /* Even darker for scrolled navbar/footer */
+    --light-grey: #f0f2f5; /* Light background */
+    --medium-grey: #e9ecef; /* Alternating section background */
+    --text-dark: #343a40; /* Main dark text */
+    --text-muted: #555; /* Muted text */
+    --white: #ffffff;
+    --black: #000000;
+}
+
 /* Base Styles */
+html {
+  font-size: 16px; /* Base font size for rem units */
+}
 body {
   font-family: 'Cairo', sans-serif; /* Default Arabic font */
-  background-color: #f0f2f5; /* Light grey background */
-  color: #343a40; /* Dark text */
+  background-color: var(--light-grey);
+  color: var(--text-dark);
   line-height: 1.7;
   overflow-x: hidden; /* Prevent horizontal scroll due to animations */
 }
@@ -12,38 +28,37 @@ body {
 
 /* Navbar Styling */
 .navbar {
-  background-color: #004d40; /* Dark Teal - primary color */
+  background-color: var(--primary-dark-teal);
   padding: 1rem 0;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  /* Added for sticky navbar on scroll */
-  position: sticky; /* Make navbar sticky */
-  top: 0; /* Stick to the top */
-  width: 100%; /* Full width */
-  z-index: 1030; /* Ensure it's above other content */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
 }
 .navbar.scrolled {
-  background-color: #00332c; /* Slightly darker when scrolled */
+  background-color: var(--dark-green); /* Slightly darker when scrolled */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 .navbar-brand {
   font-weight: 700;
-  color: #e0f2f1 !important;
-  font-size: 1.8rem; /* Consistent rem unit */
+  color: var(--secondary-light-teal) !important; /* Brighter brand text */
+  font-size: 1.8rem;
 }
 .navbar-brand img {
   border-radius: 50%;
   margin-inline-end: 10px;
-  height: 40px; /* Ensure logo has a consistent size */
+  height: 40px;
   width: 40px;
 }
 .navbar .nav-link {
-  color: #e0f2f1 !important;
+  color: var(--secondary-light-teal) !important;
   font-weight: 600;
   margin: 0 10px;
   position: relative;
   transition: color 0.3s ease;
-  padding: 0.5rem 0; /* Adjust padding for better clickable area */
+  padding: 0.5rem 0;
 }
 .navbar .nav-link::after {
   content: '';
@@ -53,7 +68,7 @@ body {
   transform: translateX(-50%);
   width: 0;
   height: 3px;
-  background-color: #a7ffeb; /* Light accent color */
+  background-color: var(--white); /* White underline for contrast */
   transition: width 0.3s ease;
 }
 .navbar .nav-link:hover::after,
@@ -61,22 +76,21 @@ body {
   width: 100%;
 }
 .navbar .btn-outline-light {
-  border-color: #0b0d0d;
-  color: #a7ffeb;
+  border-color: var(--secondary-light-teal); /* Button border matches accent */
+  color: var(--secondary-light-teal);
   transition: all 0.3s ease;
   font-weight: 600;
 }
 .navbar .btn-outline-light:hover {
-  background-color: #a7ffeb;
-  color: #004d40;
+  background-color: var(--secondary-light-teal);
+  color: var(--primary-dark-teal); /* Text changes to dark teal on hover */
 }
 
-/* Language Toggle Button - Adjusted for Navbar positioning */
+/* Language Toggle Button */
 .language-toggle {
-  /* No need for z-index: 1000 here, as it's within navbar */
-  background-color: #020202; /* لون الخلفية: Light Accent Color */
-  border: 1px solid #000000; /* لون الحدود: Light Accent Color */
-  color: #004d40; /* لون النص: Dark Teal (اللون الأساسي لشريط التنقل) */
+  background-color: var(--primary-dark-teal); /* Consistent with navbar background */
+  border: 1px solid var(--secondary-light-teal);
+  color: var(--secondary-light-teal);
   border-radius: 5px;
   padding: 8px 15px;
   font-size: 0.9rem;
@@ -84,38 +98,39 @@ body {
   box-shadow: none;
   transition: all 0.3s ease;
   margin-inline-start: 15px;
-  font-weight: 600; /* لجعل النص أكثر وضوحًا */
+  font-weight: 600;
 }
 
 .language-toggle:hover {
-  background-color: #0a0f0e; /* لون أفتح عند التمرير */
-  border-color: #e0f2f1; /* حدود أفتح عند التمرير */
-  color: #002b23; /* لون نص أغمق عند التمرير */
+  background-color: var(--secondary-light-teal);
+  border-color: var(--secondary-light-teal);
+  color: var(--primary-dark-teal); /* Text changes to dark teal on hover */
   box-shadow: none;
 }
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(rgba(0, 77, 64, 0.85), rgba(0, 77, 64, 0.85)), url('https://source.unsplash.com/random/1500x700/?islamic,family,mosque') no-repeat center center/cover;
-  color: white;
+  /* Using a more vibrant background overlay */
+  background: linear-gradient(rgba(0, 77, 64, 0.9), rgba(0, 100, 80, 0.9)), url('https://source.unsplash.com/random/1500x700/?islamic,family,mosque') no-repeat center center/cover;
+  color: var(--white);
   padding: 100px 0;
   text-align: center;
   position: relative;
-  overflow: hidden; /* For wave effect if added */
+  overflow: hidden;
   min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .hero-section h1 {
-  font-size: 4.5rem; /* Large font size for desktop */
+  font-size: 4.5rem;
   margin-bottom: 25px;
   font-weight: 700;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
   animation: fadeInDown 1s ease-out forwards;
 }
 .hero-section p {
-  font-size: 1.4rem; /* Consistent rem unit */
+  font-size: 1.4rem;
   margin-bottom: 40px;
   max-width: 800px;
   margin-left: auto;
@@ -125,28 +140,28 @@ body {
 }
 .hero-section .btn-lg {
   padding: 15px 40px;
-  font-size: 1.3rem; /* Consistent rem unit */
+  font-size: 1.3rem;
   border-radius: 50px;
-  background-color: #a7ffeb; /* Accent color */
-  border-color: #a7ffeb;
-  color: #004d40;
+  background-color: var(--secondary-light-teal); /* Accent color button */
+  border-color: var(--secondary-light-teal);
+  color: var(--primary-dark-teal);
   font-weight: 700;
   transition: all 0.3s ease;
   opacity: 0;
   animation: zoomIn 1s ease-out 1s forwards;
 }
 .hero-section .btn-lg:hover {
-  background-color: #79d2b2;
+  background-color: #79d2b2; /* Slightly darker accent on hover */
   border-color: #79d2b2;
-  color: #002b23;
+  color: var(--dark-green);
   transform: translateY(-3px);
 }
 
 /* General Section Styling */
 section {
   padding: 80px 0;
-  opacity: 0; /* For scroll animation */
-  transform: translateY(50px); /* For scroll animation */
+  opacity: 0;
+  transform: translateY(50px);
   transition: all 0.8s ease-out;
 }
 section.animate-in {
@@ -154,12 +169,12 @@ section.animate-in {
   transform: translateY(0);
 }
 section:nth-of-type(even) {
-  background-color: #e9ecef; /* Alternating background */
+  background-color: var(--medium-grey); /* Alternating background */
 }
 h2 {
-  font-size: 2.8rem; /* Consistent rem unit */
+  font-size: 2.8rem;
   font-weight: 700;
-  color: #004d40;
+  color: var(--primary-dark-teal);
   margin-bottom: 40px;
   position: relative;
 }
@@ -171,10 +186,9 @@ h2::after {
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background-color: #a7ffeb;
+  background-color: var(--secondary-light-teal); /* Accent color underline */
   border-radius: 2px;
 }
-/* No need for a separate RTL rule here, as transform: translateX(-50%) centers it correctly */
 
 /* Service Cards */
 .service-card {
@@ -185,7 +199,7 @@ h2::after {
   text-align: center;
   padding: 40px;
   height: 100%;
-  background-color: white;
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -200,7 +214,7 @@ h2::after {
   left: 0;
   width: 100%;
   height: 10px;
-  background-color: #004d40;
+  background-color: var(--primary-dark-teal);
   transition: height 0.3s ease;
   z-index: -1;
 }
@@ -213,35 +227,35 @@ h2::after {
   opacity: 0.1;
 }
 .service-card i {
-  font-size: 4rem; /* Consistent rem unit */
-  color: #004d40;
+  font-size: 4rem;
+  color: var(--primary-dark-teal);
   margin-bottom: 25px;
   transition: color 0.3s ease;
 }
 .service-card:hover i {
-  color: #a7ffeb; /* Change icon color on hover */
+  color: var(--secondary-light-teal); /* Icon changes to accent color on hover */
 }
 .service-card h4 {
-  font-size: 1.8rem; /* Consistent rem unit */
-  color: #004d40;
+  font-size: 1.8rem;
+  color: var(--primary-dark-teal);
   margin-bottom: 20px;
   font-weight: 700;
   transition: color 0.3s ease;
 }
 .service-card:hover h4 {
-  color: #00332c;
+  color: var(--dark-green);
 }
 .service-card p {
-  font-size: 1rem; /* Consistent rem unit */
-  color: #555;
+  font-size: 1rem;
+  color: var(--text-muted);
   transition: color 0.3s ease;
 }
 .service-card:hover p {
   color: #444;
 }
 .service-card .btn-outline-dark {
-  border-color: #88a8a3;
-  color: #506965;
+  border-color: var(--primary-dark-teal); /* More distinct border */
+  color: var(--primary-dark-teal);
   font-weight: 600;
   border-radius: 30px;
   padding: 10px 25px;
@@ -249,28 +263,59 @@ h2::after {
   margin-top: 20px;
 }
 .service-card .btn-outline-dark:hover {
-  background-color: #004d40;
-  color: white;
+  background-color: var(--primary-dark-teal);
+  color: var(--white);
 }
+
+/* Fatwa Cards */
+#fatwasSection .card {
+    background-color: var(--white);
+    border-radius: 15px;
+}
+#fatwasSection .text-primary {
+    color: var(--primary-dark-teal) !important; /* Use primary color for fatwa titles */
+}
+#fatwasSection .btn-info { /* "View All Fatwas" button */
+    background-color: var(--primary-dark-teal);
+    border-color: var(--primary-dark-teal);
+    color: var(--white);
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+#fatwasSection .btn-info:hover {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+    transform: translateY(-2px);
+}
+#fatwasSection .toggle-fatwa { /* "Read More" link */
+    color: var(--primary-dark-teal) !important; /* Use primary color for "Read More" links */
+    font-weight: 600;
+    text-decoration: none;
+}
+#fatwasSection .toggle-fatwa:hover {
+    color: var(--secondary-light-teal) !important; /* Accent color on hover */
+    text-decoration: underline;
+}
+
 
 /* --- Content Collapse/Expand Styling (for both services and fatwas) --- */
 .service-description,
 .fatwa-content {
-  max-height: 90px; /* Initial height for truncated content */
+  max-height: 90px;
   overflow: hidden;
-  transition: max-height 0.7s ease-out; /* Smooth transition for expand/collapse */
-  position: relative; /* For the fade effect */
-  padding-bottom: 15px; /* Space for fade effect */
+  transition: max-height 0.7s ease-out;
+  position: relative;
+  padding-bottom: 15px;
 }
 
 .service-description.expanded,
 .fatwa-content.expanded {
-  max-height: 500px; /* Max height when expanded (adjust as needed) */
-  /* Remove fade effect when expanded */
+  max-height: 500px; /* Adjusted to 500px as a reasonable max, can be increased */
   padding-bottom: 0;
 }
 
-/* Fade effect at the bottom of truncated content */
 .service-description::after,
 .fatwa-content::after {
   content: '';
@@ -278,33 +323,43 @@ h2::after {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 30px; /* Height of the fade */
+  height: 30px;
   background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-  pointer-events: none; /* Allows clicks on elements underneath */
+  pointer-events: none;
   transition: opacity 0.3s ease;
 }
 .service-description.expanded::after,
 .fatwa-content.expanded::after {
-  opacity: 0; /* Hide fade when expanded */
+  opacity: 0;
 }
 
+/* Contact Section */
+#contactSection .card {
+    border-radius: 15px;
+}
+#contactSection .text-primary {
+    color: var(--primary-dark-teal) !important; /* Ensure primary color for contact info */
+}
+#contactSection .text-muted {
+    color: var(--text-muted) !important;
+}
 
 /* Footer Styling */
 .footer {
-  background-color: #00332c; /* Darker teal for footer */
-  color: white;
+  background-color: var(--dark-green);
+  color: var(--white);
   padding: 60px 0;
   text-align: center;
-  font-size: 0.95rem; /* Consistent rem unit */
+  font-size: 0.95rem;
 }
 .footer a {
-  color: #a7ffeb;
+  color: var(--secondary-light-teal);
   margin: 0 10px;
-  font-size: 1.5rem; /* Consistent rem unit */
+  font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 .footer a:hover {
-  color: #e0f2f1;
+  color: var(--white);
   transform: translateY(-3px);
 }
 .footer p {
@@ -369,24 +424,24 @@ h2::after {
     font-size: 1.2rem;
   }
   .language-toggle {
-    width: auto; /* Allow button to size naturally in collapsed menu */
+    width: auto;
     margin-inline-start: 0;
-    margin-top: 10px; /* Add some space from other nav items */
+    margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #004d40; /* Match navbar background in mobile menu */
-    border-color: #004d40;
-    color: #a7ffeb;
-    border-radius: 5px; /* Keep some border radius for consistency */
+    background-color: var(--dark-green); /* Match mobile navbar background */
+    border-color: var(--secondary-light-teal);
+    color: var(--secondary-light-teal);
+    border-radius: 5px;
   }
   .language-toggle:hover {
-    background-color: #00332c;
-    border-color: #00332c;
+      background-color: var(--primary-dark-teal);
+      border-color: var(--primary-dark-teal);
   }
   .navbar-nav .nav-item {
-      text-align: center; /* Center nav items in mobile menu */
+      text-align: center;
   }
   .navbar-nav .nav-link {
-      padding: 0.75rem 0; /* More vertical padding for mobile nav links */
+      padding: 0.75rem 0;
   }
   .footer {
     padding: 40px 0;
@@ -397,11 +452,11 @@ h2::after {
   }
   .service-description,
   .fatwa-content {
-      max-height: 70px; /* Further reduced initial height on very small screens */
+      max-height: 70px;
   }
 }
 
-/* Medium devices (tablets, 768px and up) */
+/* Medium devices (tablets, 576px to 991.98px) */
 @media (min-width: 576px) and (max-width: 991.98px) {
   .hero-section h1 {
     font-size: 3.5rem;
@@ -419,16 +474,16 @@ h2::after {
     font-size: 1.6rem;
   }
   .language-toggle {
-      margin-inline-start: 10px; /* Smaller margin for tablets */
+      margin-inline-start: 10px;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .navbar .nav-link {
-    margin: 0 15px; /* Slightly more space between nav items on large screens */
+    margin: 0 15px;
   }
   .language-toggle {
-    margin-inline-start: 20px; /* More margin on large screens */
+    margin-inline-start: 20px;
   }
 }
