@@ -70,6 +70,9 @@ const translations = {
         emailContact: "theshariacouncil@gmail.com", 
         whatsappLabel: "Or send a message on WhatsApp:", 
         whatsappBtnText: "WhatsApp", 
+        contactName: "Full Name", // Added for placeholder translation
+        contactEmail: "Email Address", // Added for placeholder translation
+        contactMessage: "Your Message", // Added for placeholder translation
         contactClosingText: "We look forward to serving you and answering your inquiries as soon as possible.",
         footerText: "&copy; 2024 Shariah Council for the Muslim Family in London. All Rights Reserved.",
         geminiErrorModalLabel: "Connection Error",
@@ -146,6 +149,9 @@ const translations = {
         emailContact: "theshariacouncil@gmail.com",
         whatsappLabel: "أو ارسل رسالة على الواتس اب:", 
         whatsappBtnText: "واتساب", 
+        contactName: "الاسم الكامل", // Added for placeholder translation
+        contactEmail: "عنوان البريد الإلكتروني", // Added for placeholder translation
+        contactMessage: "رسالتك", // Added for placeholder translation
         contactClosingText: "نتطلع إلى خدمتكم والرد على استفساراتكم بأسرع وقت ممكن.",
         footerText: "&copy; 2024 مجلس الشريعة للأسرة المسلمة في لندن. جميع الحقوق محفوظة.",
         geminiErrorModalLabel: "خطأ في الاتصال",
@@ -165,6 +171,9 @@ function applyTranslations(lang) {
             } else if (element.id === 'navLangToggle') {
                  element.textContent = lang === 'ar' ? 'English / العربية' : 'العربية / English';
             }
+            else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') { // Added for placeholder translation
+                element.placeholder = t[key];
+            }
             else {
                 element.textContent = t[key];
             }
@@ -175,47 +184,6 @@ function applyTranslations(lang) {
     if (logoImg) {
         logoImg.alt = lang === 'ar' ? 'شعار مجلس الشريعة' : 'Shariah Council Logo';
     }
-}
-
-// Function to toggle language
-function toggleLanguage() {
-    const currentLang = document.documentElement.lang;
-    const targetLang = currentLang === 'ar' ? 'en' : 'ar';
-    document.documentElement.lang = targetLang;
-    document.documentElement.dir = targetLang === 'ar' ? 'rtl' : 'ltr';
-
-    applyTranslations(targetLang);
-
-    document.querySelectorAll('.toggle-content, .toggle-fatwa').forEach(button => {
-        const currentLang = document.documentElement.lang; 
-        const buttonId = button.id; 
-        let baseKey = buttonId;
-        
-        if (button.classList.contains('toggle-content')) { 
-            baseKey = buttonId.replace('Less', ''); 
-        } else if (button.classList.contains('toggle-fatwa')) { 
-            baseKey = buttonId.replace('Less', 'More'); 
-        }
-
-        const contentTargetId = button.dataset.target;
-        const contentElement = document.getElementById(contentTargetId);
-        const extraContentId = button.dataset.extra; 
-        const extraContentElement = document.getElementById(extraContentId);
-        
-        if (contentElement && contentElement.classList.contains('expanded')) {
-            let lessKey;
-            if (button.classList.contains('toggle-content')) {
-                lessKey = `${baseKey}Less`;
-            } else {
-                lessKey = baseKey.replace('More', 'Less');
-            }
-            button.innerHTML = `${translations[targetLang][lessKey]} <i class="fas fa-arrow-up"></i>`;
-            if(extraContentElement) extraContentElement.style.display = 'block';
-        } else {
-            button.innerHTML = `${translations[targetLang][baseKey]} <i class="fas fa-arrow-right"></i>`;
-             if(extraContentElement) extraContentElement.style.display = 'none';
-        }
-    });
 }
 
 // --- Helper function to display Gemini API errors ---
