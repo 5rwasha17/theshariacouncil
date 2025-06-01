@@ -74,7 +74,7 @@ const translations = {
         contactEmail: "Email Address", 
         contactPhone: "Phone Number", // Added for new phone field placeholder
         contactMessage: "Your Message", 
-        submitFormBtn: "Send Message", // Added for button text
+        submitFormBtn: "Send your Message", // Added for button text
         contactClosingText: "We look forward to serving you and answering your inquiries as soon as possible.",
         footerText: "&copy; 2024 Shariah Council for the Muslim Family in London. All Rights Reserved.",
         geminiErrorModalLabel: "Connection Error",
