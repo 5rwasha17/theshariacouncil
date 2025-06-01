@@ -48,9 +48,9 @@ const translations = {
         service6Btn: "Learn More", service6BtnLess: "Show Less",
 
         gallerySectionTitle: "Image Gallery",
-        galleryImageCaption1: "Brief caption for the first image",
-        galleryImageCaption2: "Brief caption for the second image",
-        galleryImageCaption3: "Brief caption for the third image",
+        galleryImageCaption1: "صورة مع بعض الشخصيات السياسية وعضو مجلس العمال في مجلس العموم البريطاني وبعض الشخصيات الدينية في لندن.",
+        galleryImageCaption2: "لقطة من إحدى الفعاليات التي شارك فيها المجلس.",
+        galleryImageCaption3: "صورة لأعضاء المجلس خلال إحدى المناسبات الهامة.",
 
         fatwasSectionTitle: "Latest Fatwas & Articles", fatwasSectionText: "Explore our growing library of fatwas and articles covering various aspects of Muslim life.",
         fatwaTitle2: "Building a Happy Family in the West",
@@ -75,7 +75,7 @@ const translations = {
         contactPhone: "Phone Number",
         contactMessage: "Your Message",
         submitFormBtn: "Send Message",
-        formTitle: "Send Us a Message", // <--- تم إضافة هذا المفتاح لترجمة العنوان "أرسل لنا رسالة"
+        formTitle: "Send Us a Message",
         contactClosingText: "We look forward to serving you and answering your inquiries as soon as possible.",
         footerText: "&copy; 2024 Shariah Council for the Muslim Family in London. All Rights Reserved.",
         geminiErrorModalLabel: "Connection Error",
@@ -130,9 +130,9 @@ const translations = {
         service6Btn: "تعرف على المزيد", service6BtnLess: "أقل",
 
         gallerySectionTitle: "معرض الصور",
-        galleryImageCaption1: "وصف مختصر للصورة الأولى",
-        galleryImageCaption2: "وصف مختصر للصورة الثانية",
-        galleryImageCaption3: "وصف مختصر للصورة الثالثة",
+        galleryImageCaption1: "صورة مع بعض الشخصيات السياسية وعضو مجلس العمال في مجلس العموم البريطاني وبعض الشخصيات الدينية في لندن.",
+        galleryImageCaption2: "لقطة من إحدى الفعاليات التي شارك فيها المجلس.",
+        galleryImageCaption3: "صورة لأعضاء المجلس خلال إحدى المناسبات الهامة.",
 
         fatwasSectionTitle: "فتاوى ومقالات حديثة", fatwasSectionText: "استكشف مكتبتنا المتنامية من الفتاوى والمقالات التي تغطي جوانب متعددة من حياة المسلم.",
         fatwaTitle2: "بناء أسرة سعيدة في الغرب",
@@ -157,7 +157,7 @@ const translations = {
         contactPhone: "رقم الهاتف",
         contactMessage: "رسالتك",
         submitFormBtn: "إرسال الرسالة",
-        formTitle: "أرسل لنا رسالة", // <--- تم إضافة هذا المفتاح لترجمة العنوان "أرسل لنا رسالة"
+        formTitle: "أرسل لنا رسالة",
         contactClosingText: "نتطلع إلى خدمتكم والرد على استفساراتكم بأسرع وقت ممكن.",
         footerText: "&copy; 2024 مجلس الشريعة للأسرة المسلمة في لندن. جميع الحقوق محفوظة.",
         geminiErrorModalLabel: "خطأ في الاتصال",
@@ -349,7 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // إضافة مستمع حدث لزر تبديل اللغة
+    // إضافة مستمع حدث لزر تبديل اللغة (مع إغلاق الشريط)
     const langToggleButton = document.getElementById('navLangToggle');
     if (langToggleButton) {
         langToggleButton.addEventListener('click', function() {
@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const newLang = currentLang === 'ar' ? 'en' : 'ar';
             applyTranslations(newLang);
 
-            // إضافة هذا الجزء لإغلاق شريط التنقل القابل للطي
+            // إغلاق شريط التنقل القابل للطي إذا كان مفتوحًا
             const navbarToggler = document.querySelector('.navbar-toggler');
             const navbarCollapse = document.getElementById('navbarNav');
             if (navbarCollapse.classList.contains('show')) {
