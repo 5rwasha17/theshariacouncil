@@ -2,21 +2,21 @@
 const translations = {
     en: {
         navHome: "Home", navAbout: "About Us", navServices: "Services",
-        navGallery: "Gallery", 
+        navGallery: "Gallery",
         navFatwas: "Fatwas & Articles", navContact: "Contact Us",
         heroTitle: "Shariah Council for the Muslim Family in London",
         heroText: "Islamic guidance for a stable life in a safe and professional environment.",
         applyNowBtn: "Contact Us Now",
-        introSectionTitle: "About Us", 
-        whoWeAreSubheading: "Who We Are", 
-        whoWeAreP1: "We are a group of scholars and Imams, graduates of Al-Azhar Al-Sharif University, the oldest Islamic university in the world. We hold a higher degree (Bachelor's) in distinguished Sharia specializations, including:", 
-        usulAlDinHeading: "Fundamentals of Religion (Usul al-Din)", 
-        usulAlDinText: "Study of creed, exegesis (Tafsir), and Hadith.", 
-        shariaIslamiyaHeading: "Islamic Sharia", 
-        shariaIslamiyaText: "Study of Fiqh (jurisprudence), its principles (Usul al-Fiqh), and comparative law.", 
-        whoWeAreP2: "We carry the message of knowledge and Da'wah (call to Islam), and strive to spread a moderate, enlightened understanding of Islam, based on profound knowledge and the moderate Azhari methodology.", 
-        whoWeAreP3: "We work to provide reliable religious content, based on authentic sources, in a contemporary style that meets the needs of Muslims in their time, without negligence or extremism.", 
-        whyChooseUsSubheading: "Why Choose Our Shariah Council?", 
+        introSectionTitle: "About Us",
+        whoWeAreSubheading: "Who We Are",
+        whoWeAreP1: "We are a group of scholars and Imams, graduates of Al-Azhar Al-Sharif University, the oldest Islamic university in the world. We hold a higher degree (Bachelor's) in distinguished Sharia specializations, including:",
+        usulAlDinHeading: "Fundamentals of Religion (Usul al-Din)",
+        usulAlDinText: "Study of creed, exegesis (Tafsir), and Hadith.",
+        shariaIslamiyaHeading: "Islamic Sharia",
+        shariaIslamiyaText: "Study of Fiqh (jurisprudence), its principles (Usul al-Fiqh), and comparative law.",
+        whoWeAreP2: "We carry the message of knowledge and Da'wah (call to Islam), and strive to spread a moderate, enlightened understanding of Islam, based on profound knowledge and the moderate Azhari methodology.",
+        whoWeAreP3: "We work to provide reliable religious content, based on authentic sources, in a contemporary style that meets the needs of Muslims in their time, without negligence or extremism.",
+        whyChooseUsSubheading: "Why Choose Our Shariah Council?",
         introSectionText: "We provide reliable Islamic guidance and operate within the framework of British law, committed to transparency and justice in all our services. Our team of scholars and specialists is dedicated to serving our community and providing the necessary family support.",
         aboutFeature1Title: "Trust & Reliability", aboutFeature1Text: "We offer authentic and contemporary Islamic guidance.",
         aboutFeature2Title: "Fairness & Transparency", aboutFeature2Text: "We adhere to fairness and transparency in all our procedures and services.",
@@ -46,37 +46,36 @@ const translations = {
         service6Text: "Comprehensive Arabic language courses for adults of all levels, aiming to enable them to understand the Holy Quran and Sunnah and communicate effectively.",
         service6ExtraText: "Courses include grammar, morphology, conversation, reading, and writing. We use modern and engaging teaching methods to ensure the best results, whether for beginners or those wishing to refine their skills.",
         service6Btn: "Learn More", service6BtnLess: "Show Less",
-        
-        gallerySectionTitle: "Image Gallery", 
-        galleryImageCaption1: "Brief caption for the first image", 
-        galleryImageCaption2: "Brief caption for the second image", 
-        galleryImageCaption3: "Brief caption for the third image", 
+
+        gallerySectionTitle: "Image Gallery",
+        galleryImageCaption1: "Brief caption for the first image",
+        galleryImageCaption2: "Brief caption for the second image",
+        galleryImageCaption3: "Brief caption for the third image",
 
         fatwasSectionTitle: "Latest Fatwas & Articles", fatwasSectionText: "Explore our growing library of fatwas and articles covering various aspects of Muslim life.",
         fatwaTitle2: "Building a Happy Family in the West",
         fatwaText2: "Tips and guidance for addressing contemporary family challenges. In this article, we discuss how to maintain Islamic identity in Western societies, the importance of family communication, and building a positive educational environment for children.",
         fatwaExtraText2: "We offer practical solutions for facing difficulties that Muslim families may encounter, such as reconciling Islamic values with the surrounding societal culture, and enhancing the role of mosques and Islamic centers in supporting the family and providing spiritual and social support. We also focus on the importance of Islamic upbringing for children amidst modern challenges, and ways to instill good values and ethics in them to become righteous individuals in society.",
         readMore2: "Read More", readLess2: "Show Less",
-        geminiBtnTextFatwa2: "✨ Request Clarification", 
-        geminiLoadingTextFatwa2: "Processing your request...", 
+        geminiBtnTextFatwa2: "✨ Request Clarification",
+        geminiLoadingTextFatwa2: "Processing your request...",
         viewAllFatwas: "View All Fatwas & Articles",
         contactSectionTitle: "Contact Us",
         contactIntro: "You can contact us directly for assistance and Islamic guidance.",
         contactNote: "Note: Our team currently works remotely, and calls are redirected to mobile devices. We appreciate your patience and understanding!",
         directPhoneLabel: "Contact us by phone:",
-        phone1: "00447404949128", 
+        phone1: "00447404949128",
         phone2: "00447450209680",
         directEmailLabel: "Or by email:",
-        emailContact: "theshariacouncil@gmail.com", 
-        whatsappLabel: "Or send a message on WhatsApp:", 
-        whatsappBtnText: "WhatsApp", 
-        contactName: "Full Name", 
-        contactEmail: "Email Address", 
-        contactPhone: "Phone Number", 
-        contactMessage: "Your Message", 
-        submitFormBtn: "Send Message", 
-        // تم إضافة هذا المفتاح لترجمة العنوان "أرسل لنا رسالة"
-        formTitle: "Send Us a Message", 
+        emailContact: "theshariacouncil@gmail.com",
+        whatsappLabel: "Or send a message on WhatsApp:",
+        whatsappBtnText: "WhatsApp",
+        contactName: "Full Name",
+        contactEmail: "Email Address",
+        contactPhone: "Phone Number",
+        contactMessage: "Your Message",
+        submitFormBtn: "Send Message",
+        formTitle: "Send Us a Message", // <--- تم إضافة هذا المفتاح لترجمة العنوان "أرسل لنا رسالة"
         contactClosingText: "We look forward to serving you and answering your inquiries as soon as possible.",
         footerText: "&copy; 2024 Shariah Council for the Muslim Family in London. All Rights Reserved.",
         geminiErrorModalLabel: "Connection Error",
@@ -85,21 +84,21 @@ const translations = {
     },
     ar: {
         navHome: "الرئيسية", navAbout: "عن المجلس", navServices: "خدماتنا",
-        navGallery: "معرض الصور", 
+        navGallery: "معرض الصور",
         navFatwas: "فتاوى ومقالات", navContact: "تواصل معنا",
         heroTitle: "مجلس الشريعة للأسرة المسلمة في لندن",
         heroText: "إرشاد شرعي لحياة مستقرة في بيئة آمنة واحترافية.",
         applyNowBtn: "تواصل معنا الآن",
-        introSectionTitle: "عن المجلس", 
-        whoWeAreSubheading: "من نحن", 
-        whoWeAreP1: "نحن مجموعة من العلماء والأئمة، تخرجنا في جامعة الأزهر الشريف، أعرق جامعة إسلامية في العالم. نحمل الإجازة العالية (البكالوريوس) في تخصصات شرعية رفيعة، تشمل:", 
-        usulAlDinHeading: "أصول الدين", 
-        usulAlDinText: "دراسة العقيدة والتفسير والحديث الشريف.", 
-        shariaIslamiyaHeading: "الشريعة الإسلامية", 
-        shariaIslamiyaText: "دراسة الفقه وأصوله والقانون المقارن.", 
-        whoWeAreP2: "نحمل على عاتقنا رسالة العلم والدعوة، ونسعى لنشر الفهم الوسطي المستنير للإسلام، مستندين إلى العلم الراسخ والمنهج الأزهري المعتدل.", 
-        whoWeAreP3: "نعمل على تقديم محتوى ديني موثوق، مستند إلى المصادر الأصيلة، وبأسلوب معاصر يلبي حاجات المسلمين في زمانهم، دون تفريط أو غلو.", 
-        whyChooseUsSubheading: "لماذا تختار مجلس الشريعة؟", 
+        introSectionTitle: "عن المجلس",
+        whoWeAreSubheading: "من نحن",
+        whoWeAreP1: "نحن مجموعة من العلماء والأئمة، تخرجنا في جامعة الأزهر الشريف، أعرق جامعة إسلامية في العالم. نحمل الإجازة العالية (البكالوريوس) في تخصصات شرعية رفيعة، تشمل:",
+        usulAlDinHeading: "أصول الدين",
+        usulAlDinText: "دراسة العقيدة والتفسير والحديث الشريف.",
+        shariaIslamiyaHeading: "الشريعة الإسلامية",
+        shariaIslamiyaText: "دراسة الفقه وأصوله والقانون المقارن.",
+        whoWeAreP2: "نحمل على عاتقنا رسالة العلم والدعوة، ونسعى لنشر الفهم الوسطي المستنير للإسلام، مستندين إلى العلم الراسخ والمنهج الأزهري المعتدل.",
+        whoWeAreP3: "نعمل على تقديم محتوى ديني موثوق، مستند إلى المصادر الأصيلة، وبأسلوب معاصر يلبي حاجات المسلمين في زمانهم، دون تفريط أو غلو.",
+        whyChooseUsSubheading: "لماذا تختار مجلس الشريعة؟",
         introSectionText: "نحن نقدم إرشادات شرعية موثوقة ونعمل ضمن إطار القانون البريطاني، ملتزمون بالشفافية والعدل في كل خدماتنا. فريقنا من العلماء والمختصين مكرس لخدمة مجتمعنا وتوفير الدعم الأسري اللازم.",
         aboutFeature1Title: "ثقة وموثوقية", aboutFeature1Text: "نقدم إرشادات شرعية تستند إلى منهج إسلامي أصيل ومعاصر.",
         aboutFeature2Title: "عدالة وشفافية", aboutFeature2Text: "نلتزم بالعدل والشفافية في جميع إجراءاتنا وخدماتنا.",
@@ -130,18 +129,18 @@ const translations = {
         service6ExtraText: "تشمل الدورات القواعد النحوية والصرفية، المحادثة، القراءة، والكتابة. نستخدم أساليب تعليمية حديثة وممتعة لضمان أفضل النتائج، سواء للمبتدئين أو لمن يرغبون في صقل مهاراتهم.",
         service6Btn: "تعرف على المزيد", service6BtnLess: "أقل",
 
-        gallerySectionTitle: "معرض الصور", 
-        galleryImageCaption1: "وصف مختصر للصورة الأولى", 
-        galleryImageCaption2: "وصف مختصر للصورة الثانية", 
-        galleryImageCaption3: "وصف مختصر للصورة الثالثة", 
+        gallerySectionTitle: "معرض الصور",
+        galleryImageCaption1: "وصف مختصر للصورة الأولى",
+        galleryImageCaption2: "وصف مختصر للصورة الثانية",
+        galleryImageCaption3: "وصف مختصر للصورة الثالثة",
 
         fatwasSectionTitle: "فتاوى ومقالات حديثة", fatwasSectionText: "استكشف مكتبتنا المتنامية من الفتاوى والمقالات التي تغطي جوانب متعددة من حياة المسلم.",
         fatwaTitle2: "بناء أسرة سعيدة في الغرب",
         fatwaText2: "نصائح وإرشادات للتعامل مع التحديات الأسرية المعاصرة. نتناول في هذا المقال كيفية الحفاظ على الهوية الإسلامية في المجتمعات الغربية، وأهمية التواصل الأسري، وبناء بيئة تعليمية إيجابية للأطفال.",
         fatwaExtraText2: "نقدم حلولاً عملية لمواجهة الصعوبات التي قد تواجه الأسر المسلمة، مثل التوفيق بين القيم الإسلامية وثقافة المجتمع المحيط، وتعزيز دور المسجد والمراكز الإسلامية في دعم الأسرة وتوفير الدعم الروحي والاجتماعي. كما نركز على أهمية التربية الإسلامية للأبناء في ظل التحديات الحديثة، وسبل غرس القيم والأخلاق الحميدة في نفوسهم ليكونوا أفراداً صالحين في المجتمع.",
         readMore2: "اقرأ المزيد", readLess2: "أقل",
-        geminiBtnTextFatwa2: "✨ اطلب توضيحًا", 
-        geminiLoadingTextFatwa2: "جاري معالجة طلبك...", 
+        geminiBtnTextFatwa2: "✨ اطلب توضيحًا",
+        geminiLoadingTextFatwa2: "جاري معالجة طلبك...",
         viewAllFatwas: "عرض جميع الفتاوى والمقالات",
         contactSectionTitle: "تواصل معنا",
         contactIntro: "يمكنكم التواصل معنا مباشرةً للحصول على المساعدة والإرشاد الشرعي.",
@@ -151,15 +150,14 @@ const translations = {
         phone2: "00447450209680",
         directEmailLabel: "للتواصل عبر البريد الإلكتروني:",
         emailContact: "theshariacouncil@gmail.com",
-        whatsappLabel: "أو ارسل رسالة على الواتس اب:", 
-        whatsappBtnText: "واتساب", 
-        contactName: "الاسم الكامل", 
-        contactEmail: "عنوان البريد الإلكتروني", 
-        contactPhone: "رقم الهاتف", 
-        contactMessage: "رسالتك", 
-        submitFormBtn: "إرسال الرسالة", 
-        // تم إضافة هذا المفتاح لترجمة العنوان "أرسل لنا رسالة"
-        formTitle: "أرسل لنا رسالة", 
+        whatsappLabel: "أو ارسل رسالة على الواتس اب:",
+        whatsappBtnText: "واتساب",
+        contactName: "الاسم الكامل",
+        contactEmail: "عنوان البريد الإلكتروني",
+        contactPhone: "رقم الهاتف",
+        contactMessage: "رسالتك",
+        submitFormBtn: "إرسال الرسالة",
+        formTitle: "أرسل لنا رسالة", // <--- تم إضافة هذا المفتاح لترجمة العنوان "أرسل لنا رسالة"
         contactClosingText: "نتطلع إلى خدمتكم والرد على استفساراتكم بأسرع وقت ممكن.",
         footerText: "&copy; 2024 مجلس الشريعة للأسرة المسلمة في لندن. جميع الحقوق محفوظة.",
         geminiErrorModalLabel: "خطأ في الاتصال",
@@ -244,9 +242,9 @@ async function handleGeminiClarify(buttonElement) {
         return;
     }
 
-    loadingIndicator.style.display = 'flex'; 
-    responseArea.style.display = 'none'; 
-    responseArea.textContent = ''; 
+    loadingIndicator.style.display = 'flex';
+    responseArea.style.display = 'none';
+    responseArea.textContent = '';
     buttonElement.disabled = true;
 
     let prompt;
@@ -257,9 +255,9 @@ async function handleGeminiClarify(buttonElement) {
     }
 
     try {
-        const apiKey = ""; 
+        const apiKey = ""; // المفتاح الذي تم تركه فارغًا في الكود الأصلي
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-        
+
         let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
         const payload = { contents: chatHistory };
 
@@ -291,8 +289,8 @@ async function handleGeminiClarify(buttonElement) {
         responseArea.textContent = currentLang === 'ar' ? "حدث خطأ أثناء محاولة الحصول على توضيح. يرجى المحاولة مرة أخرى." : "An error occurred while trying to get clarification. Please try again.";
         showGeminiErrorModal();
     } finally {
-        loadingIndicator.style.display = 'none'; 
-        responseArea.style.display = 'block'; 
+        loadingIndicator.style.display = 'none';
+        responseArea.style.display = 'block';
         buttonElement.disabled = false;
     }
 }
@@ -313,21 +311,21 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.dataset.target;
-            const contentContainer = document.getElementById(targetId); 
-            const extraContentId = this.dataset.extra; 
+            const contentContainer = document.getElementById(targetId);
+            const extraContentId = this.dataset.extra;
             const extraContentElement = document.getElementById(extraContentId);
             const currentLang = document.documentElement.lang;
-            const buttonId = this.id; 
+            const buttonId = this.id;
 
             contentContainer.classList.toggle('expanded');
 
             if (contentContainer.classList.contains('expanded')) {
                 if(extraContentElement) extraContentElement.style.display = 'block';
                 let buttonLessKey;
-                if (this.classList.contains('toggle-content')) { 
-                    buttonLessKey = `${buttonId}Less`; 
-                } else { 
-                    buttonLessKey = buttonId.replace('More', 'Less'); 
+                if (this.classList.contains('toggle-content')) {
+                    buttonLessKey = `${buttonId}Less`;
+                } else {
+                    buttonLessKey = buttonId.replace('More', 'Less');
                 }
                 this.innerHTML = `${translations[currentLang][buttonLessKey]} <i class="fas fa-arrow-up"></i>`;
             } else {
@@ -336,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    
+
     document.querySelectorAll('.gemini-clarify-btn').forEach(button => {
         button.addEventListener('click', () => handleGeminiClarify(button));
     });
@@ -358,6 +356,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const currentLang = document.documentElement.lang;
             const newLang = currentLang === 'ar' ? 'en' : 'ar';
             applyTranslations(newLang);
+
+            // إضافة هذا الجزء لإغلاق شريط التنقل القابل للطي
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.getElementById('navbarNav');
+            if (navbarCollapse.classList.contains('show')) {
+                navbarToggler.click(); // يحاكي النقر على زر التبديل لإغلاقه
+            }
         });
     }
 });
@@ -374,7 +379,7 @@ document.addEventListener('scroll', () => {
     sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top;
         const viewportHeight = window.innerHeight;
-        if (sectionTop < viewportHeight - 100) { 
+        if (sectionTop < viewportHeight - 100) {
             section.classList.add('animate-in');
         }
     });
@@ -396,16 +401,16 @@ const sections = document.querySelectorAll('section[id]');
 
 window.addEventListener('scroll', () => {
     let currentSectionId = '';
-    const navbarHeight = document.getElementById('mainNavbar').offsetHeight; 
+    const navbarHeight = document.getElementById('mainNavbar').offsetHeight;
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - navbarHeight; 
+        const sectionTop = section.offsetTop - navbarHeight;
         const sectionBottom = sectionTop + section.offsetHeight;
         if (window.scrollY >= sectionTop -1 && window.scrollY < sectionBottom -1) {
             currentSectionId = section.getAttribute('id');
         }
     });
-    
+
     if (!currentSectionId && window.scrollY < sections[0].offsetTop - navbarHeight) {
         currentSectionId = 'heroSection';
     }
