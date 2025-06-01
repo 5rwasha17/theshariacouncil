@@ -6,7 +6,16 @@ const translations = {
         heroTitle: "Shariah Council for the Muslim Family in London",
         heroText: "Islamic guidance for a stable life in a safe and professional environment.",
         applyNowBtn: "Contact Us Now",
-        introSectionTitle: "Why Choose Our Shariah Council?",
+        introSectionTitle: "About Us", // Updated
+        whoWeAreSubheading: "Who We Are", // New
+        whoWeAreP1: "We are a group of scholars and Imams, graduates of Al-Azhar Al-Sharif University, the oldest Islamic university in the world. We hold a higher degree (Bachelor's) in distinguished Sharia specializations, including:", // New
+        usulAlDinHeading: "Fundamentals of Religion (Usul al-Din):", // New
+        usulAlDinText: "Study of creed, exegesis (Tafsir), and Hadith.", // New
+        shariaIslamiyaHeading: "Islamic Sharia:", // New
+        shariaIslamiyaText: "Study of Fiqh (jurisprudence), its principles (Usul al-Fiqh), and comparative law.", // New
+        whoWeAreP2: "We carry the message of knowledge and Da'wah (call to Islam), and strive to spread a moderate, enlightened understanding of Islam, based on profound knowledge and the moderate Azhari methodology.", // New
+        whoWeAreP3: "We work to provide reliable religious content, based on authentic sources, in a contemporary style that meets the needs of Muslims in their time, without negligence or extremism.", // New
+        whyChooseUsSubheading: "Why Choose Our Shariah Council?", // New - This was the old introSectionTitle
         introSectionText: "We provide reliable Islamic guidance and operate within the framework of British law, committed to transparency and justice in all our services. Our team of scholars and specialists is dedicated to serving our community and providing the necessary family support.",
         aboutFeature1Title: "Trust & Reliability", aboutFeature1Text: "We offer authentic and contemporary Islamic guidance.",
         aboutFeature2Title: "Fairness & Transparency", aboutFeature2Text: "We adhere to fairness and transparency in all our procedures and services.",
@@ -66,7 +75,16 @@ const translations = {
         heroTitle: "مجلس الشريعة للأسرة المسلمة في لندن",
         heroText: "إرشاد شرعي لحياة مستقرة في بيئة آمنة واحترافية.",
         applyNowBtn: "تواصل معنا الآن",
-        introSectionTitle: "لماذا تختار مجلس الشريعة؟",
+        introSectionTitle: "عن المجلس", // Updated
+        whoWeAreSubheading: "من نحن", // New
+        whoWeAreP1: "نحن مجموعة من العلماء والأئمة، تخرجنا في جامعة الأزهر الشريف، أعرق جامعة إسلامية في العالم. نحمل الإجازة العالية (البكالوريوس) في تخصصات شرعية رفيعة، تشمل:", // New
+        usulAlDinHeading: "أصول الدين:", // New
+        usulAlDinText: "دراسة العقيدة والتفسير والحديث الشريف.", // New
+        shariaIslamiyaHeading: "الشريعة الإسلامية:", // New
+        shariaIslamiyaText: "دراسة الفقه وأصوله والقانون المقارن.", // New
+        whoWeAreP2: "نحمل على عاتقنا رسالة العلم والدعوة، ونسعى لنشر الفهم الوسطي المستنير للإسلام، مستندين إلى العلم الراسخ والمنهج الأزهري المعتدل.", // New
+        whoWeAreP3: "نعمل على تقديم محتوى ديني موثوق، مستند إلى المصادر الأصيلة، وبأسلوب معاصر يلبي حاجات المسلمين في زمانهم، دون تفريط أو غلو.", // New
+        whyChooseUsSubheading: "لماذا تختار مجلس الشريعة؟", // New - This was the old introSectionTitle
         introSectionText: "نحن نقدم إرشادات شرعية موثوقة ونعمل ضمن إطار القانون البريطاني، ملتزمون بالشفافية والعدل في كل خدماتنا. فريقنا من العلماء والمختصين مكرس لخدمة مجتمعنا وتوفير الدعم الأسري اللازم.",
         aboutFeature1Title: "ثقة وموثوقية", aboutFeature1Text: "نقدم إرشادات شرعية تستند إلى منهج إسلامي أصيل ومعاصر.",
         aboutFeature2Title: "عدالة وشفافية", aboutFeature2Text: "نلتزم بالعدل والشفافية في جميع إجراءاتنا وخدماتنا.",
