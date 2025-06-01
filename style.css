@@ -9,6 +9,9 @@
     --text-muted: #555; /* Muted text */
     --white: #ffffff;
     --black: #000000;
+    --success-custom: #198754; /* Bootstrap success green for reference */
+    --info-custom: #0dcaf0;    /* Bootstrap info cyan for reference */
+    --danger-custom: #dc3545;   /* Bootstrap danger red for reference */
 }
 
 /* Base Styles */
@@ -168,15 +171,21 @@ section.animate-in {
   opacity: 1;
   transform: translateY(0);
 }
-section:nth-of-type(even) {
+section:nth-of-type(even) { /* About section is odd, services is even */
   background-color: var(--medium-grey); /* Alternating background */
 }
-h2 {
+#aboutSection { /* Ensure about section has the light grey background if it's the first content section */
+    background-color: var(--light-grey);
+}
+
+
+h2 { /* Main section titles e.g. عن المجلس, خدماتنا */
   font-size: 2.8rem;
   font-weight: 700;
   color: var(--primary-dark-teal);
-  margin-bottom: 40px;
+  margin-bottom: 40px; /* Reduced from 60px to 40px for tighter look with subheadings */
   position: relative;
+  text-align: center;
 }
 h2::after {
   content: '';
@@ -189,6 +198,62 @@ h2::after {
   background-color: var(--secondary-light-teal); /* Accent color underline */
   border-radius: 2px;
 }
+
+/* Sub-section titles e.g. من نحن, لماذا تختار مجلس الشريعة */
+h3 { 
+    font-size: 2.2rem; /* Slightly smaller than H2 */
+    font-weight: 600;
+    color: var(--primary-dark-teal);
+    margin-top: 40px; /* Space above H3 if it follows another block */
+    margin-bottom: 30px;
+    text-align: center;
+}
+#aboutSection > h2 { margin-bottom: 50px; } /* Ensure main title of about section has enough space */
+#aboutSection > .mb-5 > h3 { margin-top: 0; } /* First H3 in "من نحن" doesn't need extra top margin */
+
+
+/* Feature Box Styling (Used in About Us for Specializations and Why Choose Us) */
+.feature-box-wrapper .col-md-4,
+.feature-box-wrapper .col-md-6 {
+    display: flex; /* Ensures cards in a row can stretch with h-100 */
+}
+
+.feature-box { /* This is the div with p-4 shadow-sm etc. */
+    background-color: var(--white);
+    border-radius: 10px; /* Standardized border radius */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* h-100 is applied via Bootstrap for equal height */
+    /* p-4, shadow-sm, rounded are applied via Bootstrap */
+    /* text-center is applied via Bootstrap */
+}
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; /* Enhanced shadow on hover */
+}
+.feature-box i { /* Icons within feature boxes */
+    /* font-size, color, margin-bottom are set in HTML */
+}
+.feature-box h5 { /* Titles within feature boxes */
+    font-size: 1.5rem;
+    color: var(--text-dark); /* Ensure consistent color */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.feature-box p { /* Text within feature boxes */
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Custom Icon Color for specializations */
+.icon-primary-color {
+    color: var(--primary-dark-teal) !important; 
+}
+/* Specific icon colors for "Why Choose Us" if needed beyond Bootstrap text-success etc. */
+/* .text-success { color: var(--success-custom) !important; } */
+/* .text-info { color: var(--info-custom) !important; } */
+/* .text-danger { color: var(--danger-custom) !important; } */
+
 
 /* Service Cards */
 .service-card {
@@ -272,8 +337,8 @@ h2::after {
     background-color: var(--white);
     border-radius: 15px;
 }
-#fatwasSection .text-primary {
-    color: var(--primary-dark-teal) !important; /* Use primary color for fatwa titles */
+#fatwasSection .text-primary { /* Note: Bootstrap .text-primary is blue by default */
+    color: var(--primary-dark-teal) !important; /* Use primary theme color for fatwa titles */
 }
 #fatwasSection .btn-info { /* "View All Fatwas" button */
     background-color: var(--primary-dark-teal);
@@ -290,7 +355,7 @@ h2::after {
     transform: translateY(-2px);
 }
 #fatwasSection .toggle-fatwa { /* "Read More" link */
-    color: var(--primary-dark-teal) !important; /* Use primary color for "Read More" links */
+    color: var(--primary-dark-teal) !important; 
     font-weight: 600;
     text-decoration: none;
 }
@@ -303,11 +368,11 @@ h2::after {
 /* --- Content Collapse/Expand Styling (for both services and fatwas) --- */
 .service-description,
 .fatwa-content {
-  max-height: 90px;
+  max-height: 90px; /* Initial collapsed height */
   overflow: hidden;
   transition: max-height 0.7s ease-out;
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 15px; /* Space for the gradient fade */
 }
 
 .service-description.expanded,
@@ -317,28 +382,35 @@ h2::after {
 }
 
 .service-description::after,
-.fatwa-content::after {
+.fatwa-content::after { /* Fade-out effect for collapsed text */
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 30px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  height: 30px; /* Height of the fade */
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, var(--white) 100%); /* Ensure fade matches card bg */
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
+/* Adjust fade for sections with different background if cards are not on white */
+section:nth-of-type(even) .service-description::after,
+section:nth-of-type(even) .fatwa-content::after {
+    background: linear-gradient(to bottom, rgba(233, 236, 239, 0) 0%, var(--medium-grey) 100%); /* Matches --medium-grey */
+}
+
+
 .service-description.expanded::after,
 .fatwa-content.expanded::after {
-  opacity: 0;
+  opacity: 0; /* Hide fade when expanded */
 }
 
 /* Contact Section */
 #contactSection .card {
     border-radius: 15px;
 }
-#contactSection .text-primary {
-    color: var(--primary-dark-teal) !important; /* Ensure primary color for contact info */
+#contactSection .text-primary { /* Bootstrap .text-primary */
+    color: var(--primary-dark-teal) !important; /* Ensure primary theme color for contact info */
 }
 #contactSection .text-muted {
     color: var(--text-muted) !important;
@@ -399,10 +471,21 @@ h2::after {
     font-size: 1rem;
     padding: 10px 25px;
   }
-  h2 {
+  h2 { /* Main section titles */
     font-size: 2rem;
     margin-bottom: 30px;
   }
+  h3 { /* Sub-section titles */
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+  }
+  .feature-box h5 { /* Titles in feature boxes */
+      font-size: 1.3rem;
+  }
+  .feature-box p {
+      font-size: 0.9rem;
+  }
+
   .service-card {
     padding: 25px;
   }
@@ -452,7 +535,7 @@ h2::after {
   }
   .service-description,
   .fatwa-content {
-      max-height: 70px;
+      max-height: 70px; /* Adjust for smaller screens if needed */
   }
 }
 
@@ -464,8 +547,14 @@ h2::after {
   .hero-section p {
     font-size: 1.2rem;
   }
-  h2 {
+  h2 { /* Main section titles */
     font-size: 2.5rem;
+  }
+  h3 { /* Sub-section titles */
+      font-size: 2rem;
+  }
+  .feature-box h5 {
+      font-size: 1.4rem;
   }
   .service-card h4 {
     font-size: 1.6rem;
