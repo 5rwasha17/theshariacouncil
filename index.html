@@ -252,7 +252,7 @@
     <div class="col-lg-8">
         <div class="card p-4 shadow-lg border-0 text-center">
             <div class="card-body">
-                <p class="lead mb-4" id="contactIntro">يمكنكم التواصل معنا مباشرةً للحصول على المساعدة والإرشاد الشرعي.</p>
+                <p class="lead mb-4" id="contactIntro">يمكنكم التواصل معنا مباشرةً للحصول على المساعدة والإرشاد الشرعي أو استخدام النموذج أدناه.</p>
                 <p class="text-muted small mb-4" id="contactNote">ملاحظة: فريقنا يعمل حالياً عن بعد، ويتم تحويل المكالمات إلى الأجهزة المحمولة. نقدر صبركم وتفهمكم!</p>
 
                 <div class="mb-3">
@@ -276,6 +276,23 @@
                         <i class="fab fa-whatsapp me-2"></i> <span id="whatsappBtnText">واتساب</span>
                     </a>
                 </div>
+                
+                <hr class="my-5">
+
+                <h3 class="mb-4" id="formTitle">أرسل لنا رسالة</h3>
+                <form action="https://formspree.io/f/xnnvakoo" method="POST" id="contactForm">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="name" id="contactName" placeholder="الاسم الكامل" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" name="_replyto" id="contactEmail" placeholder="عنوان البريد الإلكتروني" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" name="message" id="contactMessage" rows="5" placeholder="رسالتك" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg" id="submitFormBtn">إرسال الرسالة</button>
+                </form>
+
                <p class="mt-4" id="contactClosingText">نتطلع إلى خدمتكم والرد على استفساراتكم بأسرع وقت ممكن.</p>
             </div>
         </div>
