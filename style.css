@@ -212,10 +212,16 @@ h3 { /* Sub-section titles */
     color: var(--primary-dark-teal);
     margin-top: 40px; 
     margin-bottom: 30px;
-    text-align: center;
+    /* text-align: center; */ /* تم إزالة هذه القاعدة لتخصيصها بشكل أدق */
 }
 #aboutSection > h2 { margin-bottom: 50px; } 
 #aboutSection .mb-5 > h3:first-of-type { margin-top: 0; } 
+
+/* إضافة هذه القواعد الجديدة */
+#aboutSection h3,
+#aboutSection p.lead {
+    text-align: center; /* Ensures only these text elements are centered */
+}
 
 
 /* Feature Box Styling (Used in About Us) */
@@ -229,6 +235,7 @@ h3 { /* Sub-section titles */
     border-radius: 10px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #ddd; 
+    text-align: center; /* التأكد من أن محتوى مربع الميزة يظل في المنتصف */
 }
 .feature-box:hover {
     transform: translateY(-5px);
