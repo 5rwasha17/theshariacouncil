@@ -24,7 +24,7 @@ const translations = {
         servicesSectionTitle: "Our Main Services",
         service1Title: "Islamic Marriage (Nikah)",
         service1Text: "Completing Islamic marriage contracts according to the noble Shariah rulings, and providing guidance to couples for building a stable family.",
-        service1ExtraText: "This includes documenting contracts, ensuring all pillars and conditions of Shariah are met, and offering essential advice to couples to ensure a happy and stable marital life in accordance with Islamic teachings and local laws.",
+        service1ExtraText: "This includes documenting contracts, ensuring all pillars and and conditions of Shariah are met, and offering essential advice to couples to ensure a happy and stable marital life in accordance with Islamic teachings and local laws.",
         service1Btn: "Learn More", service1BtnLess: "Show Less",
         service2Title: "Divorce & Khula",
         service2Text: "Assistance with Islamic divorce and Khula procedures, mediation between parties, and providing advice to ensure everyone's rights.",
@@ -72,9 +72,11 @@ const translations = {
         whatsappBtnText: "WhatsApp", 
         contactName: "Full Name", 
         contactEmail: "Email Address", 
-        contactPhone: "Phone Number", // Added for new phone field placeholder
+        contactPhone: "Phone Number", 
         contactMessage: "Your Message", 
-        submitFormBtn: "Send your Message", // Added for button text
+        submitFormBtn: "Send Message", 
+        // تم إضافة هذا المفتاح لترجمة العنوان "أرسل لنا رسالة"
+        formTitle: "Send Us a Message", 
         contactClosingText: "We look forward to serving you and answering your inquiries as soon as possible.",
         footerText: "&copy; 2024 Shariah Council for the Muslim Family in London. All Rights Reserved.",
         geminiErrorModalLabel: "Connection Error",
@@ -153,9 +155,11 @@ const translations = {
         whatsappBtnText: "واتساب", 
         contactName: "الاسم الكامل", 
         contactEmail: "عنوان البريد الإلكتروني", 
-        contactPhone: "رقم الهاتف", // Added for new phone field placeholder
+        contactPhone: "رقم الهاتف", 
         contactMessage: "رسالتك", 
-        submitFormBtn: "إرسال الرسالة", // Added for button text
+        submitFormBtn: "إرسال الرسالة", 
+        // تم إضافة هذا المفتاح لترجمة العنوان "أرسل لنا رسالة"
+        formTitle: "أرسل لنا رسالة", 
         contactClosingText: "نتطلع إلى خدمتكم والرد على استفساراتكم بأسرع وقت ممكن.",
         footerText: "&copy; 2024 مجلس الشريعة للأسرة المسلمة في لندن. جميع الحقوق محفوظة.",
         geminiErrorModalLabel: "خطأ في الاتصال",
@@ -181,13 +185,13 @@ function applyTranslations(lang) {
             else if (element.tagName === 'BUTTON' && element.id === 'submitFormBtn') { // Specifically handle submit button text
                 element.textContent = t[key];
             }
-            else {
+            else { // هذا هو الجزء العام الذي يتعامل مع عناصر مثل <h3>
                 element.textContent = t[key];
             }
         }
     }
-    document.documentElement.lang = lang; // Update html lang attribute
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'; // Update html dir attribute
+    document.documentElement.lang = lang; // تحديث السمة lang
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'; // تحديث السمة dir
 
     const logoImg = document.querySelector('.navbar-brand img');
     if (logoImg) {
@@ -295,7 +299,9 @@ async function handleGeminiClarify(buttonElement) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initial application of Arabic translations
+    // التأكد من تعيين اللغة والاتجاه الافتراضي عند تحميل DOM
+    document.documentElement.lang = 'ar';
+    document.documentElement.dir = 'rtl';
     applyTranslations('ar');
 
     const modalElement = document.getElementById('geminiErrorModal');
@@ -345,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add event listener for language toggle button
+    // إضافة مستمع حدث لزر تبديل اللغة
     const langToggleButton = document.getElementById('navLangToggle');
     if (langToggleButton) {
         langToggleButton.addEventListener('click', function() {
