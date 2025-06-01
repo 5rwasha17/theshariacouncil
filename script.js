@@ -186,6 +186,8 @@ function applyTranslations(lang) {
             }
         }
     }
+    document.documentElement.lang = lang; // Update html lang attribute
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'; // Update html dir attribute
 
     const logoImg = document.querySelector('.navbar-brand img');
     if (logoImg) {
@@ -293,8 +295,7 @@ async function handleGeminiClarify(buttonElement) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.documentElement.lang = 'ar';
-    document.documentElement.dir = 'rtl';
+    // Initial application of Arabic translations
     applyTranslations('ar');
 
     const modalElement = document.getElementById('geminiErrorModal');
@@ -343,6 +344,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Add event listener for language toggle button
+    const langToggleButton = document.getElementById('navLangToggle');
+    if (langToggleButton) {
+        langToggleButton.addEventListener('click', function() {
+            const currentLang = document.documentElement.lang;
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            applyTranslations(newLang);
+        });
+    }
 });
 
 document.addEventListener('scroll', () => {
