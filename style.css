@@ -521,6 +521,36 @@ h3 { /* Sub-section titles */
     font-size: 1.3em; 
 }
 
+/* Form Styling */
+#contactForm .form-control {
+    border-radius: 8px;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contactForm .form-control:focus {
+    border-color: var(--primary-dark-teal);
+    box-shadow: 0 0 0 0.25rem rgba(0, 77, 64, 0.25);
+}
+
+#contactForm .btn-primary {
+    background-color: var(--primary-dark-teal);
+    border-color: var(--primary-dark-teal);
+    color: var(--white);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+#contactForm .btn-primary:hover {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+
 /* Gemini Feature Styling */
 .gemini-feature-container {
     margin-top: 1rem;
@@ -607,10 +637,12 @@ h3 { /* Sub-section titles */
      #contactSection .card-body .lead,
      #contactSection .card-body .small,
      #contactSection .card-body .fs-5,
-     #contactSection .card-body .mt-4 {
+     #contactSection .card-body .mt-4,
+     #contactSection .card-body #formTitle {
         text-align: start;
     }
-    #contactSection .whatsapp-btn {
+    #contactSection .whatsapp-btn,
+    #contactForm .btn-primary {
         width: 100%; 
         justify-content: center;
     }
@@ -628,19 +660,19 @@ h3 { /* Sub-section titles */
     margin-bottom: 15px;
   }
   .hero-section p {
-    font-size: 1rem;
+    font-size: 1.0rem; /* Adjusted for smaller screens */
     margin-bottom: 25px;
   }
   .hero-section .btn-lg {
-    font-size: 1rem;
+    font-size: 1.0rem; /* Adjusted for smaller screens */
     padding: 10px 25px;
   }
   h2 { 
-    font-size: 2rem;
+    font-size: 2.0rem; /* Adjusted for smaller screens */
     margin-bottom: 30px;
   }
   h3 { 
-      font-size: 1.6rem;
+      font-size: 1.6rem; /* Adjusted for smaller screens */
       margin-bottom: 20px;
   }
   .feature-box h5 { 
@@ -654,7 +686,7 @@ h3 { /* Sub-section titles */
     padding: 25px;
   }
   .service-card i {
-    font-size: 3rem;
+    font-size: 3.0rem; /* Adjusted for smaller screens */
     margin-bottom: 15px;
   }
   .service-card h4 {
@@ -728,7 +760,7 @@ h3 { /* Sub-section titles */
     font-size: 2.5rem;
   }
   h3 { 
-      font-size: 2rem;
+      font-size: 2.0rem;
   }
   .feature-box h5 {
       font-size: 1.4rem;
