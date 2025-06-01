@@ -70,10 +70,10 @@ const translations = {
         emailContact: "theshariacouncil@gmail.com", 
         whatsappLabel: "Or send a message on WhatsApp:", 
         whatsappBtnText: "WhatsApp", 
-        contactName: "Full Name", // Added for placeholder translation
-        contactEmail: "Email Address", // Added for placeholder translation
+        contactName: "Full Name", 
+        contactEmail: "Email Address", 
         contactPhone: "Phone Number", // Added for new phone field placeholder
-        contactMessage: "Your Message", // Added for placeholder translation
+        contactMessage: "Your Message", 
         submitFormBtn: "Send Message", // Added for button text
         contactClosingText: "We look forward to serving you and answering your inquiries as soon as possible.",
         footerText: "&copy; 2024 Shariah Council for the Muslim Family in London. All Rights Reserved.",
@@ -151,10 +151,10 @@ const translations = {
         emailContact: "theshariacouncil@gmail.com",
         whatsappLabel: "أو ارسل رسالة على الواتس اب:", 
         whatsappBtnText: "واتساب", 
-        contactName: "الاسم الكامل", // Added for placeholder translation
-        contactEmail: "عنوان البريد الإلكتروني", // Added for placeholder translation
+        contactName: "الاسم الكامل", 
+        contactEmail: "عنوان البريد الإلكتروني", 
         contactPhone: "رقم الهاتف", // Added for new phone field placeholder
-        contactMessage: "رسالتك", // Added for placeholder translation
+        contactMessage: "رسالتك", 
         submitFormBtn: "إرسال الرسالة", // Added for button text
         contactClosingText: "نتطلع إلى خدمتكم والرد على استفساراتكم بأسرع وقت ممكن.",
         footerText: "&copy; 2024 مجلس الشريعة للأسرة المسلمة في لندن. جميع الحقوق محفوظة.",
@@ -171,15 +171,15 @@ function applyTranslations(lang) {
         const element = document.getElementById(key);
         if (element) {
             if (element.tagName === 'A' && (element.id === 'phone1' || element.id === 'phone2' || element.id === 'emailContact')) {
-                // Link text is the number/email itself
+                // Link text is the number/email itself, no need to change it
             } else if (element.id === 'navLangToggle') {
                  element.textContent = lang === 'ar' ? 'English / العربية' : 'العربية / English';
             }
-            else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA' || element.tagName === 'BUTTON') { // Updated to include BUTTON for submit text
+            else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = t[key];
-                if (element.tagName === 'BUTTON' && element.id === 'submitFormBtn') { // Specifically for the submit button
-                    element.textContent = t[key];
-                }
+            }
+            else if (element.tagName === 'BUTTON' && element.id === 'submitFormBtn') { // Specifically handle submit button text
+                element.textContent = t[key];
             }
             else {
                 element.textContent = t[key];
