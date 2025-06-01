@@ -49,7 +49,7 @@ body {
 }
 .navbar.scrolled {
   background-color: var(--dark-green); 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 .navbar-brand {
   font-weight: 700;
@@ -212,23 +212,32 @@ h3 { /* Sub-section titles */
     color: var(--primary-dark-teal);
     margin-top: 40px; 
     margin-bottom: 30px;
-    /* text-align: center; */ /* تم إزالة هذه القاعدة لتخصيصها بشكل أدق */
 }
 #aboutSection > h2 { margin-bottom: 50px; } 
 #aboutSection .mb-5 > h3:first-of-type { margin-top: 0; } 
 
-/* إضافة هذه القواعد الجديدة */
+/* قواعد جديدة لتحسين تناسق قسم "من نحن" */
 #aboutSection h3,
 #aboutSection p.lead {
-    text-align: center; /* Ensures only these text elements are centered */
+    text-align: center; /* لضمان أن هذه العناصر النصية فقط تكون في المنتصف */
 }
-
 
 /* Feature Box Styling (Used in About Us) */
 .feature-box-wrapper .col-md-4,
 .feature-box-wrapper .col-md-6 {
     display: flex; 
 }
+
+/* تعديل عرض الأعمدة لتقريب مربعات الميزات */
+@media (min-width: 768px) { /* تطبيق التعديل على الشاشات المتوسطة فما فوق */
+    .feature-box-wrapper .col-md-6 {
+        width: 45%; /* أو 48% أو 40% حسب التفضيل */
+        max-width: 45%;
+        margin-inline-end: 1%; /* تباعد خفيف بين المربعين */
+        margin-inline-start: 1%; /* تباعد خفيف بين المربعين */
+    }
+}
+
 
 .feature-box { 
     background-color: var(--white);
@@ -542,10 +551,6 @@ h3 { /* Sub-section titles */
     width: 1.2rem;
     height: 1.2rem;
     color: var(--primary-dark-teal);
-}
-.gemini-loading-indicator .gemini-loading-text {
-    color: var(--text-muted);
-    font-size: 0.9rem;
 }
 [dir="rtl"] .gemini-loading-indicator .spinner-border {
     margin-left: 0.5rem;
