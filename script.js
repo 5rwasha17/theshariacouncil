@@ -48,9 +48,9 @@ const translations = {
         service6Btn: "Learn More", service6BtnLess: "Show Less",
 
         gallerySectionTitle: "Image Gallery",
-        galleryImageCaption1: "صورة مع بعض الشخصيات السياسية وعضو مجلس العمال في مجلس العموم البريطاني وبعض الشخصيات الدينية في لندن.",
-        galleryImageCaption2: "لقطة من إحدى الفعاليات التي شارك فيها المجلس.",
-        galleryImageCaption3: "صورة لأعضاء المجلس خلال إحدى المناسبات الهامة.",
+        galleryImageCaption1: "Photo with political and religious figures, and a Labour Party member of the British House of Commons in London.",
+        galleryImageCaption2: "A snapshot from one of the events we participated in Britain.",
+        galleryImageCaption3: "During the marriage contract of a Malaysian bride and groom from the Malaysian community in London.",
 
         fatwasSectionTitle: "Latest Fatwas & Articles", fatwasSectionText: "Explore our growing library of fatwas and articles covering various aspects of Muslim life.",
         fatwaTitle2: "Building a Happy Family in the West",
@@ -131,8 +131,8 @@ const translations = {
 
         gallerySectionTitle: "معرض الصور",
         galleryImageCaption1: "صورة مع بعض الشخصيات السياسية وعضو مجلس العمال في مجلس العموم البريطاني وبعض الشخصيات الدينية في لندن.",
-        galleryImageCaption2: "لقطة من إحدى الفعاليات التي شارك فيها المجلس.",
-        galleryImageCaption3: "صورة لأعضاء المجلس خلال إحدى المناسبات الهامة.",
+        galleryImageCaption2: "لقطة من إحدى الفعاليات التي شاركنا فيها في بريطانيا.",
+        galleryImageCaption3: "خلال عقد قران عريس وعروسة من الجالية الماليزية في لندن.",
 
         fatwasSectionTitle: "فتاوى ومقالات حديثة", fatwasSectionText: "استكشف مكتبتنا المتنامية من الفتاوى والمقالات التي تغطي جوانب متعددة من حياة المسلم.",
         fatwaTitle2: "بناء أسرة سعيدة في الغرب",
@@ -190,6 +190,12 @@ function applyTranslations(lang) {
     }
     document.documentElement.lang = lang; // تحديث السمة lang
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'; // تحديث السمة dir
+
+    // Update gallery image captions
+    document.getElementById('galleryImageCaption1').textContent = t.galleryImageCaption1; //cite: 2
+    document.getElementById('galleryImageCaption2').textContent = t.galleryImageCaption2; //cite: 2
+    document.getElementById('galleryImageCaption3').textContent = t.galleryImageCaption3; //cite: 2
+
 
     const logoImg = document.querySelector('.navbar-brand img');
     if (logoImg) {
