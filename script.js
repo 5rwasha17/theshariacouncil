@@ -261,7 +261,7 @@ async function handleGeminiClarify(buttonElement) {
     }
 
     try {
-        const apiKey = ""; // المفتاح الذي تم تركه فارغًا في الكود الأصلي
+        const apiKey = "AIzaSyDwwEnjkcDxnREl2po1cr-Mo-ZaTRIr0Aw"; // المفتاح الذي تم تركه فارغًا في الكود الأصلي
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
         let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
