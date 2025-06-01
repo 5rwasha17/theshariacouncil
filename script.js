@@ -7,15 +7,15 @@ const translations = {
         heroText: "Islamic guidance for a stable life in a safe and professional environment.",
         applyNowBtn: "Contact Us Now",
         introSectionTitle: "About Us", // Updated
-        whoWeAreSubheading: "Who We Are", // New
-        whoWeAreP1: "We are a group of scholars and Imams, graduates of Al-Azhar Al-Sharif University, the oldest Islamic university in the world. We hold a higher degree (Bachelor's) in distinguished Sharia specializations, including:", // New
-        usulAlDinHeading: "Fundamentals of Religion (Usul al-Din):", // New
-        usulAlDinText: "Study of creed, exegesis (Tafsir), and Hadith.", // New
-        shariaIslamiyaHeading: "Islamic Sharia:", // New
-        shariaIslamiyaText: "Study of Fiqh (jurisprudence), its principles (Usul al-Fiqh), and comparative law.", // New
-        whoWeAreP2: "We carry the message of knowledge and Da'wah (call to Islam), and strive to spread a moderate, enlightened understanding of Islam, based on profound knowledge and the moderate Azhari methodology.", // New
-        whoWeAreP3: "We work to provide reliable religious content, based on authentic sources, in a contemporary style that meets the needs of Muslims in their time, without negligence or extremism.", // New
-        whyChooseUsSubheading: "Why Choose Our Shariah Council?", // New - This was the old introSectionTitle
+        whoWeAreSubheading: "Who We Are", 
+        whoWeAreP1: "We are a group of scholars and Imams, graduates of Al-Azhar Al-Sharif University, the oldest Islamic university in the world. We hold a higher degree (Bachelor's) in distinguished Sharia specializations, including:", 
+        usulAlDinHeading: "Fundamentals of Religion (Usul al-Din)", // Colon removed
+        usulAlDinText: "Study of creed, exegesis (Tafsir), and Hadith.", 
+        shariaIslamiyaHeading: "Islamic Sharia", // Colon removed
+        shariaIslamiyaText: "Study of Fiqh (jurisprudence), its principles (Usul al-Fiqh), and comparative law.", 
+        whoWeAreP2: "We carry the message of knowledge and Da'wah (call to Islam), and strive to spread a moderate, enlightened understanding of Islam, based on profound knowledge and the moderate Azhari methodology.", 
+        whoWeAreP3: "We work to provide reliable religious content, based on authentic sources, in a contemporary style that meets the needs of Muslims in their time, without negligence or extremism.", 
+        whyChooseUsSubheading: "Why Choose Our Shariah Council?", 
         introSectionText: "We provide reliable Islamic guidance and operate within the framework of British law, committed to transparency and justice in all our services. Our team of scholars and specialists is dedicated to serving our community and providing the necessary family support.",
         aboutFeature1Title: "Trust & Reliability", aboutFeature1Text: "We offer authentic and contemporary Islamic guidance.",
         aboutFeature2Title: "Fairness & Transparency", aboutFeature2Text: "We adhere to fairness and transparency in all our procedures and services.",
@@ -76,15 +76,15 @@ const translations = {
         heroText: "إرشاد شرعي لحياة مستقرة في بيئة آمنة واحترافية.",
         applyNowBtn: "تواصل معنا الآن",
         introSectionTitle: "عن المجلس", // Updated
-        whoWeAreSubheading: "من نحن", // New
-        whoWeAreP1: "نحن مجموعة من العلماء والأئمة، تخرجنا في جامعة الأزهر الشريف، أعرق جامعة إسلامية في العالم. نحمل الإجازة العالية (البكالوريوس) في تخصصات شرعية رفيعة، تشمل:", // New
-        usulAlDinHeading: "أصول الدين:", // New
-        usulAlDinText: "دراسة العقيدة والتفسير والحديث الشريف.", // New
-        shariaIslamiyaHeading: "الشريعة الإسلامية:", // New
-        shariaIslamiyaText: "دراسة الفقه وأصوله والقانون المقارن.", // New
-        whoWeAreP2: "نحمل على عاتقنا رسالة العلم والدعوة، ونسعى لنشر الفهم الوسطي المستنير للإسلام، مستندين إلى العلم الراسخ والمنهج الأزهري المعتدل.", // New
-        whoWeAreP3: "نعمل على تقديم محتوى ديني موثوق، مستند إلى المصادر الأصيلة، وبأسلوب معاصر يلبي حاجات المسلمين في زمانهم، دون تفريط أو غلو.", // New
-        whyChooseUsSubheading: "لماذا تختار مجلس الشريعة؟", // New - This was the old introSectionTitle
+        whoWeAreSubheading: "من نحن", 
+        whoWeAreP1: "نحن مجموعة من العلماء والأئمة، تخرجنا في جامعة الأزهر الشريف، أعرق جامعة إسلامية في العالم. نحمل الإجازة العالية (البكالوريوس) في تخصصات شرعية رفيعة، تشمل:", 
+        usulAlDinHeading: "أصول الدين", // Colon removed
+        usulAlDinText: "دراسة العقيدة والتفسير والحديث الشريف.", 
+        shariaIslamiyaHeading: "الشريعة الإسلامية", // Colon removed
+        shariaIslamiyaText: "دراسة الفقه وأصوله والقانون المقارن.", 
+        whoWeAreP2: "نحمل على عاتقنا رسالة العلم والدعوة، ونسعى لنشر الفهم الوسطي المستنير للإسلام، مستندين إلى العلم الراسخ والمنهج الأزهري المعتدل.", 
+        whoWeAreP3: "نعمل على تقديم محتوى ديني موثوق، مستند إلى المصادر الأصيلة، وبأسلوب معاصر يلبي حاجات المسلمين في زمانهم، دون تفريط أو غلو.", 
+        whyChooseUsSubheading: "لماذا تختار مجلس الشريعة؟", 
         introSectionText: "نحن نقدم إرشادات شرعية موثوقة ونعمل ضمن إطار القانون البريطاني، ملتزمون بالشفافية والعدل في كل خدماتنا. فريقنا من العلماء والمختصين مكرس لخدمة مجتمعنا وتوفير الدعم الأسري اللازم.",
         aboutFeature1Title: "ثقة وموثوقية", aboutFeature1Text: "نقدم إرشادات شرعية تستند إلى منهج إسلامي أصيل ومعاصر.",
         aboutFeature2Title: "عدالة وشفافية", aboutFeature2Text: "نلتزم بالعدل والشفافية في جميع إجراءاتنا وخدماتنا.",
@@ -177,8 +177,21 @@ function toggleLanguage() {
 
     document.querySelectorAll('.toggle-content, .toggle-fatwa').forEach(button => {
         const currentLang = document.documentElement.lang;
-        const buttonTextKey = button.id;
-        button.innerHTML = `${translations[currentLang][buttonTextKey]} <i class="fas fa-arrow-right"></i>`;
+        const buttonTextKey = button.id; // This assumes button ID matches translation key
+        let buttonBaseTextKey = buttonTextKey;
+
+        // For service buttons, the ID might be 'service1Btn', 'service2Btn', etc.
+        // For fatwa buttons, the ID might be 'readMore2', etc.
+        // Ensure we use the correct base key if the state was 'Less'
+        if (this.classList.contains('toggle-content')) {
+             // e.g. service1BtnLess should revert to service1Btn for translation
+            buttonBaseTextKey = buttonId.replace('Less', '');
+        } else if (this.classList.contains('toggle-fatwa')) {
+            // e.g. readLess2 should revert to readMore2 for translation
+            buttonBaseTextKey = buttonId.replace('Less', 'More');
+        }
+
+        button.innerHTML = `${translations[currentLang][buttonBaseTextKey]} <i class="fas fa-arrow-right"></i>`;
     });
 }
 
@@ -196,24 +209,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetId = this.dataset.target;
             const content = document.getElementById(targetId);
             const currentLang = document.documentElement.lang;
-            const buttonId = this.id;
+            const buttonId = this.id; // e.g., service1Btn, readMore2
 
             if (content.classList.contains('expanded')) {
                 content.classList.remove('expanded');
-                if (this.classList.contains('toggle-content')) {
-                    this.innerHTML = `${translations[currentLang][buttonId]} <i class="fas fa-arrow-right"></i>`;
-                } else if (this.classList.contains('toggle-fatwa')) {
-                    this.innerHTML = `${translations[currentLang][buttonId]} <i class="fas fa-arrow-right"></i>`;
-                }
+                // Text for "Learn More" or "Read More"
+                this.innerHTML = `${translations[currentLang][buttonId]} <i class="fas fa-arrow-right"></i>`;
             } else {
                 content.classList.add('expanded');
-                if (this.classList.contains('toggle-content')) {
-                    const buttonLessKey = `${buttonId}Less`;
-                    this.innerHTML = `${translations[currentLang][buttonLessKey]} <i class="fas fa-arrow-up"></i>`;
-                } else if (this.classList.contains('toggle-fatwa')) {
-                    const readLessKey = buttonId.replace('readMore', 'readLess');
-                    this.innerHTML = `${translations[currentLang][readLessKey]} <i class="fas fa-arrow-up"></i>`;
+                let buttonLessKey;
+                if (this.classList.contains('toggle-content')) { // Service buttons
+                    buttonLessKey = `${buttonId}Less`; // e.g., service1BtnLess
+                } else { // Fatwa buttons
+                    buttonLessKey = buttonId.replace('More', 'Less'); // e.g., readLess2
                 }
+                this.innerHTML = `${translations[currentLang][buttonLessKey]} <i class="fas fa-arrow-up"></i>`;
             }
         });
     });
@@ -271,7 +281,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Set active class on navbar links based on scroll position
 const navLinks = document.querySelectorAll('.navbar .nav-link');
-const sections = document.querySelectorAll('section');
+const sections = document.querySelectorAll('section[id]'); // Ensure sections have IDs
 
 window.addEventListener('scroll', () => {
     let current = '';
@@ -279,9 +289,10 @@ window.addEventListener('scroll', () => {
     const scrollY = window.pageYOffset;
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - navbarHeight;
+        const sectionTop = section.offsetTop - navbarHeight; // Adjust for sticky navbar
         const sectionHeight = section.offsetHeight;
-
+        
+        // Check if section is in view (adjust threshold as needed, e.g., sectionTop - 50)
         if (scrollY >= sectionTop - 50 && scrollY < sectionTop + sectionHeight - 50) {
             current = section.getAttribute('id');
         }
@@ -289,8 +300,14 @@ window.addEventListener('scroll', () => {
 
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') && link.getAttribute('href').includes(current)) {
+        // Check if link's href matches the current section ID
+        if (link.getAttribute('href') && link.getAttribute('href').substring(1) === current) {
             link.classList.add('active');
         }
     });
+     // Special case for home link when at the top
+    if (current === 'heroSection' || scrollY < sections[0].offsetTop - navbarHeight - 50) {
+        const homeLink = document.querySelector('.nav-link[href="#heroSection"]');
+        if (homeLink) homeLink.classList.add('active');
+    }
 });
