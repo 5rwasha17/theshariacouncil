@@ -72,7 +72,9 @@ const translations = {
         whatsappBtnText: "WhatsApp", 
         contactName: "Full Name", // Added for placeholder translation
         contactEmail: "Email Address", // Added for placeholder translation
+        contactPhone: "Phone Number", // Added for new phone field placeholder
         contactMessage: "Your Message", // Added for placeholder translation
+        submitFormBtn: "Send Message", // Added for button text
         contactClosingText: "We look forward to serving you and answering your inquiries as soon as possible.",
         footerText: "&copy; 2024 Shariah Council for the Muslim Family in London. All Rights Reserved.",
         geminiErrorModalLabel: "Connection Error",
@@ -151,7 +153,9 @@ const translations = {
         whatsappBtnText: "واتساب", 
         contactName: "الاسم الكامل", // Added for placeholder translation
         contactEmail: "عنوان البريد الإلكتروني", // Added for placeholder translation
+        contactPhone: "رقم الهاتف", // Added for new phone field placeholder
         contactMessage: "رسالتك", // Added for placeholder translation
+        submitFormBtn: "إرسال الرسالة", // Added for button text
         contactClosingText: "نتطلع إلى خدمتكم والرد على استفساراتكم بأسرع وقت ممكن.",
         footerText: "&copy; 2024 مجلس الشريعة للأسرة المسلمة في لندن. جميع الحقوق محفوظة.",
         geminiErrorModalLabel: "خطأ في الاتصال",
@@ -171,8 +175,11 @@ function applyTranslations(lang) {
             } else if (element.id === 'navLangToggle') {
                  element.textContent = lang === 'ar' ? 'English / العربية' : 'العربية / English';
             }
-            else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') { // Added for placeholder translation
+            else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA' || element.tagName === 'BUTTON') { // Updated to include BUTTON for submit text
                 element.placeholder = t[key];
+                if (element.tagName === 'BUTTON' && element.id === 'submitFormBtn') { // Specifically for the submit button
+                    element.textContent = t[key];
+                }
             }
             else {
                 element.textContent = t[key];
