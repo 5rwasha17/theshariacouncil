@@ -57,8 +57,8 @@ const translations = {
         fatwaText2: "Tips and guidance for addressing contemporary family challenges. In this article, we discuss how to maintain Islamic identity in Western societies, the importance of family communication, and building a positive educational environment for children.",
         fatwaExtraText2: "We offer practical solutions for facing difficulties that Muslim families may encounter, such as reconciling Islamic values with the surrounding societal culture, and enhancing the role of mosques and Islamic centers in supporting the family and providing spiritual and social support. We also focus on the importance of Islamic upbringing for children amidst modern challenges, and ways to instill good values and ethics in them to become righteous individuals in society.",
         readMore2: "Read More", readLess2: "Show Less",
-        geminiBtnTextFatwa2: "✨ Request Clarification", // New
-        geminiLoadingTextFatwa2: "Processing your request...", // New
+        geminiBtnTextFatwa2: "✨ Request Clarification", 
+        geminiLoadingTextFatwa2: "Processing your request...", 
         viewAllFatwas: "View All Fatwas & Articles",
         contactSectionTitle: "Contact Us",
         contactIntro: "You can contact us directly for assistance and Islamic guidance.",
@@ -133,8 +133,8 @@ const translations = {
         fatwaText2: "نصائح وإرشادات للتعامل مع التحديات الأسرية المعاصرة. نتناول في هذا المقال كيفية الحفاظ على الهوية الإسلامية في المجتمعات الغربية، وأهمية التواصل الأسري، وبناء بيئة تعليمية إيجابية للأطفال.",
         fatwaExtraText2: "نقدم حلولاً عملية لمواجهة الصعوبات التي قد تواجه الأسر المسلمة، مثل التوفيق بين القيم الإسلامية وثقافة المجتمع المحيط، وتعزيز دور المسجد والمراكز الإسلامية في دعم الأسرة وتوفير الدعم الروحي والاجتماعي. كما نركز على أهمية التربية الإسلامية للأبناء في ظل التحديات الحديثة، وسبل غرس القيم والأخلاق الحميدة في نفوسهم ليكونوا أفراداً صالحين في المجتمع.",
         readMore2: "اقرأ المزيد", readLess2: "أقل",
-        geminiBtnTextFatwa2: "✨ اطلب توضيحًا", // New
-        geminiLoadingTextFatwa2: "جاري معالجة طلبك...", // New
+        geminiBtnTextFatwa2: "✨ اطلب توضيحًا", 
+        geminiLoadingTextFatwa2: "جاري معالجة طلبك...", 
         viewAllFatwas: "عرض جميع الفتاوى والمقالات",
         contactSectionTitle: "تواصل معنا",
         contactIntro: "يمكنكم التواصل معنا مباشرةً للحصول على المساعدة والإرشاد الشرعي.",
@@ -187,7 +187,7 @@ function toggleLanguage() {
     applyTranslations(targetLang);
 
     document.querySelectorAll('.toggle-content, .toggle-fatwa').forEach(button => {
-        const currentLang = document.documentElement.lang; // Use targetLang for consistency after switch
+        const currentLang = document.documentElement.lang; 
         const buttonId = button.id; 
         let baseKey = buttonId;
         
@@ -199,7 +199,7 @@ function toggleLanguage() {
 
         const contentTargetId = button.dataset.target;
         const contentElement = document.getElementById(contentTargetId);
-        const extraContentId = button.dataset.extra; // Get the ID of the extra content
+        const extraContentId = button.dataset.extra; 
         const extraContentElement = document.getElementById(extraContentId);
         
         if (contentElement && contentElement.classList.contains('expanded')) {
@@ -226,7 +226,6 @@ function showGeminiErrorModal() {
         if (!geminiErrorModalInstance) {
             geminiErrorModalInstance = new bootstrap.Modal(modalElement);
         }
-        // Update modal text based on current language before showing
         const currentLang = document.documentElement.lang || 'ar';
         document.getElementById('geminiErrorModalLabel').textContent = translations[currentLang].geminiErrorModalLabel;
         document.getElementById('geminiErrorModalBody').textContent = translations[currentLang].geminiErrorModalBody;
@@ -264,9 +263,9 @@ async function handleGeminiClarify(buttonElement) {
         return;
     }
 
-    loadingIndicator.style.display = 'flex'; // Show loading
-    responseArea.style.display = 'none'; // Hide previous response
-    responseArea.textContent = ''; // Clear previous response
+    loadingIndicator.style.display = 'flex'; 
+    responseArea.style.display = 'none'; 
+    responseArea.textContent = ''; 
     buttonElement.disabled = true;
 
     let prompt;
@@ -277,7 +276,7 @@ async function handleGeminiClarify(buttonElement) {
     }
 
     try {
-        const apiKey = ""; // API Key will be injected by the environment
+        const apiKey = ""; 
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
         
         let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
@@ -311,8 +310,8 @@ async function handleGeminiClarify(buttonElement) {
         responseArea.textContent = currentLang === 'ar' ? "حدث خطأ أثناء محاولة الحصول على توضيح. يرجى المحاولة مرة أخرى." : "An error occurred while trying to get clarification. Please try again.";
         showGeminiErrorModal();
     } finally {
-        loadingIndicator.style.display = 'none'; // Hide loading
-        responseArea.style.display = 'block'; // Show response area
+        loadingIndicator.style.display = 'none'; 
+        responseArea.style.display = 'block'; 
         buttonElement.disabled = false;
     }
 }
@@ -323,20 +322,17 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.dir = 'rtl';
     applyTranslations('ar');
 
-    // Initialize Bootstrap Modal instance for error display
     const modalElement = document.getElementById('geminiErrorModal');
     if (modalElement) {
         geminiErrorModalInstance = new bootstrap.Modal(modalElement);
     }
 
-
-    // Event listeners for "Learn More" / "Read More" buttons
     document.querySelectorAll('.toggle-content, .toggle-fatwa').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.dataset.target;
-            const contentContainer = document.getElementById(targetId); // This is the .service-description or .fatwa-content
-            const extraContentId = this.dataset.extra; // ID of the .collapse-content div
+            const contentContainer = document.getElementById(targetId); 
+            const extraContentId = this.dataset.extra; 
             const extraContentElement = document.getElementById(extraContentId);
             const currentLang = document.documentElement.lang;
             const buttonId = this.id; 
@@ -359,13 +355,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Event listeners for Gemini clarify buttons
     document.querySelectorAll('.gemini-clarify-btn').forEach(button => {
         button.addEventListener('click', () => handleGeminiClarify(button));
     });
 
-
-    // Navbar link click handling
     document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
         link.addEventListener('click', () => {
             const navbarToggler = document.querySelector('.navbar-toggler');
@@ -377,7 +370,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Navbar Sticky and Scroll Animation
 document.addEventListener('scroll', () => {
     const navbar = document.getElementById('mainNavbar');
     if (window.scrollY > 50) {
@@ -396,7 +388,6 @@ document.addEventListener('scroll', () => {
     });
 });
 
-// Smooth Scrolling for Navbar links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -408,7 +399,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Set active class on navbar links based on scroll position
 const navLinks = document.querySelectorAll('.navbar .nav-link');
 const sections = document.querySelectorAll('section[id]');
 
