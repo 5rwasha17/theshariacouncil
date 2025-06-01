@@ -408,13 +408,13 @@ h3 { /* Sub-section titles */
 #fatwasSection .fatwa-content {
     max-height: 80px; 
 }
-.collapse-content { /* Ensure this is part of the collapsible area */
-    padding-top: 10px; /* Add some space if it's directly after the main p */
+.collapse-content { 
+    padding-top: 10px; 
 }
 
 .service-description.expanded,
 .fatwa-content.expanded {
-  max-height: 800px; /* Increased max height for potentially long content */
+  max-height: 800px; 
 }
 
 .service-description::after,
@@ -524,12 +524,12 @@ h3 { /* Sub-section titles */
     border-color: var(--gemini-btn-hover-bg);
 }
 .gemini-response-area {
-    background-color: #f8f9fa; /* A light off-white for the response area */
+    background-color: #f8f9fa; 
     border: 1px solid #dee2e6;
     border-radius: .25rem;
     font-size: 0.95rem;
     line-height: 1.6;
-    white-space: pre-wrap; /* Preserve line breaks from Gemini response */
+    white-space: pre-wrap; 
 }
 .gemini-loading-indicator .spinner-border {
     width: 1.2rem;
