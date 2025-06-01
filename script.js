@@ -130,7 +130,7 @@ const translations = {
         service6Btn: "تعرف على المزيد", service6BtnLess: "أقل",
 
         gallerySectionTitle: "معرض الصور",
-        galleryImageCaption1: "صورة مع بعض الشخصيات السياسية وعضو مجلس العمال في مجلس العموم البريطاني وبعض الشخصيات الدينية في لندن.",
+        galleryImageCaption1: "صورة مع بعض الشخصيات السياسية وعضو حزب العمال في مجلس العموم البريطاني وبعض الشخصيات الدينية في لندن.",
         galleryImageCaption2: "لقطة من إحدى الفعاليات التي شاركنا فيها في بريطانيا.",
         galleryImageCaption3: "خلال عقد قران عريس وعروسة من الجالية الماليزية في لندن.",
 
@@ -138,31 +138,31 @@ const translations = {
         fatwaTitle2: "بناء أسرة سعيدة في الغرب",
         fatwaText2: "نصائح وإرشادات للتعامل مع التحديات الأسرية المعاصرة. نتناول في هذا المقال كيفية الحفاظ على الهوية الإسلامية في المجتمعات الغربية، وأهمية التواصل الأسري، وبناء بيئة تعليمية إيجابية للأطفال.",
         fatwaExtraText2: "نقدم حلولاً عملية لمواجهة الصعوبات التي قد تواجه الأسر المسلمة، مثل التوفيق بين القيم الإسلامية وثقافة المجتمع المحيط، وتعزيز دور المسجد والمراكز الإسلامية في دعم الأسرة وتوفير الدعم الروحي والاجتماعي. كما نركز على أهمية التربية الإسلامية للأبناء في ظل التحديات الحديثة، وسبل غرس القيم والأخلاق الحميدة في نفوسهم ليكونوا أفراداً صالحين في المجتمع.",
-        readMore2: "اقرأ المزيد", readLess2: "أقل",
-        geminiBtnTextFatwa2: "✨ اطلب توضيحًا",
-        geminiLoadingTextFatwa2: "جاري معالجة طلبك...",
-        viewAllFatwas: "عرض جميع الفتاوى والمقالات",
-        contactSectionTitle: "تواصل معنا",
-        contactIntro: "يمكنكم التواصل معنا مباشرةً للحصول على المساعدة والإرشاد الشرعي.",
-        contactNote: "ملاحظة: فريقنا يعمل حالياً عن بعد، ويتم تحويل المكالمات إلى الأجهزة المحمولة. نقدر صبركم وتفهمكم!",
-        directPhoneLabel: "للتواصل عبر الهاتف:",
+        readMore2: "Read More", readLess2: "Show Less",
+        geminiBtnTextFatwa2: "✨ Request Clarification",
+        geminiLoadingTextFatwa2: "Processing your request...",
+        viewAllFatwas: "View All Fatwas & Articles",
+        contactSectionTitle: "Contact Us",
+        contactIntro: "You can contact us directly for assistance and Islamic guidance.",
+        contactNote: "Note: Our team currently works remotely, and calls are redirected to mobile devices. We appreciate your patience and understanding!",
+        directPhoneLabel: "Contact us by phone:",
         phone1: "00447404949128",
         phone2: "00447450209680",
-        directEmailLabel: "للتواصل عبر البريد الإلكتروني:",
+        directEmailLabel: "Or by email:",
         emailContact: "theshariacouncil@gmail.com",
-        whatsappLabel: "أو ارسل رسالة على الواتس اب:",
-        whatsappBtnText: "واتساب",
-        contactName: "الاسم الكامل",
-        contactEmail: "عنوان البريد الإلكتروني",
-        contactPhone: "رقم الهاتف",
-        contactMessage: "رسالتك",
-        submitFormBtn: "إرسال الرسالة",
-        formTitle: "أرسل لنا رسالة",
-        contactClosingText: "نتطلع إلى خدمتكم والرد على استفساراتكم بأسرع وقت ممكن.",
-        footerText: "&copy; 2024 مجلس الشريعة للأسرة المسلمة في لندن. جميع الحقوق محفوظة.",
-        geminiErrorModalLabel: "خطأ في الاتصال",
-        geminiErrorModalBody: "عذرًا، حدث خطأ أثناء محاولة معالجة طلبك. يرجى المحاولة مرة أخرى لاحقًا.",
-        geminiErrorModalCloseBtn: "إغلاق"
+        whatsappLabel: "Or send a message on WhatsApp:",
+        whatsappBtnText: "WhatsApp",
+        contactName: "Full Name",
+        contactEmail: "Email Address",
+        contactPhone: "Phone Number",
+        contactMessage: "Your Message",
+        submitFormBtn: "Send Message",
+        formTitle: "Send Us a Message",
+        contactClosingText: "We look forward to serving you and answering your inquiries as soon as possible.",
+        footerText: "&copy; 2024 Shariah Council for the Muslim Family in London. All Rights Reserved.",
+        geminiErrorModalLabel: "Connection Error",
+        geminiErrorModalBody: "Sorry, an error occurred while trying to process your request. Please try again later.",
+        geminiErrorModalCloseBtn: "Close"
     }
 };
 
@@ -192,9 +192,9 @@ function applyTranslations(lang) {
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'; // تحديث السمة dir
 
     // Update gallery image captions
-    document.getElementById('galleryImageCaption1').textContent = t.galleryImageCaption1; //cite: 2
-    document.getElementById('galleryImageCaption2').textContent = t.galleryImageCaption2; //cite: 2
-    document.getElementById('galleryImageCaption3').textContent = t.galleryImageCaption3; //cite: 2
+    document.getElementById('galleryImageCaption1').textContent = t.galleryImageCaption1;
+    document.getElementById('galleryImageCaption2').textContent = t.galleryImageCaption2;
+    document.getElementById('galleryImageCaption3').textContent = t.galleryImageCaption3;
 
 
     const logoImg = document.querySelector('.navbar-brand img');
