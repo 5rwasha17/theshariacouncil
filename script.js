@@ -51,7 +51,7 @@ const translations = {
         galleryImageCaption1: "Meeting with BBC in London.",
         galleryImageCaption2: "A snapshot from one of the events we participated in Britain.",
         galleryImageCaption3: "During the marriage contract of a Malaysian bride and groom from the Malaysian community in London.",
-        galleryImageCaption4: "Additional Image 1.",
+        galleryImageCaption4: "Lecture on the Family in Islam.", // Updated
         galleryImageCaption5: "Additional Image 2.",
         galleryImageCaption6: "Additional Image 3.",
 
@@ -136,7 +136,7 @@ const translations = {
         galleryImageCaption1: "لقاء مع قناة BBC في لندن.",
         galleryImageCaption2: "لقطة من إحدى الفعاليات التي شاركنا فيها في بريطانيا.",
         galleryImageCaption3: "خلال عقد قران عريس وعروسة من الجالية الماليزية في لندن.",
-        galleryImageCaption4: "صورة إضافية 1.",
+        galleryImageCaption4: "محاضرة عن الاسرة في الاسلام", // Updated
         galleryImageCaption5: "صورة إضافية 2.",
         galleryImageCaption6: "صورة إضافية 3.",
 
