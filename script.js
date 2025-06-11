@@ -48,7 +48,7 @@ const translations = {
         service6Btn: "Learn More", service6BtnLess: "Show Less",
 
         gallerySectionTitle: "Image Gallery",
-        galleryImageCaption1: "Photo with political and religious figures, and a Labour Party member of the British House of Commons in London.",
+        galleryImageCaption1: "Meeting with BBC in London.",
         galleryImageCaption2: "A snapshot from one of the events we participated in Britain.",
         galleryImageCaption3: "During the marriage contract of a Malaysian bride and groom from the Malaysian community in London.",
 
@@ -130,7 +130,7 @@ const translations = {
         service6Btn: "تعرف على المزيد", service6BtnLess: "أقل",
 
         gallerySectionTitle: "معرض الصور",
-        galleryImageCaption1: "صورة مع بعض الشخصيات السياسية وعضو حزب العمال في مجلس العموم البريطاني وبعض الشخصيات الدينية في لندن.",
+        galleryImageCaption1: "لقاء مع قناة BBC في لندن.",
         galleryImageCaption2: "لقطة من إحدى الفعاليات التي شاركنا فيها في بريطانيا.",
         galleryImageCaption3: "خلال عقد قران عريس وعروسة من الجالية الماليزية في لندن.",
 
