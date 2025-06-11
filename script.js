@@ -48,12 +48,14 @@ const translations = {
         service6Btn: "Learn More", service6BtnLess: "Show Less",
 
         gallerySectionTitle: "Image Gallery",
-        galleryImageCaption1: "Meeting with BBC in London.",
-        galleryImageCaption2: "A snapshot from one of the events we participated in Britain.",
-        galleryImageCaption3: "During the marriage contract of a Malaysian bride and groom from the Malaysian community in London.",
-        galleryImageCaption4: "Lecture on the Family in Islam.", // Updated
-        galleryImageCaption5: "Additional Image 2.",
-        galleryImageCaption6: "Additional Image 3.",
+        // Updated gallery image captions
+        galleryImageCaption1: "Lecture on the Family in Islam.",
+        galleryImageCaption2: "Meeting with BBC in London.",
+        galleryImageCaption3: "With the international reciter Dr. Abdullah Matroud.",
+        galleryImageCaption4: "A snapshot from one of the events we participated in Britain.",
+        galleryImageCaption5: "During the marriage contract of a Malaysian bride and groom from the Malaysian community in London.",
+        galleryImageCaption6: "Additional Image 1.",
+        galleryImageCaption7: "Additional Image 3.",
 
         fatwasSectionTitle: "Latest Fatwas & Articles", fatwasSectionText: "Explore our growing library of fatwas and articles covering various aspects of Muslim life.",
         fatwaTitle2: "Building a Happy Family in the West",
@@ -133,12 +135,14 @@ const translations = {
         service6Btn: "تعرف على المزيد", service6BtnLess: "أقل",
 
         gallerySectionTitle: "معرض الصور",
-        galleryImageCaption1: "لقاء مع قناة BBC في لندن.",
-        galleryImageCaption2: "لقطة من إحدى الفعاليات التي شاركنا فيها في بريطانيا.",
-        galleryImageCaption3: "خلال عقد قران عريس وعروسة من الجالية الماليزية في لندن.",
-        galleryImageCaption4: "محاضرة عن الاسرة في الاسلام", // Updated
-        galleryImageCaption5: "صورة إضافية 2.",
-        galleryImageCaption6: "صورة إضافية 3.",
+        // Updated gallery image captions
+        galleryImageCaption1: "محاضرة عن الاسرة في الاسلام",
+        galleryImageCaption2: "لقاء مع قناة BBC في لندن.",
+        galleryImageCaption3: "مع القاريء العالمي الدكتور عبد الله مطرود",
+        galleryImageCaption4: "لقطة من إحدى الفعاليات التي شارك فيها المجلس.",
+        galleryImageCaption5: "صورة لأعضاء المجلس خلال إحدى المناسبات الهامة.",
+        galleryImageCaption6: "صورة إضافية 1.",
+        galleryImageCaption7: "صورة إضافية 3.",
 
         fatwasSectionTitle: "فتاوى ومقالات حديثة", fatwasSectionText: "استكشف مكتبتنا المتنامية من الفتاوى والمقالات التي تغطي جوانب متعددة من حياة المسلم.",
         fatwaTitle2: "بناء أسرة سعيدة في الغرب",
@@ -204,6 +208,7 @@ function applyTranslations(lang) {
     document.getElementById('galleryImageCaption4').textContent = t.galleryImageCaption4;
     document.getElementById('galleryImageCaption5').textContent = t.galleryImageCaption5;
     document.getElementById('galleryImageCaption6').textContent = t.galleryImageCaption6;
+    document.getElementById('galleryImageCaption7').textContent = t.galleryImageCaption7;
 
 
     const logoImg = document.querySelector('.navbar-brand img');
