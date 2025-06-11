@@ -140,7 +140,7 @@ const translations = {
         galleryImageCaption2: "لقاء مع قناة BBC في لندن.",
         galleryImageCaption3: "مع القاريء العالمي الدكتور عبد الله مطرود",
         galleryImageCaption4: "لقطة من إحدى الفعاليات التي شارك فيها المجلس.",
-        galleryImageCaption5: "صورة لأعضاء المجلس خلال إحدى المناسبات الهامة.",
+        galleryImageCaption5: "خلال عقد قران عريس وعروسة من الجالية الماليزية في لندن.",
         galleryImageCaption6: "صورة إضافية 1.",
         galleryImageCaption7: "صورة إضافية 3.",
 
