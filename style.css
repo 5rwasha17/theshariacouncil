@@ -539,7 +539,7 @@ h3 { /* Sub-section titles */
     border-color: var(--primary-dark-teal);
     color: var(--white);
     font-weight: 600;
-    padding: 12px 30px;
+    padding: 12px 12px;
     border-radius: 30px;
     transition: all 0.3s ease;
 }
