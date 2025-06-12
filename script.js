@@ -54,7 +54,7 @@ const translations = {
         galleryImageCaption3: "With the international reciter Dr. Abdullah Matroud.",
         galleryImageCaption4: "A snapshot from one of the events we participated in Britain.",
         galleryImageCaption5: "During the marriage contract of a Malaysian bride and groom from the Malaysian community in London.",
-        galleryImageCaption6: "Additional Image 1.",
+        galleryImageCaption6: "Meeting with the scholar Dr. Omar Abdul Kafi.",
         galleryImageCaption7: "Additional Image 3.",
 
         fatwasSectionTitle: "Latest Fatwas & Articles", fatwasSectionText: "Explore our growing library of fatwas and articles covering various aspects of Muslim life.",
