@@ -141,7 +141,7 @@ const translations = {
         galleryImageCaption3: "مع القاريء العالمي الدكتور عبد الله مطرود",
         galleryImageCaption4: "لقطة من احد الفعاليات التى شاركنا فيها في بريطانيا.",
         galleryImageCaption5: "خلال عقد قران عريس وعروسة من الجالية الماليزية في لندن.",
-        galleryImageCaption6: "صورة إضافية 1.",
+        galleryImageCaption6: "لقاء مع العلامة الدكتور عمر عبد الكافي.",
         galleryImageCaption7: "صورة إضافية 3.",
 
         fatwasSectionTitle: "فتاوى ومقالات حديثة", fatwasSectionText: "استكشف مكتبتنا المتنامية من الفتاوى والمقالات التي تغطي جوانب متعددة من حياة المسلم.",
