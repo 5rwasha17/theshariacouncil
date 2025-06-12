@@ -139,7 +139,7 @@ const translations = {
         galleryImageCaption1: "محاضرة عن الاسرة في الاسلام",
         galleryImageCaption2: "لقاء مع قناة BBC في لندن.",
         galleryImageCaption3: "مع القاريء العالمي الدكتور عبد الله مطرود",
-        galleryImageCaption4: "لقطة من إحدى الفعاليات التي شارك فيها المجلس.",
+        galleryImageCaption4: "لقطة من احد الفعاليات التى شاركنا فيها في بريطانيا.",
         galleryImageCaption5: "خلال عقد قران عريس وعروسة من الجالية الماليزية في لندن.",
         galleryImageCaption6: "صورة إضافية 1.",
         galleryImageCaption7: "صورة إضافية 3.",
