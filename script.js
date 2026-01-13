@@ -1,243 +1,83 @@
-// 1. كائن الترجمات - يحتوي على جميع نصوص الموقع باللغتين
 const translations = {
     en: {
-        navHome: "Home",
-        navAbout: "About Us",
-        navServices: "Services",
-        navGallery: "Gallery",
-        navFatwas: "Fatwas & Articles",
-        navContact: "Contact Us",
-        navLangToggle: "العربية / English",
+        navHome: "Home", navAbout: "About", navServices: "Services", navGallery: "Gallery", navFatwas: "Fatwas", navContact: "Contact",
+        navLangToggle: "العربية / اردو / English",
         heroTitle: "Shariah Council for the Muslim Family in London",
         heroText: "Islamic guidance for a stable life in a safe and professional environment.",
         applyNowBtn: "Contact Us Now",
         introSectionTitle: "About Us",
-        whoWeAreSubheading: "Who We Are",
-        whoWeAreP1: "We are a group of scholars and Imams, graduates of Al-Azhar Al-Sharif University. We hold high degrees in distinguished Sharia specializations, including:",
-        usulAlDinHeading: "Fundamentals of Religion",
-        usulAlDinText: "Study of creed, Tafsir, and Hadith.",
-        shariaIslamiyaHeading: "Islamic Sharia",
-        shariaIslamiyaText: "Study of Fiqh, Usul al-Fiqh, and comparative law.",
-        whoWeAreP2: "We carry the message of knowledge and strive to spread a moderate understanding of Islam.",
-        whyChooseUsSubheading: "Why Choose Us?",
-        introSectionText: "We provide reliable Islamic guidance within the framework of British law.",
-        aboutFeature1Title: "Trust & Reliability",
-        aboutFeature1Text: "Authentic and contemporary Islamic guidance.",
-        aboutFeature2Title: "Fairness & Transparency",
-        aboutFeature2Text: "Adhering to fairness in all procedures.",
-        aboutFeature3Title: "UK Law Adherence",
-        aboutFeature3Text: "Operating in harmony with UK laws.",
+        whoWeAreP1: "We are a group of scholars and Imams, graduates of Al-Azhar Al-Sharif University.",
+        fatwasTitle: "Common Fatwas",
+        fatwaQ1: "What are the conditions for Islamic marriage?",
+        fatwaA1: "The presence of the wali, two witnesses, and the mutual consent of both parties.",
+        fatwaQ2: "Does civil divorce count as Islamic divorce?",
+        fatwaA2: "It depends on the intention and the specific case; we recommend consulting the council.",
         servicesSectionTitle: "Our Main Services",
-        service1Title: "Islamic Marriage",
-        service1Text: "Completing Islamic marriage contracts according to Shariah rulings.",
-        service1ExtraText: "Includes documenting contracts and ensuring all conditions are met.",
+        service1Title: "Islamic Marriage", service1Text: "Completing Islamic marriage contracts.",
         service1Btn: "Learn More",
-        service2Title: "Divorce & Khula",
-        service2Text: "Assistance with Islamic divorce procedures and mediation.",
-        service2ExtraText: "We strive to minimize disputes and protect children's interests.",
-        service2Btn: "Learn More",
-        service3Title: "Consultations",
-        service3Text: "Islamic guidance on family matters and inheritance.",
-        service3ExtraText: "Accurate fatwas based on Quran and Sunnah considering contemporary life.",
-        service3Btn: "Learn More",
-        service4Title: "Ruqyah Shariah",
-        service4Text: "Ruqyah sessions adhering to Quran and Sunnah.",
-        service4ExtraText: "Safe environment for spiritual healing.",
-        service4Btn: "Learn More",
-        service5Title: "Quran Courses",
-        service5Text: "Advanced Tajweed courses with Ijazah possibility.",
-        service5ExtraText: "Taught by authorized scholars.",
-        service5Btn: "Learn More",
-        service6Title: "Arabic Language",
-        service6Text: "Comprehensive Arabic courses for all levels.",
-        service6ExtraText: "Grammar, conversation, reading, and writing.",
-        service6Btn: "Learn More",
-        gallerySectionTitle: "Image Gallery",
-        galleryImageCaption1: "Lecture on the Family in Islam.",
-        galleryImageCaption2: "Meeting with BBC in London.",
-        galleryImageCaption3: "With Dr. Abdullah Matroud.",
-        galleryImageCaption4: "Event snapshot in the UK.",
-        galleryImageCaption5: "Malaysian community marriage contract.",
-        galleryImageCaption6: "Meeting with Dr. Omar Abdul Kafi.",
-        fatwasSectionTitle: "Latest Fatwas & Articles",
-        fatwasSectionText: "Explore our growing library of fatwas and articles.",
-        fatwaTitle2: "Building a Happy Family in the West",
-        fatwaText2: "Tips and guidance for addressing contemporary family challenges and maintaining Islamic identity.",
-        fatwaExtraText2: "Practical solutions for facing difficulties Muslim families may encounter, reconciling values with culture, and Islamic upbringing.",
-        readMore2: "Read More",
-        contactSectionTitle: "Contact Us",
-        contactIntro: "Contact us directly for assistance.",
-        directPhoneLabel: "Contact us by phone:",
-        directEmailLabel: "Or by email:",
-        whatsappLabel: "Or send a message on WhatsApp:",
-        whatsappBtnText: "WhatsApp",
-        formTitle: "Send Us a Message",
-        contactName: "Full Name",
-        contactEmail: "Email Address",
-        contactPhone: "Phone Number",
-        contactMessage: "Your Message",
-        submitFormBtn: "Send Message",
+        contactSectionTitle: "Contact Us", contactIntro: "Get in touch for professional guidance.",
+        whatsappBtnText: "WhatsApp", contactName: "Full Name", contactEmail: "Email", contactMessage: "Message", submitFormBtn: "Send Message",
         footerText: "© 2024 Shariah Council for the Muslim Family in London. All Rights Reserved."
     },
     ar: {
-        navHome: "الرئيسية",
-        navAbout: "من نحن",
-        navServices: "خدماتنا",
-        navGallery: "معرض الصور",
-        navFatwas: "فتاوى ومقالات",
-        navContact: "اتصل بنا",
-        navLangToggle: "English / العربية",
+        navHome: "الرئيسية", navAbout: "من نحن", navServices: "خدماتنا", navGallery: "المعرض", navFatwas: "الفتاوى", navContact: "اتصل بنا",
+        navLangToggle: "English / اردو / العربية",
         heroTitle: "المجلس الشرعي للأسرة المسلمة في لندن",
         heroText: "إرشاد إسلامي لحياة مستقرة في بيئة آمنة ومهنية.",
         applyNowBtn: "اتصل بنا الآن",
         introSectionTitle: "من نحن",
-        whoWeAreSubheading: "من نحن",
-        whoWeAreP1: "نحن مجموعة من العلماء والأئمة، خريجي جامعة الأزهر الشريف. نحمل درجات علمية عالية في تخصصات شرعية متميزة، منها:",
-        usulAlDinHeading: "أصول الدين",
-        usulAlDinText: "دراسة العقيدة، التفسير، والحديث.",
-        shariaIslamiyaHeading: "الشريعة الإسلامية",
-        shariaIslamiyaText: "دراسة الفقه، أصول الفقه، والقانون المقارن.",
-        whoWeAreP2: "نحمل رسالة العلم ونسعى لنشر الفهم الوسطي للإسلام.",
-        whyChooseUsSubheading: "لماذا تختارنا؟",
-        introSectionText: "نقدم إرشاداً إسلامياً موثوقاً في إطار القانون البريطاني.",
-        aboutFeature1Title: "الثقة والمصداقية",
-        aboutFeature1Text: "إرشاد إسلامي أصيل ومعاصر.",
-        aboutFeature2Title: "العدل والشفافية",
-        aboutFeature2Text: "الالتزام بالعدالة في جميع الإجراءات.",
-        aboutFeature3Title: "الالتزام بالقانون البريطاني",
-        aboutFeature3Text: "العمل بانسجام مع القوانين البريطانية.",
+        whoWeAreP1: "نحن مجموعة من العلماء والأئمة، خريجي جامعة الأزهر الشريف.",
+        fatwasTitle: "فتاوى شائعة",
+        fatwaQ1: "ما هي شروط الزواج الإسلامي؟",
+        fatwaA1: "حضور الولي، والشاهدين، والقبول المتبادل بين الطرفين.",
+        fatwaQ2: "هل يعتبر الطلاق المدني طلاقاً شرعياً؟",
+        fatwaA2: "يعتمد ذلك على النية وتفاصيل الحالة، وننصح بمراجعة المجلس للتحقق.",
         servicesSectionTitle: "خدماتنا الرئيسية",
-        service1Title: "الزواج الإسلامي",
-        service1Text: "إتمام عقود الزواج الإسلامي وفق الأحكام الشرعية.",
-        service1ExtraText: "يشمل توثيق العقود والتأكد من استيفاء كافة الشروط.",
-        service1Btn: "تعرف على المزيد",
-        service2Title: "الطلاق والخلع",
-        service2Text: "المساعدة في إجراءات الطلاق الإسلامي والوساطة.",
-        service2ExtraText: "نسعى لتقليل النزاعات وحماية مصالح الأطفال.",
-        service2Btn: "تعرف على المزيد",
-        service3Title: "الاستشارات",
-        service3Text: "إرشاد إسلامي في قضايا الأسرة والمواريث.",
-        service3ExtraText: "فتاوى دقيقة مبنية على الكتاب والسنة مع مراعاة الحياة المعاصرة.",
-        service3Btn: "تعرف على المزيد",
-        service4Title: "الرقية الشرعية",
-        service4Text: "جلسات رقية ملتزمة بالكتاب والسنة.",
-        service4ExtraText: "بيئة آمنة للاستشفاء الروحي.",
-        service4Btn: "تعرف على المزيد",
-        service5Title: "دورات القرآن",
-        service5Text: "دورات تجويد متقدمة مع إمكانية الحصول على إجازة.",
-        service5ExtraText: "تُدرس على يد علماء مجازين.",
-        service5Btn: "تعرف على المزيد",
-        service6Title: "اللغة العربية",
-        service6Text: "دورات شاملة في اللغة العربية لجميع المستويات.",
-        service6ExtraText: "النحو، المحادثة، القراءة والكتابة.",
-        service6Btn: "تعرف على المزيد",
-        gallerySectionTitle: "معرض الصور",
-        galleryImageCaption1: "محاضرة عن الأسرة في الإسلام.",
-        galleryImageCaption2: "لقاء مع قناة BBC في لندن.",
-        galleryImageCaption3: "مع الدكتور عبدالله مطرود.",
-        galleryImageCaption4: "لقطة من فعالية في المملكة المتحدة.",
-        galleryImageCaption5: "عقد زواج للجالية الماليزية.",
-        galleryImageCaption6: "لقاء مع الدكتور عمر عبد الكافي.",
-        fatwasSectionTitle: "أحدث الفتاوى والمقالات",
-        fatwasSectionText: "استكشف مكتبتنا المتنامية من الفتاوى والمقالات.",
-        fatwaTitle2: "بناء أسرة سعيدة في الغرب",
-        fatwaText2: "نصائح وإرشادات لمواجهة التحديات الأسرية المعاصرة والحفاظ على الهوية الإسلامية.",
-        fatwaExtraText2: "حلول عملية للصعوبات التي قد تواجهها الأسر المسلمة، والتربية الإسلامية.",
-        readMore2: "اقرأ المزيد",
-        contactSectionTitle: "اتصل بنا",
-        contactIntro: "تواصل معنا مباشرة للحصول على المساعدة.",
-        directPhoneLabel: "اتصل بنا هاتفياً:",
-        directEmailLabel: "أو عبر البريد الإلكتروني:",
-        whatsappLabel: "أو أرسل رسالة عبر واتساب:",
-        whatsappBtnText: "واتساب",
-        formTitle: "أرسل لنا رسالة",
-        contactName: "الاسم الكامل",
-        contactEmail: "البريد الإلكتروني",
-        contactPhone: "رقم الهاتف",
-        contactMessage: "رسالتك",
-        submitFormBtn: "إرسال الرسالة",
+        service1Title: "الزواج الإسلامي", service1Text: "إتمام عقود الزواج وفق الأحكام الشرعية.",
+        service1Btn: "المزيد",
+        contactSectionTitle: "اتصل بنا", contactIntro: "تواصل معنا مباشرة للحصول على استشارة احترافية.",
+        whatsappBtnText: "واتساب", contactName: "الاسم الكامل", contactEmail: "البريد الإلكتروني", contactMessage: "الرسالة", submitFormBtn: "إرسال الرسالة",
         footerText: "© 2024 المجلس الشرعي للأسرة المسلمة في لندن. جميع الحقوق محفوظة."
+    },
+    ur: {
+        navHome: "ہوم", navAbout: "ہمارے بارے میں", navServices: "خدمات", navGallery: "گیلری", navFatwas: "فتویٰ", navContact: "رابطہ",
+        navLangToggle: "English / العربية / اردو",
+        heroTitle: "لندن میں مسلم خاندان کے لیے شریعہ کونسل",
+        heroText: "ایک محفوظ اور پیشہ ورانہ ماحول میں مستحکم زندگی کے لیے اسلامی رہنمائی۔",
+        applyNowBtn: "ابھی رابطہ کریں",
+        introSectionTitle: "ہمارے بارے میں",
+        whoWeAreP1: "ہم علماء اور ائمہ کا ایک گروپ ہیں، جو جامعہ الازهر الشريف کے فارغ التحصیل ہیں۔",
+        fatwasTitle: "عام فتاویٰ",
+        fatwaQ1: "اسلامی نکاح کی شرائط کیا ہیں؟",
+        fatwaA1: "ولی کی موجودگی، دو گواہ، اور دونوں فریقوں کی باہمی رضامندی۔",
+        fatwaQ2: "کیا سول طلاق اسلامی طلاق شمار ہوتی ہے؟",
+        fatwaA2: "یہ نیت اور مخصوص کیس پر منحصر ہے؛ ہم کونسل سے رجوع کرنے کی سفارش کرتے ہیں۔",
+        servicesSectionTitle: "ہماری اہم خدمات",
+        service1Title: "اسلامی نکاح", service1Text: "شرعی احکامات کے مطابق اسلامی نکاح۔",
+        service1Btn: "مزید جانیں",
+        contactSectionTitle: "رابطہ کریں", contactIntro: "پیشہ ورانہ رہنمائی کے لیے رابطہ کریں۔",
+        whatsappBtnText: "واٹس ایپ", contactName: "پورا نام", contactEmail: "ای میل", contactMessage: "پیغام", submitFormBtn: "پیغام بھیجیں",
+        footerText: "© 2024 لندن میں مسلم خاندان کے لیے شریعہ کونسل۔"
     }
 };
 
-// 2. دالة تطبيق الترجمة
 function applyTranslations(lang) {
     document.documentElement.lang = lang;
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-
+    document.documentElement.dir = (lang === 'ar' || lang === 'ur') ? 'rtl' : 'ltr';
     const data = translations[lang];
     for (const id in data) {
-        const element = document.getElementById(id);
-        if (element) {
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = data[id];
-            } else {
-                const icon = element.querySelector('i');
-                element.textContent = data[id] + " "; 
-                if (icon) element.appendChild(icon);
-            }
+        const el = document.getElementById(id);
+        if (el) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = data[id];
+            else el.textContent = data[id];
         }
     }
 }
 
-// 3. دالة إغلاق القائمة باستخدام مكتبة Bootstrap
-function forceCloseNavbar() {
-    const navbarCollapseElement = document.getElementById('navbarNav');
-    if (navbarCollapseElement) {
-        // التحقق مما إذا كانت القائمة مفتوحة حالياً
-        if (navbarCollapseElement.classList.contains('show')) {
-            // استخدام الـ Instance الموجود أو إنشاء واحد جديد لإخفاء القائمة
-            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapseElement) || new bootstrap.Collapse(navbarCollapseElement);
-            bsCollapse.hide();
-        }
-    }
-}
-
-// 4. تهيئة الصفحة عند التحميل
-document.addEventListener('DOMContentLoaded', () => {
-    // البدء بالإنجليزية
-    document.documentElement.lang = 'en';
-    document.documentElement.dir = 'ltr';
-
-    // زر تبديل اللغة
-    const langToggleButton = document.getElementById('navLangToggle');
-    if (langToggleButton) {
-        langToggleButton.addEventListener('click', () => {
-            const currentLang = document.documentElement.lang;
-            const newLang = currentLang === 'en' ? 'ar' : 'en';
-            applyTranslations(newLang);
-            forceCloseNavbar(); // إغلاق بعد التبديل
-        });
-    }
-
-    // إغلاق القائمة عند الضغط على أي رابط بداخلها
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            forceCloseNavbar();
-        });
-    });
-
-    // منطق أزرار "Learn More"
-    document.querySelectorAll('.toggle-content, .toggle-fatwa').forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.dataset.target;
-            const contentContainer = document.getElementById(targetId);
-            const extraContentId = this.dataset.extra;
-            const extraContentElement = document.getElementById(extraContentId);
-            const currentLang = document.documentElement.lang;
-
-            contentContainer.classList.toggle('expanded');
-
-            if (contentContainer.classList.contains('expanded')) {
-                if(extraContentElement) extraContentElement.style.display = 'block';
-                this.innerHTML = (currentLang === 'ar' ? 'عرض أقل' : 'Show Less') + ' <i class="fas fa-arrow-up"></i>';
-            } else {
-                if(extraContentElement) extraContentElement.style.display = 'none';
-                const originalText = translations[currentLang][this.id];
-                this.innerHTML = originalText + ' <i class="fas fa-arrow-right"></i>';
-            }
-        });
-    });
+document.getElementById('navLangToggle').addEventListener('click', () => {
+    const curr = document.documentElement.lang;
+    let next = curr === 'en' ? 'ar' : (curr === 'ar' ? 'ur' : 'en');
+    applyTranslations(next);
 });
+
+applyTranslations('en');
