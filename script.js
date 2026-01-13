@@ -1,11 +1,11 @@
-// 1. كائن الترجمات المحدث - يحتوي على نصوص النماذج بدلاً من الفتاوى
+// 1. كائن الترجمات المحدث - يحتوي على نصوص النماذج والمستندات بدلاً من الفتاوى
 const translations = {
     en: {
         navHome: "Home",
         navAbout: "About Us",
         navServices: "Services",
         navGallery: "Gallery",
-        navForms: "Forms", // الرابط الجديد في القائمة
+        navForms: "Forms", // الرابط الجديد في القائمة العلوية
         navContact: "Contact Us",
         navLangToggle: "العربية / English / اردو",
         heroTitle: "Shariah Council for the Muslim Family in London",
@@ -218,7 +218,7 @@ const translations = {
         // نصوص قسم النماذج الجديد بالأردية
         formsSectionTitle: "فارمز اور دستاویزات",
         divorceFormTitle: "طلاق کی درخواست",
-        divorceFormText: "براہ کرم اپنی درخواست کا عمل شروع کرنے کے لیے آفیشل فارم ڈاؤن لوڈ کریں۔",
+        divorceFormText: "برائے مہربانی اپنی درخواست کا عمل شروع کرنے کے لیے آفیشل فارم ڈاؤن لوڈ کریں۔",
         divorceFormBtn: "فارم ڈاؤن لوڈ کریں",
         contactSectionTitle: "ہم سے رابطہ کریں",
         contactIntro: "مدد کے لیے براہ راست ہم سے رابطہ کریں۔",
@@ -248,6 +248,7 @@ function applyTranslations(lang) {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = data[id];
             } else {
+                // الحفاظ على الأيقونات داخل العناصر أثناء تبديل النص
                 const icon = element.querySelector('i');
                 element.textContent = data[id] + " "; 
                 if (icon) element.appendChild(icon);
@@ -256,7 +257,7 @@ function applyTranslations(lang) {
     }
 }
 
-// 3. دالة إغلاق القائمة باستخدام مكتبة Bootstrap
+// 3. دالة إغلاق القائمة في الموبايل عند الضغط
 function forceCloseNavbar() {
     const navbarCollapseElement = document.getElementById('navbarNav');
     if (navbarCollapseElement) {
@@ -269,8 +270,10 @@ function forceCloseNavbar() {
 
 // 4. تهيئة الصفحة عند التحميل
 document.addEventListener('DOMContentLoaded', () => {
+    // البدء بالإنجليزية افتراضياً
     applyTranslations('en');
 
+    // زر تبديل اللغة (يدور بين الإنجليزية -> العربية -> الأردية)
     const langToggleButton = document.getElementById('navLangToggle');
     if (langToggleButton) {
         langToggleButton.addEventListener('click', () => {
@@ -288,6 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // إغلاق القائمة عند الضغط على أي رابط تنقل
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -295,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // منطق أزرار "Learn More"
+    // منطق أزرار "Learn More" (إظهار المزيد / إظهار أقل)
     document.querySelectorAll('.toggle-content').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
@@ -309,6 +313,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (contentContainer.classList.contains('expanded')) {
                 if(extraContentElement) extraContentElement.style.display = 'block';
+                
+                // نصوص أزرار الإغلاق بناءً على اللغة الحالية
                 let closeText = "Show Less";
                 if (currentLang === 'ar') closeText = "عرض أقل";
                 if (currentLang === 'ur') closeText = "کم دکھائیں";
@@ -316,6 +322,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.innerHTML = closeText + ' <i class="fas fa-arrow-up"></i>';
             } else {
                 if(extraContentElement) extraContentElement.style.display = 'none';
+                
+                // استعادة النص الأصلي من كائن الترجمة بناءً على الـ ID الخاص بالزر
                 const originalText = translations[currentLang][this.id];
                 this.innerHTML = originalText + ' <i class="fas fa-arrow-right"></i>';
             }
