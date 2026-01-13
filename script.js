@@ -1,50 +1,48 @@
 const translations = {
     en: {
         navHome: "Home", navAbout: "About Us", navServices: "Services",
-        navGallery: "Gallery", navFatwas: "Fatwas", navContact: "Contact",
-        heroTitle: "Shariah Council for the Muslim Family in London",
-        heroText: "Islamic guidance for a stable life in a safe and professional environment.",
-        applyNowBtn: "Contact Us Now",
-        introSectionTitle: "About Us",
-        whoWeAreSubheading: "Who We Are",
-        whoWeAreP1: "We are a group of scholars and Imams, graduates of Al-Azhar Al-Sharif University, the oldest Islamic university in the world.",
-        whoWeAreP2: "We carry the message of knowledge and Da'wah, striving to spread a moderate, enlightened understanding of Islam.",
-        servicesSectionTitle: "Our Main Services",
-        fatwasSectionTitle: "Latest Fatwas & Articles",
-        fatwaTitle2: "Building a Happy Family in the West",
-        fatwaText2: "Tips for maintaining Islamic identity in Western societies and building a positive environment for children.",
+        navGallery: "Gallery", navContact: "Contact",
+        welcomeBadge: "Trusted Islamic Guidance",
+        heroTitle: "Shariah Council for the Muslim Family",
+        heroText: "A professional beacon for Shariah services in London, rooted in Al-Azhar methodology and committed to UK law.",
+        applyNowBtn: "Contact Our Scholars",
+        introSectionTitle: "About the Council",
+        whoWeAreSubheading: "Expertise from Al-Azhar",
+        whoWeAreP1: "We are a group of scholars and Imams from Al-Azhar Al-Sharif University, holding degrees in Fundamentals of Religion (Usul al-Din), Sharia and Law, and Arabic Language.",
+        whoWeAreP2: "We strive to spread moderate Islamic values to help Muslims in London balance their faith and contemporary life through expert fatwas and counseling.",
+        ourVisionHeading: "Our Core Vision",
+        ourVisionText: "Promoting family stability and a peaceful, moderate Islamic presence in British society.",
+        servicesSectionTitle: "Our Services",
         contactSectionTitle: "Contact Us",
-        contactIntro: "Contact us directly for assistance and Islamic guidance.",
         services: [
-            { id: "s1", title: "Islamic Marriage (Nikah)", icon: "fa-ring", desc: "Completing marriage contracts according to Shariah and guiding couples." },
-            { id: "s2", title: "Divorce & Khula", icon: "fa-handshake-slash", desc: "Assistance with divorce procedures, mediation, and ensuring rights." },
-            { id: "s3", title: "Consultations & Fatwas", icon: "fa-book-quran", desc: "Islamic guidance on family, inheritance, and financial matters." },
-            { id: "s4", title: "Ruqyah Shariah", icon: "fa-heart-pulse", desc: "Ruqyah sessions adhering to Quran and Sunnah for healing." },
-            { id: "s5", title: "Quran Courses", icon: "fa-mosque", desc: "Advanced Tajweed courses and Ijazah with continuous chains." }
+            { title: "Islamic Marriage", icon: "fa-ring", desc: "Official Nikah contracts following Shariah principles and legal guidance." },
+            { title: "Divorce & Khula", icon: "fa-handshake-slash", desc: "Expert mediation and Shariah-compliant dissolution of marriage with full confidentiality." },
+            { title: "Fatwas & Consultations", icon: "fa-book-quran", desc: "Trusted answers to family, inheritance, and personal issues based on Azhari methodology." },
+            { title: "Ruqyah Shariah", icon: "fa-heart-pulse", desc: "Spiritual sessions according to Quran and Sunnah for healing and peace." },
+            { title: "Quran & Arabic", icon: "fa-mosque", desc: "Specialized courses in Tajweed, memorization, and Arabic for all ages." }
         ]
     },
     ar: {
         navHome: "الرئيسية", navAbout: "من نحن", navServices: "خدماتنا",
-        navGallery: "معرض الصور", navFatwas: "فتاوى", navContact: "تواصل معنا",
+        navGallery: "معرض الصور", navContact: "اتصل بنا",
+        welcomeBadge: "إرشاد شرعي موثوق",
         heroTitle: "مجلس الشريعة للأسرة المسلمة في لندن",
-        heroText: "إرشاد شرعي لحياة مستقرة في بيئة آمنة واحترافية.",
-        applyNowBtn: "تواصل معنا الآن",
+        heroText: "منارة مهنية للخدمات الشرعية، تنطلق من المنهج الأزهري الوسطي وتلتزم بالقانون البريطاني.",
+        applyNowBtn: "تواصل مع علمائنا",
         introSectionTitle: "عن المجلس",
-        whoWeAreSubheading: "من نحن",
-        whoWeAreP1: "نحن مجموعة من العلماء والأئمة، تخرجنا في جامعة الأزهر الشريف، أعرق جامعة إسلامية في العالم.",
-        whoWeAreP2: "نحمل على عاتقنا رسالة العلم والدعوة، ونسعى لنشر الفهم الوسطي المستنير للإسلام.",
-        servicesSectionTitle: "خدماتنا الرئيسية",
-        fatwasSectionTitle: "فتاوى ومقالات حديثة",
-        fatwaTitle2: "بناء أسرة سعيدة في الغرب",
-        fatwaText2: "نصائح للحفاظ على الهوية الإسلامية في المجتمعات الغربية وبناء بيئة إيجابية للأطفال.",
-        contactSectionTitle: "تواصل معنا",
-        contactIntro: "يمكنكم التواصل معنا مباشرةً للحصول على المساعدة والإرشاد الشرعي.",
+        whoWeAreSubheading: "خبرة من قلب الأزهر",
+        whoWeAreP1: "نحن مجموعة من العلماء والأئمة خريجي جامعة الأزهر الشريف، نحمل تخصصات في أصول الدين، الشريعة والقانون، واللغة العربية.",
+        whoWeAreP2: "نسعى لنشر قيم الإسلام الوسطي لمساعدة المسلمين في لندن على الموازنة بين دينهم وحياتهم المعاصرة من خلال الفتاوى والاستشارات.",
+        ourVisionHeading: "رؤيتنا الجوهرية",
+        ourVisionText: "تعزيز الاستقرار الأسري وضمان وجود إسلامي وسطى مسالم في المجتمع البريطاني.",
+        servicesSectionTitle: "خدماتنا",
+        contactSectionTitle: "اتصل بنا",
         services: [
-            { id: "s1", title: "الزواج الإسلامي (النكاح)", icon: "fa-ring", desc: "إتمام عقود الزواج الشرعية وتقديم الإرشاد للمقبلين على الزواج." },
-            { id: "s2", title: "الطلاق والخلع", icon: "fa-handshake-slash", desc: "المساعدة في إجراءات الطلاق والوساطة لضمان الحقوق." },
-            { id: "s3", title: "الاستشارات والفتاوى", icon: "fa-book-quran", desc: "إرشادات شرعية حول مسائل الأسرة، الميراث، والمعاملات المالية." },
-            { id: "s4", title: "الرقية الشرعية", icon: "fa-heart-pulse", desc: "جلسات الرقية الشرعية المطابقة للكتاب والسنة لعلاج الحسد والسحر." },
-            { id: "s5", title: "دورات القرآن الكريم", icon: "fa-mosque", desc: "دورات متقدمة في التجويد والحصول على إجازات بسند متصل." }
+            { title: "الزواج الإسلامي", icon: "fa-ring", desc: "إتمام عقود النكاح الشرعية وفق الضوابط مع تقديم الإرشاد للمقبلين على الزواج." },
+            { title: "الطلاق والخلع", icon: "fa-handshake-slash", desc: "وساطة خبيرة وإجراءات شرعية لإنهاء الزواج مع الحفاظ الكامل على الخصوصية." },
+            { title: "الفتاوى والاستشارات", icon: "fa-book-quran", desc: "إجابات موثوقة في قضايا الأسرة والمواريث وفق المنهج الأزهري." },
+            { title: "الرقية الشرعية", icon: "fa-heart-pulse", desc: "جلسات استشفاء روحي وفق الكتاب والسنة للطمأنينة والسكينة." },
+            { title: "القرآن والعربية", icon: "fa-mosque", desc: "دورات متخصصة في التجويد، الحفظ، واللغة العربية لكافة الأعمار." }
         ]
     }
 };
@@ -63,18 +61,19 @@ function updateLanguage(lang) {
     const container = document.getElementById('servicesContainer');
     container.innerHTML = t.services.map(s => `
         <div class="col-md-4">
-            <div class="service-card shadow-sm">
+            <div class="service-card-modern shadow-sm">
                 <i class="fas ${s.icon}"></i>
-                <h3>${s.title}</h3>
-                <p>${s.desc}</p>
+                <h3 class="h5 fw-bold text-white">${s.title}</h3>
+                <p class="text-white-50 small mt-3">${s.desc}</p>
             </div>
         </div>
     `).join('');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    updateLanguage('en'); // اللغة الافتراضية
+    updateLanguage('en'); 
     document.getElementById('navLangToggle').addEventListener('click', () => {
-        updateLanguage(document.documentElement.lang === 'en' ? 'ar' : 'en');
+        const currentLang = document.documentElement.lang;
+        updateLanguage(currentLang === 'en' ? 'ar' : 'en');
     });
 });
