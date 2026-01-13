@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shariah Council for the Muslim Family in London</title>
+    <title>Shariah Council for the Muslim Family in London - Light & Life</title>
+    <meta name="description" content="Islamic Shariah Council in London providing reliable guidance, marriage, divorce, consultations, and more.">
     <link rel="icon" href="theshariacouncil.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNavbar">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="theshariacouncil.png" alt="Logo" class="rounded-circle me-2" width="45"> 
-            <span id="navBrand">SHARIAH COUNCIL</span>
+            <img src="https://github.com/5rwasha17/theshariacouncil/blob/main/theshariacouncil.png?raw=true" alt="Logo">
+            <span id="navBrandText">Shariah Council</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#heroSection" id="navHome">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#heroSection" id="navHome">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#aboutSection" id="navAbout">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="#servicesSection" id="navServices">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="#gallerySection" id="navGallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#fatwasSection" id="navFatwas">Fatwas</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contactSection" id="navContact">Contact</a></li>
                 <li class="nav-item">
                     <button class="btn btn-lang ms-lg-3" id="navLangToggle">العربية</button>
@@ -38,77 +40,61 @@
 
 <header class="hero-section" id="heroSection">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-7">
-                <div class="hero-badge" id="welcomeBadge">Trusted Islamic Guidance</div>
-                <h1 id="heroTitle" class="display-4 fw-800">Shariah Council for the Muslim Family</h1>
-                <p id="heroText" class="lead text-muted">A professional beacon providing Shariah services in London, rooted in moderate Azhari methodology and committed to UK law.</p>
-                <div class="mt-4">
-                    <a href="#contactSection" class="btn btn-dark-custom" id="applyNowBtn">Contact Our Scholars</a>
-                </div>
-            </div>
-            <div class="col-lg-5 d-none d-lg-block">
-                <div class="hero-img-frame">
-                    <img src="islam4.jpg" class="img-fluid" alt="Islamic Architecture">
-                </div>
-            </div>
+        <div class="hero-content">
+            <h1 id="heroTitle">Shariah Council for the Muslim Family in London</h1>
+            <p id="heroText">Islamic guidance for a stable life in a safe and professional environment.</p>
+            <a href="#contactSection" class="btn btn-main btn-lg" id="applyNowBtn">Contact Us Now</a>
         </div>
     </div>
 </header>
 
-<section class="py-5" id="aboutSection">
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-6">
-                <h2 id="introSectionTitle" class="section-title-modern">About the Council</h2>
-                <h3 id="whoWeAreSubheading" class="h4 mt-4 text-bronze">Expertise from Al-Azhar</h3>
-                <p id="whoWeAreP1" class="text-secondary mt-3 lead">We are a group of scholars and Imams from Al-Azhar Al-Sharif University, holding degrees in Fundamentals of Religion (Usul al-Din), Sharia and Law, and Arabic Language.</p>
-                <p id="whoWeAreP2" class="text-secondary">We spread moderate Islamic values to help Muslims in London balance their faith and contemporary life through expert fatwas and family counseling.</p>
-            </div>
-            <div class="col-lg-6 bg-light p-5 border-start-bronze">
-                <h4 id="ourVisionHeading" class="fw-bold">Our Core Vision</h4>
-                <p id="ourVisionText" class="text-muted">Promoting stability in the Muslim home and ensuring a peaceful, moderate Islamic presence in British society.</p>
-                <ul class="list-unstyled mt-4">
-                    <li class="mb-3"><i class="fas fa-check text-bronze me-2"></i> High Transparency</li>
-                    <li class="mb-3"><i class="fas fa-check text-bronze me-2"></i> Professional Confidentiality</li>
-                    <li><i class="fas fa-check text-bronze me-2"></i> Moderate Methodology</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="py-5 bg-dark text-white" id="servicesSection">
-    <div class="container py-5">
-        <div class="text-center mb-5">
-            <h2 id="servicesSectionTitle" class="display-6 fw-bold">Our Services</h2>
-            <div class="bronze-line mx-auto"></div>
-        </div>
-        <div class="row g-4" id="servicesContainer">
-            </div>
-    </div>
-</section>
-
-<section class="py-5" id="gallerySection">
-    <div class="container py-5">
-        <h2 id="gallerySectionTitle" class="text-center mb-5">Gallery</h2>
-        <div class="row g-3">
-            <div class="col-md-4"><img src="BBC.jpg" class="img-fluid rounded gallery-img" alt="BBC Meeting"></div>
-            <div class="col-md-4"><img src="3.jpeg" class="img-fluid rounded gallery-img" alt="Marriage"></div>
-            <div class="col-md-4"><img src="1jpeg.jpeg" class="img-fluid rounded gallery-img" alt="Official Ceremony"></div>
-        </div>
-    </div>
-</section>
-
-<footer class="footer-modern py-5" id="contactSection">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <h2 id="contactSectionTitle" class="fw-bold mb-4">Contact</h2>
-                <p id="contactIntro" class="text-muted">Reach out for reliable Shariah consultations or family guidance.</p>
-                <div class="fs-5 mt-4">
-                    <p><i class="fas fa-phone-alt text-bronze me-3"></i> 00447404949128</p>
-                    <p><i class="fas fa-envelope text-bronze me-3"></i> theshariacouncil@gmail.com</p>
+<section class="container my-5" id="aboutSection">
+    <h2 class="section-title" id="introSectionTitle">About Us</h2>
+    <div class="text-center mb-5">
+        <h3 id="whoWeAreSubheading">Who We Are</h3>
+        <p class="lead" id="whoWeAreP1">We are a group of scholars and Imams, graduates of Al-Azhar Al-Sharif University. We hold degrees in:</p>
+        <div class="row justify-content-center mt-4 g-4">
+            <div class="col-md-5">
+                <div class="feature-box">
+                    <i class="fas fa-scroll fa-3x mb-3"></i>
+                    <h5 id="usulAlDinHeading">Usul al-Din</h5>
+                    <p id="usulAlDinText">Study of creed, exegesis (Tafsir), and Hadith.</p>
                 </div>
             </div>
-            <div class="col-
+            <div class="col-md-5">
+                <div class="feature-box">
+                    <i class="fas fa-scale-balanced fa-3x mb-3"></i>
+                    <h5 id="shariaIslamiyaHeading">Islamic Sharia</h5>
+                    <p id="shariaIslamiyaText">Study of Fiqh, its principles, and comparative law.</p>
+                </div>
+            </div>
+        </div>
+        <p class="lead mt-4" id="whoWeAreP2">We carry the message of knowledge and Da'wah, striving to spread a moderate, enlightened understanding of Islam.</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p id="footerText">&copy; 2024 Shariah Council for the Muslim Family in London. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<div class="modal fade" id="geminiErrorModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="geminiErrorModalLabel">Connection Error</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="geminiErrorModalBody">Please try again later.</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="geminiErrorModalCloseBtn" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
