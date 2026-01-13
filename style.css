@@ -6,10 +6,11 @@
     --primary-color: #1e5f5b; 
     --secondary-color: #4d908e; 
     --accent-gold: #c5a065; 
+    --word-blue: #2b5797; /* لون وورد الرسمي للمستندات */
     
-    /* ألوان الخلفية المحدثة (تم تعتيمها لراحة العين) */
-    --bg-main: #edf1f0; /* رمادي مخضر فاتح وخافت */
-    --bg-secondary: #dee5e4; /* أغمق قليلاً للتمييز */
+    /* ألوان الخلفية المحدثة لراحة العين */
+    --bg-main: #edf1f0; 
+    --bg-secondary: #dee5e4; 
     
     /* أسطح زجاجية خافتة */
     --glass-surface: rgba(230, 235, 234, 0.96);
@@ -31,7 +32,7 @@ body {
     color: var(--text-main);
     overflow-x: hidden;
     line-height: 1.8;
-    transition: background-color 0.3s ease; /* انتقال ناعم عند تبديل اللغة أو السمات */
+    transition: background-color 0.3s ease;
 }
 
 /* =========================================
@@ -85,11 +86,6 @@ body {
     white-space: nowrap;
 }
 
-.language-toggle:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
 /* =========================================
    3. Hero Section
    ========================================= */
@@ -107,7 +103,6 @@ body {
     position: relative;
     overflow: hidden;
     color: white;
-    /* خلفية داكنة للقسم العلوي لتقليل السطوع */
     background: linear-gradient(180deg, rgba(23, 56, 53, 0.85) 0%, rgba(15, 38, 36, 0.9) 100%),
                 url('https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=1920&auto=format&fit=crop');
     background-size: cover;
@@ -122,13 +117,6 @@ body {
     margin-bottom: 20px;
     color: #f0fdfa;
     text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-.hero-section p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    max-width: 750px;
-    margin: 0 auto 35px;
 }
 
 .hero-section .btn {
@@ -165,7 +153,7 @@ h2 {
 }
 
 .service-card:hover, .feature-box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: var(--shadow-hover);
     background: white;
 }
@@ -175,28 +163,47 @@ h2 {
     text-align: center;
 }
 
+/* تنسيق الأيقونات الموحد */
 .service-card i, .feature-box i {
     font-size: 2.5rem;
     color: var(--secondary-color);
     margin-bottom: 20px;
     background: rgba(77, 144, 142, 0.1);
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
     border-radius: 50%;
     display: inline-block;
+    transition: 0.3s ease;
 }
 
-.gallery-card img {
-    height: 250px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+/* تنسيق خاص لأيقونة الوورد في قسم النماذج */
+#formsSection .service-card i {
+    color: var(--word-blue);
+    background: rgba(43, 87, 151, 0.1);
+}
+
+.service-card:hover i {
+    transform: scale(1.1);
 }
 
 /* =========================================
-   5. Forms & RTL Support
+   5. Buttons & Forms
    ========================================= */
+.btn-outline-dark {
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: 600;
+    border-width: 2px;
+    transition: 0.3s;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
 input.form-control, textarea.form-control {
     background: var(--bg-secondary);
     border: 1px solid rgba(0,0,0,0.05);
@@ -204,26 +211,23 @@ input.form-control, textarea.form-control {
     padding: 12px;
 }
 
-/* تنسيقات خاصة باللغات من اليمين لليسار (عربي / أردو) */
-[dir="rtl"] {
-    text-align: right;
-}
-
-[dir="rtl"] .ms-auto {
-    margin-right: auto !important;
-    margin-left: 0 !important;
-}
-
-[dir="rtl"] .navbar-brand img {
-    margin-left: 10px;
-    margin-right: 0 !important;
-}
-
 /* =========================================
-   6. RESPONSIVE MEDIA QUERIES
+   6. RTL & Responsive Support
    ========================================= */
+[dir="rtl"] { text-align: right; }
+
+[dir="rtl"] .ms-auto { margin-right: auto !important; margin-left: 0 !important; }
+
+[dir="rtl"] .navbar-brand img { margin-left: 10px; margin-right: 0 !important; }
+
 @media (max-width: 768px) {
     .hero-section h1 { font-size: 2rem; }
     .hero-section { min-height: 60vh; border-radius: 0 0 30px 30px; }
     .navbar { width: 95%; padding: 0.5rem 1rem; }
+    .service-card { padding: 1.5rem; }
+}
+
+/* تأثيرات الظهور للمستند */
+#formsSection .card {
+    border-bottom: 5px solid var(--word-blue) !important; /* تمييز المستند بخط أزرق أسفله */
 }
