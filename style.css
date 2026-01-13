@@ -1,50 +1,48 @@
 :root {
-    --primary: #004d40;
-    --gold: #c5a059;
-    --bg-light: #f8f9fa;
-    --text-dark: #2c3e50;
+    --navy: #0a192f;
+    --bronze: #b08d57;
+    --off-white: #f8f9fa;
+    --text-main: #2d3436;
 }
 
-body { font-family: 'Poppins', sans-serif; color: var(--text-dark); overflow-x: hidden; }
-[lang="ar"] body { font-family: 'Cairo', sans-serif; }
+body { font-family: 'Poppins', sans-serif; background-color: #fff; }
 
-.navbar { background: var(--primary); padding: 15px 0; transition: 0.5s; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-.navbar.scrolled { background: rgba(0, 77, 64, 0.98); padding: 10px 0; }
+/* Navbar شفاف مع خط سفلي نحيف */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+}
+.navbar-brand { color: var(--navy) !important; font-weight: 700; letter-spacing: 1px; }
+.nav-link { color: var(--navy) !important; font-weight: 500; text-transform: uppercase; font-size: 0.85rem; }
 
+/* Hero Section بأسلوب جانبي (Split Design) */
 .hero-section {
-    height: 85vh;
-    background: url('islam4.jpg') center/cover no-repeat fixed;
-    display: flex; align-items: center; color: white; position: relative;
+    padding: 150px 0;
+    background: linear-gradient(to right, #ffffff 50%, #f4f4f4 50%);
+    display: flex; align-items: center;
 }
-.hero-overlay {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(135deg, rgba(0,77,64,0.85) 0%, rgba(0,0,0,0.5) 100%);
+.hero-content h1 {
+    font-size: 3.5rem; color: var(--navy); font-weight: 800; line-height: 1.2;
 }
+.hero-content p { color: #636e72; font-size: 1.1rem; margin: 25px 0; }
 
-.section-title {
-    text-align: center; font-weight: 700; color: var(--primary);
-    position: relative; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 1px;
+/* أزرار مسطحة (Flat Design) */
+.btn-main {
+    background: var(--navy); color: white; padding: 15px 40px; border-radius: 0;
+    transition: 0.4s; border: none; font-weight: 600;
 }
-.section-title::after {
-    content: ''; width: 80px; height: 4px; background: var(--gold);
-    position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%);
-}
+.btn-main:hover { background: var(--bronze); color: white; transform: translateY(-2px); }
 
+/* بطاقات الخدمات (Clean Cards) */
 .service-card {
-    background: white; padding: 40px 25px; border-radius: 20px; text-align: center;
-    transition: all 0.4s ease; border: 1px solid rgba(0,0,0,0.05); height: 100%;
+    padding: 40px; border: 1px solid #f0f0f0; border-radius: 0;
+    transition: 0.3s; background: #fff; position: relative;
 }
-.service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
-.service-card i { font-size: 45px; color: var(--gold); margin-bottom: 25px; }
-.service-card h3 { color: var(--primary); font-size: 1.5rem; margin-bottom: 15px; }
-
-.btn-primary-custom {
-    background: var(--gold); border: none; color: white; padding: 15px 40px;
-    border-radius: 50px; font-weight: 600; box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+.service-card::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 0; height: 3px;
+    background: var(--bronze); transition: 0.3s;
 }
-.btn-gold-outline { border: 2px solid var(--gold); color: var(--gold); border-radius: 50px; }
-.btn-gold-outline:hover { background: var(--gold); color: white; }
-
-.gallery-card img { transition: 0.5s; cursor: pointer; }
-.gallery-card img:hover { transform: scale(1.05); }
-.gold-text { color: var(--gold); }
+.service-card:hover { border-color: transparent; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+.service-card:hover::before { width: 100%; }
+.service-icon { color: var(--bronze); font-size: 2.5rem; margin-bottom: 20px; }
