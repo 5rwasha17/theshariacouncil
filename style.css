@@ -1,52 +1,52 @@
 /* =========================================
-   1. MODERN VARIABLES & RESET
+   1. المتغيرات وإعادة التعيين (MODERN VARIABLES)
    ========================================= */
 :root {
-    /* Main Colors - Richer & Deeper */
+    /* الألوان الرئيسية - أكثر عمقاً وفخامة */
     --primary-dark-teal: #004d40;
-    --primary-gradient: linear-gradient(135deg, #004d40 0%, #00695c 100%);
+    --primary-gradient: linear-gradient(135deg, #004d40 0%, #00695c 100%); /* تدرج لوني */
     --secondary-light-teal: #a7ffeb;
-    --accent-gold: #ffd700; /* لمسة ذهبية للفخامة */
+    --accent-gold: #ffd700; /* اللمسة الذهبية */
     
-    /* Backgrounds */
+    /* الخلفيات */
     --bg-light: #f8f9fa;
     --bg-white: #ffffff;
     
-    /* Text */
+    /* النصوص */
     --text-dark: #2c3e50;
     --text-muted: #6c757d;
     
-    /* Modern UI Elements */
-    --glass-bg: rgba(255, 255, 255, 0.95);
-    --glass-border: 1px solid rgba(255, 255, 255, 0.5);
-    --shadow-soft: 0 10px 30px -5px rgba(0, 77, 64, 0.08);
-    --shadow-hover: 0 20px 40px -5px rgba(0, 77, 64, 0.15);
-    --radius-lg: 20px;
-    --radius-pill: 50px;
+    /* عناصر التصميم الحديث */
+    --shadow-soft: 0 10px 30px -5px rgba(0, 77, 64, 0.08); /* ظل ناعم */
+    --shadow-hover: 0 20px 40px -5px rgba(0, 77, 64, 0.15); /* ظل عند التحويم */
+    --radius-lg: 20px; /* استدارة الزوايا */
+    --radius-pill: 50px; /* استدارة كاملة للأزرار */
     
-    /* Third Party Colors */
+    /* ألوان إضافية */
     --whatsapp-green: #25D366;
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* تمرير ناعم عند النقر على الروابط */
     scroll-padding-top: 80px;
 }
 
 body {
-    font-family: 'Cairo', 'Poppins', sans-serif;
+    /* الخط العربي هو الأساس هنا */
+    font-family: 'Cairo', sans-serif; 
     background-color: var(--bg-light);
     color: var(--text-dark);
     line-height: 1.8;
     overflow-x: hidden;
+    text-align: right; /* ضمان اتجاه النص لليمين */
 }
 
 /* =========================================
-   2. GLASSMORPHISM NAVBAR
+   2. القائمة العلوية الزجاجية (NAVBAR)
    ========================================= */
 .navbar {
-    background: rgba(0, 77, 64, 0.85) !important; /* شفافية */
-    backdrop-filter: blur(12px); /* تأثير الضباب */
+    background: rgba(0, 77, 64, 0.90) !important; /* خلفية شبه شفافة */
+    backdrop-filter: blur(12px); /* تأثير الضباب (الزجاج) */
     -webkit-backdrop-filter: blur(12px);
     padding: 1rem 0;
     transition: all 0.4s ease;
@@ -55,7 +55,7 @@ body {
 }
 
 .navbar.scrolled {
-    background: rgba(0, 51, 44, 0.95) !important;
+    background: rgba(0, 51, 44, 0.98) !important; /* تصبح أغمق عند التمرير */
     padding: 0.7rem 0;
     box-shadow: 0 5px 25px rgba(0,0,0,0.15);
 }
@@ -63,13 +63,16 @@ body {
 .navbar-brand {
     font-weight: 800;
     color: var(--secondary-light-teal) !important;
-    font-size: 1.5rem;
-    letter-spacing: -0.5px;
+    font-size: 1.6rem;
+    /* إزالة تباعد الأحرف في العربية لأنه يشوه النص */
+    letter-spacing: 0; 
 }
 
 .navbar-brand img {
     border: 2px solid var(--secondary-light-teal);
+    border-radius: 50%;
     padding: 2px;
+    margin-left: 10px; /* مسافة للصورة في النسخة العربية */
 }
 
 .nav-link {
@@ -78,30 +81,31 @@ body {
     margin: 0 5px;
     transition: all 0.3s;
     position: relative;
+    font-size: 1.05rem;
 }
 
 .nav-link:hover, .nav-link.active {
     color: var(--secondary-light-teal) !important;
 }
 
-/* مؤشر تحت الروابط */
+/* الخط المتحرك تحت الروابط */
 .nav-link::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
     bottom: 5px;
-    left: 50%;
+    right: 50%; /* تعديل لليمين ليتناسب مع العربية */
     background-color: var(--secondary-light-teal);
     transition: all 0.3s ease;
-    transform: translateX(-50%);
+    transform: translateX(50%); /* تعديل الاتجاه */
 }
 
 .nav-link:hover::after, .nav-link.active::after {
     width: 80%;
 }
 
-/* زر اللغة */
+/* زر تغيير اللغة */
 .language-toggle {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid var(--secondary-light-teal);
@@ -109,6 +113,8 @@ body {
     border-radius: var(--radius-pill);
     padding: 6px 20px;
     transition: 0.3s;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
 }
 
 .language-toggle:hover {
@@ -117,15 +123,15 @@ body {
 }
 
 /* =========================================
-   3. HERO SECTION (THE WOW FACTOR)
+   3. قسم الهيرو - الواجهة الرئيسية (HERO SECTION)
    ========================================= */
 .hero-section {
-    /* خلفية متدرجة احترافية مع صورة */
+    /* الصورة الخلفية مع طبقة لونية متدرجة */
     background: linear-gradient(135deg, rgba(0, 77, 64, 0.92) 0%, rgba(0, 30, 25, 0.85) 100%), 
                 url('https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=1920&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* تأثير Parallax */
+    background-attachment: fixed; /* تثبيت الخلفية عند التمرير */
     min-height: 85vh;
     display: flex;
     align-items: center;
@@ -133,37 +139,39 @@ body {
     text-align: center;
     color: white;
     position: relative;
-    /* شكل متموج في الأسفل */
+    /* القص المتموج أسفل القسم */
     clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
     padding-bottom: 5rem;
 }
 
 .hero-section h1 {
-    font-size: 3.5rem;
+    font-size: 3.5rem; /* حجم كبير للعنوان */
     font-weight: 800;
     margin-bottom: 1.5rem;
     text-shadow: 0 4px 15px rgba(0,0,0,0.3);
     animation: fadeInUp 1s ease-out;
+    line-height: 1.4;
 }
 
 .hero-section p {
-    font-size: 1.4rem;
-    opacity: 0.9;
-    max-width: 700px;
+    font-size: 1.5rem;
+    opacity: 0.95;
+    max-width: 800px;
     margin: 0 auto 2.5rem;
-    font-weight: 300;
+    font-weight: 400;
     animation: fadeInUp 1s ease-out 0.3s backwards;
 }
 
 .hero-section .btn {
     background-color: var(--secondary-light-teal);
     color: var(--primary-dark-teal);
-    padding: 15px 40px;
-    font-size: 1.2rem;
+    padding: 15px 50px;
+    font-size: 1.3rem;
     border: none;
     font-weight: 700;
     box-shadow: 0 10px 25px rgba(167, 255, 235, 0.3);
     animation: fadeInUp 1s ease-out 0.6s backwards;
+    font-family: 'Cairo', sans-serif; /* تأكيد الخط العربي */
 }
 
 .hero-section .btn:hover {
@@ -173,7 +181,7 @@ body {
 }
 
 /* =========================================
-   4. SECTIONS & HEADINGS
+   4. تنسيق الأقسام والعناوين
    ========================================= */
 section {
     padding: 100px 0;
@@ -191,18 +199,19 @@ h2 {
     transform: translateX(-50%);
 }
 
+/* الخط الذهبي الصغير تحت العناوين */
 h2::after {
     content: '';
     display: block;
     width: 60px;
     height: 4px;
-    background: var(--accent-gold); /* الخط الذهبي الصغير */
+    background: var(--accent-gold); 
     margin: 15px auto 0;
     border-radius: 2px;
 }
 
 /* =========================================
-   5. MODERN CARDS (Services, Features, Fatwas)
+   5. البطاقات الحديثة (خدمات، ميزات، فتاوى)
    ========================================= */
 .feature-box, .service-card, .gallery-card, #fatwasSection .card, #contactSection .card {
     background: var(--bg-white);
@@ -214,14 +223,13 @@ h2::after {
     height: 100%;
 }
 
-/* تأثير التحويم المميز */
 .feature-box:hover, .service-card:hover, .gallery-card:hover, #fatwasSection .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* رفع البطاقة لأعلى */
     box-shadow: var(--shadow-hover);
     border-color: rgba(0, 77, 64, 0.1);
 }
 
-/* Service Cards Specifics */
+/* تخصيص بطاقات الخدمات */
 .service-card {
     padding: 2.5rem 1.5rem;
     text-align: center;
@@ -229,12 +237,12 @@ h2::after {
     z-index: 1;
 }
 
-/* خلفية أيقونة دائرية باهتة */
+/* الدائرة الخلفية الشفافة */
 .service-card::before {
     content: '';
     position: absolute;
     top: -50px;
-    right: -50px;
+    left: -50px; /* تعديل لليسار في النسخة العربية */
     width: 150px;
     height: 150px;
     background: rgba(0, 77, 64, 0.03);
@@ -271,12 +279,13 @@ h2::after {
     margin-bottom: 1rem;
 }
 
-/* Buttons inside cards */
+/* الأزرار داخل البطاقات */
 .btn-outline-dark, .btn-info, .toggle-fatwa {
     border-radius: var(--radius-pill);
     padding: 8px 25px;
     font-weight: 600;
     transition: 0.3s;
+    font-family: 'Cairo', sans-serif;
 }
 
 .service-card .btn-outline-dark {
@@ -291,36 +300,44 @@ h2::after {
 }
 
 /* =========================================
-   6. GALLERY & FATWA
+   6. معرض الصور والفتاوى
    ========================================= */
 .gallery-card img {
     height: 250px;
+    width: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
 }
 
 .gallery-card:hover img {
-    transform: scale(1.1);
+    transform: scale(1.1); /* تكبير الصورة عند التحويم */
+}
+
+.gallery-card .card-text {
+    font-weight: 600;
+    color: var(--primary-dark-teal);
 }
 
 #fatwasSection .card {
-    border-left: 5px solid var(--primary-dark-teal); /* زخرفة جانبية */
+    border-right: 5px solid var(--primary-dark-teal); /* زخرفة على اليمين للعربية */
+    border-left: none;
+    text-align: right;
 }
 
-/* زر طلب التوضيح (Gemini) - مظهر ذكي */
+/* زر طلب التوضيح (Gemini) */
 .gemini-clarify-btn {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* لون بنفسجي أزرق للذكاء الاصطناعي */
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     color: white;
     border: none;
     border-radius: 10px;
     padding: 8px 20px;
     box-shadow: 0 4px 15px rgba(37, 117, 252, 0.3);
+    font-family: 'Cairo', sans-serif;
 }
 
 .gemini-clarify-btn:hover {
     background: linear-gradient(135deg, #5b0eb0 0%, #1a60d6 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 117, 252, 0.5);
     color: white;
 }
 
@@ -329,14 +346,23 @@ h2::after {
     border: 1px dashed #2575fc;
     border-radius: 10px;
     color: #333;
+    padding: 15px;
+    margin-top: 15px;
 }
 
 /* =========================================
-   7. CONTACT SECTION
+   7. قسم التواصل (CONTACT SECTION)
    ========================================= */
 #contactSection .card {
     border: none;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.1); /* ظل كبير جداً للنموذج */
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+.contact-link-item {
+    direction: ltr; /* الأرقام والبريد يفضل أن تكون LTR حتى لا تنعكس */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .whatsapp-btn {
@@ -344,19 +370,21 @@ h2::after {
     border: none;
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
     border-radius: var(--radius-pill);
+    color: white !important;
 }
 
 .whatsapp-btn:hover {
     background-color: #1ebc57;
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
 }
 
+/* حقول الإدخال */
 input.form-control, textarea.form-control {
     border-radius: 10px;
     border: 1px solid #e0e0e0;
     padding: 15px;
     background: #f9f9f9;
+    text-align: right; /* الكتابة من اليمين */
 }
 
 input.form-control:focus, textarea.form-control:focus {
@@ -371,17 +399,18 @@ input.form-control:focus, textarea.form-control:focus {
     width: 100%;
     border-radius: var(--radius-pill);
     padding: 15px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 /* =========================================
-   8. FOOTER
+   8. التذييل (FOOTER)
    ========================================= */
 .footer {
-    background: #00251a; /* لون داكن جداً */
+    background: #00251a;
     padding: 4rem 0 2rem;
     color: rgba(255,255,255,0.7);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 .footer .social-icons a {
@@ -405,7 +434,7 @@ input.form-control:focus, textarea.form-control:focus {
 }
 
 /* =========================================
-   9. RESPONSIVE & ANIMATION UTILS
+   9. الرسوم المتحركة والتجاوب
    ========================================= */
 @keyframes fadeInUp {
     from {
@@ -422,10 +451,17 @@ section.animate-in {
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
+/* للتجاوب مع الموبايل */
 @media (max-width: 768px) {
-    .hero-section h1 { font-size: 2.5rem; }
+    .hero-section h1 { font-size: 2.2rem; }
     .hero-section { clip-path: none; padding-bottom: 3rem; }
-    h2 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
     .service-card { padding: 2rem 1rem; }
     .navbar-brand { font-size: 1.2rem; }
+    
+    /* التأكد من أن الأزرار تأخذ العرض الكامل في الموبايل */
+    .hero-section .btn, .whatsapp-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
