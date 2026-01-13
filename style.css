@@ -1,26 +1,26 @@
 /* =========================================
-   1. Theme Variables & Reset
+   1. Themes & Variables
    ========================================= */
 :root {
     --primary: #1e5f5b;
     --accent: #c5a065;
-    /* Light Mode - Dimmed for Eye Comfort */
-    --bg-body: #f4f7f6; 
+    /* Light Mode */
+    --bg-body: #f8fafb;
     --bg-card: #ffffff;
-    --text-main: #1a202c;
-    --text-muted: #4a5568;
-    --border: rgba(0,0,0,0.08);
+    --text-main: #212529; /* أسود واضح جداً */
+    --text-muted: #495057;
+    --border: rgba(0,0,0,0.1);
     --icon-bg: rgba(30, 95, 91, 0.08);
 }
 
 [data-theme="dark"] {
     /* Deep Dark Mode */
-    --bg-body: #0a0f0e;
-    --bg-card: #141d1c;
-    --text-main: #f1f5f9;
-    --text-muted: #94a3b8;
-    --border: rgba(197, 160, 101, 0.2);
-    --icon-bg: rgba(197, 160, 101, 0.12);
+    --bg-body: #0a0e0d;
+    --bg-card: #131b1a;
+    --text-main: #ffffff !important; /* نص أبيض ناصع لوضوح فائق */
+    --text-muted: #d1d5db;
+    --border: rgba(197, 160, 101, 0.25);
+    --icon-bg: rgba(197, 160, 101, 0.15);
     --accent: #d4af37;
 }
 
@@ -28,20 +28,22 @@ body {
     font-family: 'Poppins', 'Cairo', sans-serif;
     background-color: var(--bg-body);
     color: var(--text-main);
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     line-height: 1.8;
 }
 
-/* =========================================
-   2. UI Elements & Toggles
-   ========================================= */
+/* Navbar */
 .navbar {
     background: var(--bg-card) !important;
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     padding: 0.8rem 2rem;
 }
 
+.nav-link { color: var(--text-main) !important; font-weight: 600; }
+.text-gold { color: var(--accent) !important; }
+
+/* Themes Button */
 .theme-toggle-btn {
     background: var(--icon-bg);
     color: var(--accent);
@@ -52,42 +54,32 @@ body {
     transition: 0.3s;
 }
 
-.theme-toggle-btn:hover { transform: scale(1.1); }
-
+/* Hero Section */
 .hero-section {
-    padding: 120px 20px;
-    background: linear-gradient(rgba(10, 15, 14, 0.85), rgba(10, 15, 14, 0.95)),
+    padding: 140px 20px;
+    background: linear-gradient(rgba(10, 15, 14, 0.8), rgba(10, 15, 14, 0.95)),
                 url('https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=1920');
     background-size: cover;
     color: white;
     border-radius: 0 0 50px 50px;
+    text-align: center;
 }
 
-.btn-gold {
-    background: var(--accent);
-    color: white;
-    border-radius: 30px;
-    padding: 12px 40px;
-    font-weight: 700;
-    border: none;
-    transition: 0.3s;
-}
+.btn-gold { background: var(--accent); color: white; border-radius: 30px; font-weight: 700; border: none; }
+.btn-outline-gold { border: 2px solid var(--accent); color: var(--accent); border-radius: 30px; font-weight: 600; }
 
-/* =========================================
-   3. Squircle Icons & Cards
-   ========================================= */
+/* Cards & Icons (Squircle) */
 .feature-box i, .service-card i {
     font-size: 2.2rem;
     color: var(--accent);
     background: var(--icon-bg);
     width: 85px; height: 85px;
     line-height: 85px;
-    border-radius: 22px; /* Squircle Shape */
+    border-radius: 22px; /* شكل Squircle بارز */
     border: 1.5px solid var(--border);
     margin-bottom: 25px;
     display: inline-block;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
 .card, .feature-box {
@@ -95,33 +87,22 @@ body {
     border: 1px solid var(--border);
     border-radius: 28px;
     padding: 2.5rem;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     transition: 0.4s ease;
 }
 
-.card:hover { transform: translateY(-10px); border-color: var(--accent); }
+.card h4, .feature-box h4, .feature-box h5 { color: var(--accent); font-weight: 700; }
 
-.gallery-card img {
-    height: 250px;
-    object-fit: cover;
-    border-radius: 28px 28px 0 0;
+/* Form Visibility */
+.custom-input {
+    background: var(--bg-body);
+    border: 1.5px solid var(--border);
+    color: var(--text-main) !important;
+    border-radius: 15px;
+    padding: 12px;
 }
+.custom-input::placeholder { color: var(--text-muted); }
 
-/* RTL Support */
+/* RTL Fixes */
 [dir="rtl"] { text-align: right; }
 [dir="rtl"] .ms-auto { margin-right: auto !important; margin-left: 0 !important; }
-[dir="rtl"] .navbar-brand img { margin-left: 10px; margin-right: 0; }
-
-.form-control {
-    background-color: var(--bg-body);
-    border: 1px solid var(--border);
-    color: var(--text-main);
-    border-radius: 15px;
-}
-
-.form-control:focus {
-    background-color: var(--bg-body);
-    color: var(--text-main);
-    border-color: var(--accent);
-    box-shadow: none;
-}
