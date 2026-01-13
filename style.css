@@ -1,111 +1,431 @@
+/* =========================================
+   1. MODERN VARIABLES & RESET
+   ========================================= */
 :root {
-    --primary: #00a884; /* مبهج - زمردي */
-    --secondary: #f6b93b; /* دافئ - ذهبي */
-    --bg-light: #f4f7f6;
-    --text-dark: #2d3436;
-    --white: #ffffff;
+    /* Main Colors - Richer & Deeper */
+    --primary-dark-teal: #004d40;
+    --primary-gradient: linear-gradient(135deg, #004d40 0%, #00695c 100%);
+    --secondary-light-teal: #a7ffeb;
+    --accent-gold: #ffd700; /* لمسة ذهبية للفخامة */
+    
+    /* Backgrounds */
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    
+    /* Text */
+    --text-dark: #2c3e50;
+    --text-muted: #6c757d;
+    
+    /* Modern UI Elements */
+    --glass-bg: rgba(255, 255, 255, 0.95);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.5);
+    --shadow-soft: 0 10px 30px -5px rgba(0, 77, 64, 0.08);
+    --shadow-hover: 0 20px 40px -5px rgba(0, 77, 64, 0.15);
+    --radius-lg: 20px;
+    --radius-pill: 50px;
+    
+    /* Third Party Colors */
+    --whatsapp-green: #25D366;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Cairo', 'Poppins', sans-serif;
     background-color: var(--bg-light);
     color: var(--text-dark);
-    scroll-behavior: smooth;
+    line-height: 1.8;
+    overflow-x: hidden;
 }
 
-/* Navbar */
+/* =========================================
+   2. GLASSMORPHISM NAVBAR
+   ========================================= */
 .navbar {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-    border-bottom: 3px solid var(--primary);
+    background: rgba(0, 77, 64, 0.85) !important; /* شفافية */
+    backdrop-filter: blur(12px); /* تأثير الضباب */
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1rem 0;
+    transition: all 0.4s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.navbar.scrolled {
+    background: rgba(0, 51, 44, 0.95) !important;
+    padding: 0.7rem 0;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
 }
 
 .navbar-brand {
-    font-weight: 700;
-    color: var(--primary) !important;
+    font-weight: 800;
+    color: var(--secondary-light-teal) !important;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
 }
 
 .navbar-brand img {
-    height: 45px;
-    border-radius: 50%;
+    border: 2px solid var(--secondary-light-teal);
+    padding: 2px;
 }
 
-.btn-lang {
-    background: var(--primary);
-    color: white;
-    border-radius: 25px;
-    padding: 6px 20px;
+.nav-link {
+    color: rgba(255,255,255,0.9) !important;
     font-weight: 600;
+    margin: 0 5px;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--secondary-light-teal) !important;
+}
+
+/* مؤشر تحت الروابط */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 50%;
+    background-color: var(--secondary-light-teal);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 80%;
+}
+
+/* زر اللغة */
+.language-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--secondary-light-teal);
+    color: var(--secondary-light-teal);
+    border-radius: var(--radius-pill);
+    padding: 6px 20px;
     transition: 0.3s;
 }
 
-.btn-lang:hover {
-    background: var(--secondary);
-    color: var(--text-dark);
+.language-toggle:hover {
+    background: var(--secondary-light-teal);
+    color: var(--primary-dark-teal);
 }
 
-/* Hero Section */
+/* =========================================
+   3. HERO SECTION (THE WOW FACTOR)
+   ========================================= */
 .hero-section {
-    background: linear-gradient(rgba(0, 168, 132, 0.8), rgba(0, 184, 148, 0.7)), 
-                url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2070&auto=format&fit=crop');
+    /* خلفية متدرجة احترافية مع صورة */
+    background: linear-gradient(135deg, rgba(0, 77, 64, 0.92) 0%, rgba(0, 30, 25, 0.85) 100%), 
+                url('https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=1920&auto=format&fit=crop');
     background-size: cover;
-    height: 85vh;
+    background-position: center;
+    background-attachment: fixed; /* تأثير Parallax */
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    border-radius: 0 0 50px 50px;
-}
-
-.btn-main {
-    background: var(--secondary);
-    color: var(--text-dark);
-    border-radius: 30px;
-    font-weight: 700;
-    padding: 12px 35px;
-    box-shadow: 0 4px 15px rgba(246, 185, 59, 0.3);
-}
-
-/* Titles */
-.section-title {
-    color: var(--primary);
-    font-weight: 700;
     position: relative;
-    padding-bottom: 15px;
-    margin-bottom: 40px;
-    text-align: center;
+    /* شكل متموج في الأسفل */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    padding-bottom: 5rem;
 }
 
-.section-title::after {
-    content: '';
-    width: 70px;
-    height: 4px;
-    background: var(--secondary);
-    position: absolute;
-    bottom: 0;
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-section p {
+    font-size: 1.4rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-weight: 300;
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.hero-section .btn {
+    background-color: var(--secondary-light-teal);
+    color: var(--primary-dark-teal);
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(167, 255, 235, 0.3);
+    animation: fadeInUp 1s ease-out 0.6s backwards;
+}
+
+.hero-section .btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #fff;
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.4);
+}
+
+/* =========================================
+   4. SECTIONS & HEADINGS
+   ========================================= */
+section {
+    padding: 100px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-dark-teal);
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
     left: 50%;
     transform: translateX(-50%);
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-gold); /* الخط الذهبي الصغير */
+    margin: 15px auto 0;
     border-radius: 2px;
 }
 
-/* Cards */
-.feature-box, .service-card {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-    transition: 0.3s;
-    border: 1px solid rgba(0, 168, 132, 0.1);
+/* =========================================
+   5. MODERN CARDS (Services, Features, Fatwas)
+   ========================================= */
+.feature-box, .service-card, .gallery-card, #fatwasSection .card, #contactSection .card {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* حركة مرنة */
+    overflow: hidden;
+    height: 100%;
 }
 
-.feature-box:hover, .service-card:hover {
+/* تأثير التحويم المميز */
+.feature-box:hover, .service-card:hover, .gallery-card:hover, #fatwasSection .card:hover {
     transform: translateY(-10px);
-    border-color: var(--primary);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(0, 77, 64, 0.1);
 }
 
-.feature-box i { color: var(--primary); }
+/* Service Cards Specifics */
+.service-card {
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
 
-/* RTL Adjustment for Arabic */
-[lang="ar"] body { font-family: 'Cairo', sans-serif; }
+/* خلفية أيقونة دائرية باهتة */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 77, 64, 0.03);
+    border-radius: 50%;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.service-card:hover::before {
+    transform: scale(1.5);
+    background: rgba(0, 77, 64, 0.06);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: var(--primary-dark-teal);
+    margin-bottom: 1.5rem;
+    background: rgba(167, 255, 235, 0.3);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.service-card:hover i {
+    background: var(--primary-dark-teal);
+    color: var(--secondary-light-teal);
+    transform: rotateY(180deg);
+}
+
+.service-card h4 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Buttons inside cards */
+.btn-outline-dark, .btn-info, .toggle-fatwa {
+    border-radius: var(--radius-pill);
+    padding: 8px 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.service-card .btn-outline-dark {
+    margin-top: 1.5rem;
+    border-color: var(--primary-dark-teal);
+    color: var(--primary-dark-teal);
+}
+
+.service-card .btn-outline-dark:hover {
+    background: var(--primary-dark-teal);
+    color: #fff;
+}
+
+/* =========================================
+   6. GALLERY & FATWA
+   ========================================= */
+.gallery-card img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.1);
+}
+
+#fatwasSection .card {
+    border-left: 5px solid var(--primary-dark-teal); /* زخرفة جانبية */
+}
+
+/* زر طلب التوضيح (Gemini) - مظهر ذكي */
+.gemini-clarify-btn {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* لون بنفسجي أزرق للذكاء الاصطناعي */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 20px;
+    box-shadow: 0 4px 15px rgba(37, 117, 252, 0.3);
+}
+
+.gemini-clarify-btn:hover {
+    background: linear-gradient(135deg, #5b0eb0 0%, #1a60d6 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 117, 252, 0.5);
+    color: white;
+}
+
+.gemini-response-area {
+    background: #f0f4ff;
+    border: 1px dashed #2575fc;
+    border-radius: 10px;
+    color: #333;
+}
+
+/* =========================================
+   7. CONTACT SECTION
+   ========================================= */
+#contactSection .card {
+    border: none;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1); /* ظل كبير جداً للنموذج */
+}
+
+.whatsapp-btn {
+    background-color: var(--whatsapp-green);
+    border: none;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    border-radius: var(--radius-pill);
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebc57;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
+
+input.form-control, textarea.form-control {
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    background: #f9f9f9;
+}
+
+input.form-control:focus, textarea.form-control:focus {
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 77, 64, 0.1);
+    border-color: var(--primary-dark-teal);
+}
+
+#submitFormBtn {
+    background: var(--primary-gradient);
+    border: none;
+    width: 100%;
+    border-radius: var(--radius-pill);
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   8. FOOTER
+   ========================================= */
+.footer {
+    background: #00251a; /* لون داكن جداً */
+    padding: 4rem 0 2rem;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+}
+
+.footer .social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+}
+
+.footer .social-icons a:hover {
+    background: var(--secondary-light-teal);
+    color: var(--primary-dark-teal);
+    transform: translateY(-5px);
+}
+
+/* =========================================
+   9. RESPONSIVE & ANIMATION UTILS
+   ========================================= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+section.animate-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 { font-size: 2.5rem; }
+    .hero-section { clip-path: none; padding-bottom: 3rem; }
+    h2 { font-size: 2rem; }
+    .service-card { padding: 2rem 1rem; }
+    .navbar-brand { font-size: 1.2rem; }
+}
