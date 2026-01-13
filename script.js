@@ -48,14 +48,12 @@ const translations = {
         service6Btn: "Learn More", service6BtnLess: "Show Less",
 
         gallerySectionTitle: "Image Gallery",
-        // Updated gallery image captions
         galleryImageCaption1: "Lecture on the Family in Islam.",
         galleryImageCaption2: "Meeting with BBC in London.",
         galleryImageCaption3: "With the international reciter Dr. Abdullah Matroud.",
         galleryImageCaption4: "A snapshot from one of the events we participated in Britain.",
         galleryImageCaption5: "During the marriage contract of a Malaysian bride and groom from the Malaysian community in London.",
         galleryImageCaption6: "Meeting with the scholar Dr. Omar Abdul Kafi.",
-        galleryImageCaption7: "Additional Image 3.",
 
         fatwasSectionTitle: "Latest Fatwas & Articles", fatwasSectionText: "Explore our growing library of fatwas and articles covering various aspects of Muslim life.",
         fatwaTitle2: "Building a Happy Family in the West",
@@ -135,103 +133,12 @@ const translations = {
         service6Btn: "تعرف على المزيد", service6BtnLess: "أقل",
 
         gallerySectionTitle: "معرض الصور",
-        // Updated gallery image captions
         galleryImageCaption1: "محاضرة عن الاسرة في الاسلام",
         galleryImageCaption2: "لقاء مع قناة BBC في لندن.",
         galleryImageCaption3: "مع القاريء العالمي الدكتور عبد الله مطرود",
         galleryImageCaption4: "لقطة من احد الفعاليات التى شاركنا فيها في بريطانيا.",
         galleryImageCaption5: "خلال عقد قران عريس وعروسة من الجالية الماليزية في لندن.",
         galleryImageCaption6: "لقاء مع العلامة الدكتور عمر عبد الكافي.",
-        // تم إزالة galleryImageCaption7 لأنه لا يوجد عنصر HTML له
-        // galleryImageCaption7: "صورة إضافية 3.",
-
-        fatwasSectionTitle: "فتاوى ومقالات حديثة", fatwasSectionText: "استكشف مكتبتنا المتنامية من الفتاوى والمقالات التي تغطي جوانب متعددة من حياة المسلم.",
-        fatwaTitle2: "بناء أسرة سعيدة في الغرب",
-        fatwaText2: "نصائح وإرشادات للتعامل مع التحديات الأسرية المعاصرة. نتناول في هذا المقال كيفية الحفاظ على الهوية الإسلامية في المجتمعات الغربية، وأهمية التواصل الأسري، وبناء بيئة تعليمية إيجابية للأطفال.",
-        fatwaExtraText2: "نقدم حلولاً عملية لمواجهة الصعوبات التي قد تواجه الأسر المسلمة، مثل التوفيق بين القيم الإسلامية وثقافة المجتمع المحيط، وتعزيز دور المسجد والمراكز الإسلامية في دعم الأسرة وتوفير الدعم الروحي والاجتماعي. كما نركز على أهمية التربية الإسلامية للأبناء في ظل التحديات الحديثة، وسبل غرس القيم والأخلاق الحميدة في نفوسهم ليكونوا أفراداً صالحين في المجتمع.",
-        readMore2: "Read More", readLess2: "Show Less",
-        geminiBtnTextFatwa2: "✨ Request Clarification",
-        geminiLoadingTextFatwa2: "Processing your request...",
-        viewAllFatwas: "View All Fatwas & Articles",
-        contactSectionTitle: "Contact Us",
-        contactIntro: "You can contact us directly for assistance and Islamic guidance.",
-        contactNote: "Note: Our team currently works remotely, and calls are redirected to mobile devices. We appreciate your patience and understanding!",
-        directPhoneLabel: "Contact us by phone:",
-        phone1: "00447404949128",
-        phone2: "00447450209680",
-        directEmailLabel: "Or by email:",
-        emailContact: "theshariacouncil@gmail.com",
-        whatsappLabel: "Or send a message on WhatsApp:",
-        whatsappBtnText: "WhatsApp",
-        contactName: "Full Name",
-        contactEmail: "Email Address",
-        contactPhone: "Phone Number",
-        contactMessage: "Your Message",
-        submitFormBtn: "Send Message",
-        formTitle: "Send Us a Message",
-        contactClosingText: "We look forward to serving you and answering your inquiries as soon as possible.",
-        footerText: "&copy; 2024 Shariah Council for the Muslim Family in London. All Rights Reserved.",
-        geminiErrorModalLabel: "Connection Error",
-        geminiErrorModalBody: "Sorry, an error occurred while trying to process your request. Please try again later.",
-        geminiErrorModalCloseBtn: "Close"
-    },
-    ar: {
-        navHome: "الرئيسية", navAbout: "عن المجلس", navServices: "خدماتنا",
-        navGallery: "معرض الصور",
-        navFatwas: "فتاوى ومقالات", navContact: "تواصل معنا",
-        heroTitle: "مجلس الشريعة للأسرة المسلمة في لندن",
-        heroText: "إرشاد شرعي لحياة مستقرة في بيئة آمنة واحترافية.",
-        applyNowBtn: "تواصل معنا الآن",
-        introSectionTitle: "عن المجلس",
-        whoWeAreSubheading: "من نحن",
-        whoWeAreP1: "نحن مجموعة من العلماء والأئمة، تخرجنا في جامعة الأزهر الشريف، أعرق جامعة إسلامية في العالم. نحمل الإجازة العالية (البكالوريوس) في تخصصات شرعية رفيعة، تشمل:",
-        usulAlDinHeading: "أصول الدين",
-        usulAlDinText: "دراسة العقيدة والتفسير والحديث الشريف.",
-        shariaIslamiyaHeading: "الشريعة الإسلامية",
-        shariaIslamiyaText: "دراسة الفقه وأصوله والقانون المقارن.",
-        whoWeAreP2: "نحمل على عاتقنا رسالة العلم والدعوة، ونسعى لنشر الفهم الوسطي المستنير للإسلام، مستندين إلى العلم الراسخ والمنهج الأزهري المعتدل.",
-        whoWeAreP3: "نعمل على تقديم محتوى ديني موثوق، مستند إلى المصادر الأصيلة، وبأسلوب معاصر يلبي حاجات المسلمين في زمانهم، دون تفريط أو غلو.",
-        whyChooseUsSubheading: "لماذا تختار مجلس الشريعة؟",
-        introSectionText: "نحن نقدم إرشادات شرعية موثوقة ونعمل ضمن إطار القانون البريطاني، ملتزمون بالشفافية والعدل في كل خدماتنا. فريقنا من العلماء والمختصين مكرس لخدمة مجتمعنا وتوفير الدعم الأسري اللازم.",
-        aboutFeature1Title: "ثقة وموثوقية", aboutFeature1Text: "نقدم إرشادات شرعية تستند إلى منهج إسلامي أصيل ومعاصر.",
-        aboutFeature2Title: "عدالة وشفافية", aboutFeature2Text: "نلتزم بالعدل والشفافية في جميع إجراءاتنا وخدماتنا.",
-        aboutFeature3Title: "التزام بالقانون البريطاني", aboutFeature3Text: "نعمل بانسجام تام مع قوانين المملكة المتحدة ونظامها القضائي.",
-        servicesSectionTitle: "خدماتنا الرئيسية",
-        service1Title: "الزواج الإسلامي (النكاح)",
-        service1Text: "إتمام عقود الزواج الشرعية وفقًا لأحكام الشريعة الغراء، وتقديم الإرشاد للمقبلين على الزواج لبناء أسرة مستقرة.",
-        service1ExtraText: "يشمل ذلك توثيق العقود، التأكد من استيفاء جميع الأركان والشروط الشرعية، وتقديم نصائح مهمة للزوجين لضمان حياة زوجية سعيدة ومستقرة تتفق مع تعاليم الإسلام والقوانين المحلية.",
-        service1Btn: "تعرف على المزيد", service1BtnLess: "أقل",
-        service2Title: "الطلاق والخلع",
-        service2Text: "المساعدة في إجراءات الطلاق والخلع الشرعية، والوساطة بين الطرفين، وتقديم النصائح لضمان حقوق الجميع.",
-        service2ExtraText: "نسعى جاهدين لتقليل النزاعات وحماية مصالح الأطفال إن وجدوا. نقدم المشورة الشرعية والقانونية حول نفقة الزوجة، حضانة الأطفال، وتقسيم الممتلكات، مع الحفاظ على الأجواء الودية قدر الإمكان.",
-        service2Btn: "تعرف على المزيد", service2BtnLess: "أقل",
-        service3Title: "الاستشارات والفتاوى",
-        service3Text: "إرشادات شرعية حول مسائل الأسرة، الميراث، المعاملات المالية، والعبادات، للإجابة على تساؤلاتكم الدينية.",
-        service3ExtraText: "يقدم علماؤنا المتخصصون فتاوى دقيقة وموثوقة بناءً على أدلة الكتاب والسنة والإجماع، مع مراعاة الظروف المعاصرة للمسلمين في الغرب، لتقديم حلول شرعية عملية لمختلف قضايا الحياة اليومية.",
-        service3Btn: "تعرف على المزيد", service3BtnLess: "أقل",
-        service4Title: "الرقية الشرعية",
-        service4Text: "تقديم جلسات الرقية الشرعية المطابقة للكتاب والسنة لعلاج الحسد، العين، والسحر، مع التزام بأعلى معايير الأمان والخصوصية.",
-        service4ExtraText: "نقوم بالرقية الشرعية وفق المنهج النبوي الصحيح، باستخدام آيات القرآن الكريم والأدعية المأثورة. نضمن بيئة آمنة ومحترمة للمستفيدين، مع التوجيه والنصائح اللازمة للمتابعة الذاتية.",
-        service4Btn: "تعرف على المزيد", service4BtnLess: "أقل",
-        service5Title: "دورات تجويد وإجازات قرآنية",
-        service5Text: "دورات متقدمة في تجويد القرآن الكريم للكبار، مع إمكانية الحصول على إجازة بسند متصل برواية حفص عن عاصم من طريق الشاطبية.",
-        service5ExtraText: "تُعقد الدورات على يد مشايخ متخصصين ومجازين، لتعليم أحكام التجويد النظرية والتطبيقية، ومساعدة الطلاب على إتقان تلاوة القرآن الكريم. كما نوفر مسارات للإجازة لمن يرغبون في إتقان الرواية بسند متصل.",
-        service5Btn: "تعرف على المزيد", service5BtnLess: "أقل",
-        service6Title: "دورات اللغة العربية",
-        service6Text: "تقديم دورات شاملة لتعليم اللغة العربية للكبار من جميع المستويات، بهدف تمكينهم من فهم القرآن الكريم والسنة النبوية والتواصل الفعال.",
-        service6ExtraText: "تشمل الدورات القواعد النحوية والصرفية، المحادثة، القراءة، والكتابة. نستخدم أساليب تعليمية حديثة وممتعة لضمان أفضل النتائج، سواء للمبتدئين أو لمن يرغبون في صقل مهاراتهم.",
-        service6Btn: "تعرف على المزيد", service6BtnLess: "أقل",
-
-        gallerySectionTitle: "معرض الصور",
-        // Updated gallery image captions
-        galleryImageCaption1: "محاضرة عن الاسرة في الاسلام",
-        galleryImageCaption2: "لقاء مع قناة BBC في لندن.",
-        galleryImageCaption3: "مع القاريء العالمي الدكتور عبد الله مطرود",
-        galleryImageCaption4: "لقطة من احد الفعاليات التى شاركنا فيها في بريطانيا.",
-        galleryImageCaption5: "خلال عقد قران عريس وعروسة من الجالية الماليزية في لندن.",
-        galleryImageCaption6: "لقاء مع العلامة الدكتور عمر عبد الكافي.",
-        // تم إزالة galleryImageCaption7 لأنه لا يوجد عنصر HTML له
-        // galleryImageCaption7: "صورة إضافية 3.",
 
         fatwasSectionTitle: "فتاوى ومقالات حديثة", fatwasSectionText: "استكشف مكتبتنا المتنامية من الفتاوى والمقالات التي تغطي جوانب متعددة من حياة المسلم.",
         fatwaTitle2: "بناء أسرة سعيدة في الغرب",
@@ -279,16 +186,16 @@ function applyTranslations(lang) {
             else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = t[key];
             }
-            else if (element.tagName === 'BUTTON' && element.id === 'submitFormBtn') { // Specifically handle submit button text
+            else if (element.tagName === 'BUTTON' && element.id === 'submitFormBtn') {
                 element.textContent = t[key];
             }
-            else { // هذا هو الجزء العام الذي يتعامل مع عناصر مثل <h3>
+            else { 
                 element.textContent = t[key];
             }
         }
     }
-    document.documentElement.lang = lang; // تحديث السمة lang
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'; // تحديث السمة dir
+    document.documentElement.lang = lang; 
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'; 
 
     // Update gallery image captions
     document.getElementById('galleryImageCaption1').textContent = t.galleryImageCaption1;
@@ -297,8 +204,6 @@ function applyTranslations(lang) {
     document.getElementById('galleryImageCaption4').textContent = t.galleryImageCaption4;
     document.getElementById('galleryImageCaption5').textContent = t.galleryImageCaption5;
     document.getElementById('galleryImageCaption6').textContent = t.galleryImageCaption6;
-    // تم إزالة السطر التالي: document.getElementById('galleryImageCaption7').textContent = t.galleryImageCaption7;
-
 
     const logoImg = document.querySelector('.navbar-brand img');
     if (logoImg) {
@@ -364,7 +269,7 @@ async function handleGeminiClarify(buttonElement) {
     }
 
     try {
-        const apiKey = "AIzaSyDwwEnjkcDxnREl2po1cr-Mo-ZaTRIr0Aw"; // المفتاح الذي تم تركه فارغًا في الكود الأصلي
+        const apiKey = "AIzaSyDwwEnjkcDxnREl2po1cr-Mo-ZaTRIr0Aw"; 
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
         let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
@@ -406,7 +311,6 @@ async function handleGeminiClarify(buttonElement) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // التأكد من تعيين اللغة والاتجاه الافتراضي عند تحميل DOM
     document.documentElement.lang = 'ar';
     document.documentElement.dir = 'rtl';
     applyTranslations('ar');
@@ -458,7 +362,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // إضافة مستمع حدث لزر تبديل اللغة (مع إغلاق الشريط)
     const langToggleButton = document.getElementById('navLangToggle');
     if (langToggleButton) {
         langToggleButton.addEventListener('click', function() {
@@ -466,11 +369,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const newLang = currentLang === 'ar' ? 'en' : 'ar';
             applyTranslations(newLang);
 
-            // إغلاق شريط التنقل القابل للطي إذا كان مفتوحًا
             const navbarToggler = document.querySelector('.navbar-toggler');
             const navbarCollapse = document.getElementById('navbarNav');
             if (navbarCollapse.classList.contains('show')) {
-                navbarToggler.click(); // يحاكي النقر على زر التبديل لإغلاقه
+                navbarToggler.click(); 
             }
         });
     }
