@@ -27,6 +27,7 @@
                 <li class="nav-item"><a class="nav-link" href="#aboutSection" id="navAbout">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="#servicesSection" id="navServices">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="#gallerySection" id="navGallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#fatwasSection" id="navFatwas">Fatwas</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contactSection" id="navContact">Contact</a></li>
                 <li class="nav-item">
                     <button class="btn btn-gold-outline ms-lg-3" id="navLangToggle">العربية</button>
@@ -41,22 +42,24 @@
     <div class="container text-center position-relative">
         <h1 id="heroTitle" class="display-3 fw-bold">Islamic Guidance for a Stable Life</h1>
         <p id="heroText" class="lead mb-4">Professional Shariah services in London under Al-Azhar methodology.</p>
-        <div class="hero-btns">
-            <a href="#contactSection" class="btn btn-primary-custom" id="applyNowBtn">Contact Us Now</a>
-        </div>
+        <a href="#contactSection" class="btn btn-primary-custom" id="applyNowBtn">Contact Us Now</a>
     </div>
 </header>
 
 <section class="py-5" id="aboutSection">
     <div class="container">
         <h2 class="section-title" id="introSectionTitle">About Us</h2>
-        <p id="whoWeAreP1" class="text-center mt-4">We are a group of scholars from Al-Azhar University providing moderate Islamic guidance.</p>
+        <div class="text-center mb-5">
+            <h3 id="whoWeAreSubheading">Who We Are</h3>
+            <p id="whoWeAreP1" class="lead">We are a group of scholars and Imams, graduates of Al-Azhar Al-Sharif University.</p>
+            <p id="whoWeAreP2">We strive to spread a moderate, enlightened understanding of Islam based on the moderate Azhari methodology.</p>
+        </div>
     </div>
 </section>
 
 <section class="py-5 bg-light" id="servicesSection">
     <div class="container">
-        <h2 class="section-title" id="servicesSectionTitle">Our Services</h2>
+        <h2 class="section-title" id="servicesSectionTitle">Our Main Services</h2>
         <div class="row g-4 mt-4" id="servicesContainer">
             </div>
     </div>
@@ -64,14 +67,36 @@
 
 <section class="py-5" id="gallerySection">
     <div class="container">
-        <h2 class="section-title" id="gallerySectionTitle">Gallery</h2>
+        <h2 class="section-title" id="gallerySectionTitle">Image Gallery</h2>
         <div class="row g-3 mt-4">
-            <div class="col-md-4"><img src="1jpeg.jpeg" class="img-fluid rounded shadow" alt="Gallery 1"></div>
-            <div class="col-md-4"><img src="2jpeg.jpeg" class="img-fluid rounded shadow" alt="Gallery 2"></div>
-            <div class="col-md-4"><img src="3.jpeg" class="img-fluid rounded shadow" alt="Gallery 3"></div>
-            <div class="col-md-4"><img src="islam4.jpg" class="img-fluid rounded shadow" alt="Gallery 4"></div>
-            <div class="col-md-4"><img src="jpg6.jpg" class="img-fluid rounded shadow" alt="Gallery 5"></div>
-            <div class="col-md-4"><img src="BBC.jpg" class="img-fluid rounded shadow" alt="BBC Interview"></div>
+            <div class="col-md-4"><div class="gallery-card"><img src="islam4.jpg" class="img-fluid rounded shadow" alt="Lecture"><p id="galleryImageCaption1" class="p-2 text-center small">Lecture on Family</p></div></div>
+            <div class="col-md-4"><div class="gallery-card"><img src="BBC.jpg" class="img-fluid rounded shadow" alt="BBC"><p id="galleryImageCaption2" class="p-2 text-center small">Meeting with BBC</p></div></div>
+            <div class="col-md-4"><div class="gallery-card"><img src="3.jpeg" class="img-fluid rounded shadow" alt="Marriage"><p id="galleryImageCaption5" class="p-2 text-center small">Malaysian Wedding</p></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light" id="fatwasSection">
+    <div class="container">
+        <h2 class="section-title" id="fatwasSectionTitle">Latest Fatwas & Articles</h2>
+        <div class="card p-4 shadow-sm">
+            <h5 id="fatwaTitle2" class="text-primary">Building a Happy Family in the West</h5>
+            <p id="fatwaText2">Tips and guidance for addressing contemporary family challenges.</p>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" id="contactSection">
+    <div class="container">
+        <h2 class="section-title" id="contactSectionTitle">Contact Us</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <p id="contactIntro">Contact us directly for assistance and Islamic guidance.</p>
+                <div class="mb-4">
+                    <p><i class="fas fa-phone gold-text me-2"></i> <a href="tel:+00447404949128" id="phone1">00447404949128</a></p>
+                    <p><i class="fas fa-envelope gold-text me-2"></i> <a href="mailto:theshariacouncil@gmail.com" id="emailContact">theshariacouncil@gmail.com</a></p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
