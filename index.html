@@ -3,199 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shariah Council for the Muslim Family in London</title>
+    <title>Shariah Council for the Muslim Family in London - Noor & Hayat</title>
     <meta name="description" content="The Shariah Council for the Muslim Family in London offers reliable Islamic guidance, marriage services, divorce, counseling, Ruqyah, and educational courses.">
-    
-    <link rel="icon" href="https://github.com/5rwasha17/theshariacouncil/blob/main/theshariacouncil.png?raw=true" type="image/png">
+    <link rel="icon" href="theshariacouncil.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light" id="mainNavbar">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="https://github.com/5rwasha17/theshariacouncil/blob/main/theshariacouncil.png?raw=true" alt="Logo" width="35" class="rounded-circle me-2"> 
-                Shariah Council
-            </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto text-center">
-                    <li class="nav-item"><a class="nav-link" href="#heroSection" id="navHome">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#aboutSection" id="navAbout">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#servicesSection" id="navServices">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallerySection" id="navGallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#fatwasSection" id="navFatwas">Fatwas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contactSection" id="navContact">Contact</a></li>
-                    <li class="nav-item">
-                        <button class="language-toggle ms-lg-3 mt-2 mt-lg-0" id="navLangToggle">العربية / اردو / English</button>
-                    </li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNavbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://github.com/5rwasha17/theshariacouncil/blob/main/theshariacouncil.png?raw=true" alt="Shariah Council Logo" width="40" height="40" class="rounded-circle me-2"> Shariah Council
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#heroSection" id="navHome">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#aboutSection" id="navAbout">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servicesSection" id="navServices">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallerySection" id="navGallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#fatwasSection" id="navFatwas">Fatwas & Articles</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contactSection" id="navContact">Contact Us</a></li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-dark ms-lg-3 language-toggle" id="navLangToggle">العربية / English</button>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <header class="hero-section" id="heroSection">
-        <div class="container">
-            <h1 id="heroTitle">Shariah Council for the Muslim Family in London</h1>
-            <p id="heroText" class="lead">Islamic guidance for a stable life in a safe and professional environment.</p>
-            <a href="#contactSection" class="btn hero-btn mt-3" id="applyNowBtn">Contact Us Now</a>
-        </div>
-    </header>
+<header class="hero-section" id="heroSection">
+    <div class="container">
+        <h1 id="heroTitle">Shariah Council for the Muslim Family in London</h1>
+        <p id="heroText">Islamic guidance for a stable life in a safe and professional environment.</p>
+        <a href="#contactSection" class="btn btn-light btn-lg" id="applyNowBtn">Contact Us Now</a>
+    </div>
+</header>
 
-    <section id="aboutSection">
-        <div class="container text-center">
-            <h2 class="section-title" id="introSectionTitle">About Us</h2>
-            <p class="lead text-muted mb-5" id="whoWeAreP1">We are a group of scholars and Imams, graduates of Al-Azhar Al-Sharif University.</p>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="feature-card">
-                        <i class="fas fa-scroll"></i>
-                        <h4 id="usulAlDinHeading">Fundamentals of Religion</h4>
-                        <p id="usulAlDinText" class="text-muted">Study of creed, Tafsir, and Hadith.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="feature-card">
-                        <i class="fas fa-balance-scale"></i>
-                        <h4 id="shariaIslamiyaHeading">Islamic Sharia</h4>
-                        <p id="shariaIslamiyaText" class="text-muted">Fiqh and comparative law.</p>
-                    </div>
+<section class="container my-5" id="aboutSection">
+    <h2 class="text-center mb-5" id="introSectionTitle">About Us</h2>
+
+    <div class="text-center mb-5">
+        <h3 class="mb-3" id="whoWeAreSubheading">Who We Are</h3>
+        <p class="lead" id="whoWeAreP1">We are a group of scholars and Imams, graduates of Al-Azhar Al-Sharif University. We hold high degrees in distinguished Sharia specializations, including:</p>
+
+        <div class="row justify-content-center mt-4 mb-4 feature-box-wrapper">
+            <div class="col-md-6 mb-4">
+                <div class="feature-box p-4 h-100">
+                    <i class="fas fa-scroll fa-3x mb-3"></i>
+                    <h5 id="usulAlDinHeading">Fundamentals of Religion</h5>
+                    <p id="usulAlDinText">Study of creed, Tafsir, and Hadith.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="bg-light" id="servicesSection">
-        <div class="container text-center">
-            <h2 class="section-title" id="servicesSectionTitle">Our Main Services</h2>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <i class="fas fa-ring"></i>
-                        <h4 id="service1Title">Islamic Marriage</h4>
-                        <p id="service1Text">Completing Islamic marriage contracts.</p>
-                        <div id="service1Extra" style="display:none;" class="p-2 small text-muted"><span id="service1ExtraText">Includes documenting contracts and ensuring conditions.</span></div>
-                        <button class="btn btn-link text-decoration-none toggle-btn" data-target="service1Extra" id="service1Btn">Learn More</button>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <i class="fas fa-gavel"></i>
-                        <h4 id="service2Title">Divorce & Khula</h4>
-                        <p id="service2Text">Assistance with divorce procedures.</p>
-                        <div id="service2Extra" style="display:none;" class="p-2 small text-muted"><span id="service2ExtraText">We strive to protect the interests of children.</span></div>
-                        <button class="btn btn-link text-decoration-none toggle-btn" data-target="service2Extra" id="service2Btn">Learn More</button>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <i class="fas fa-lightbulb"></i>
-                        <h4 id="service3Title">Consultations</h4>
-                        <p id="service3Text">Guidance on family and inheritance.</p>
-                        <div id="service3Extra" style="display:none;" class="p-2 small text-muted"><span id="service3ExtraText">Accurate fatwas based on Quran and Sunnah.</span></div>
-                        <button class="btn btn-link text-decoration-none toggle-btn" data-target="service3Extra" id="service3Btn">Learn More</button>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <i class="fas fa-book-open"></i>
-                        <h4 id="service4Title">Ruqyah Shariah</h4>
-                        <p id="service4Text">Ruqyah sessions following Sunnah.</p>
-                        <div id="service4Extra" style="display:none;" class="p-2 small text-muted"><span id="service4ExtraText">Safe environment for spiritual healing.</span></div>
-                        <button class="btn btn-link text-decoration-none toggle-btn" data-target="service4Extra" id="service4Btn">Learn More</button>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <i class="fas fa-quran"></i>
-                        <h4 id="service5Title">Quran Courses</h4>
-                        <p id="service5Text">Advanced Tajweed with Ijazah.</p>
-                        <div id="service5Extra" style="display:none;" class="p-2 small text-muted"><span id="service5ExtraText">Taught by authorized scholars.</span></div>
-                        <button class="btn btn-link text-decoration-none toggle-btn" data-target="service5Extra" id="service5Btn">Learn More</button>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <i class="fas fa-language"></i>
-                        <h4 id="service6Title">Arabic Language</h4>
-                        <p id="service6Text">Courses for all levels.</p>
-                        <div id="service6Extra" style="display:none;" class="p-2 small text-muted"><span id="service6ExtraText">Grammar, conversation, and writing.</span></div>
-                        <button class="btn btn-link text-decoration-none toggle-btn" data-target="service6Extra" id="service6Btn">Learn More</button>
-                    </div>
+            <div class="col-md-6 mb-4">
+                <div class="feature-box p-4 h-100">
+                    <i class="fas fa-scale-balanced fa-3x mb-3"></i>
+                    <h5 id="shariaIslamiyaHeading">Islamic Sharia</h5>
+                    <p id="shariaIslamiyaText">Study of Fiqh, Usul al-Fiqh, and comparative law.</p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="fatwasSection">
-        <div class="container text-center">
-            <h2 class="section-title" id="fatwasTitle">Common Fatwas</h2>
-            <div class="row g-4 text-start mt-4">
-                <div class="col-md-6">
-                    <div class="p-4 border rounded-4 bg-white shadow-sm h-100">
-                        <h5 class="text-primary mb-3"><i class="fas fa-question-circle me-2"></i><span id="fatwaQ1">What are the conditions for Islamic marriage?</span></h5>
-                        <p class="text-muted small" id="fatwaA1">The presence of the wali, two witnesses, and the mutual consent of both parties.</p>
+        <p class="lead" id="whoWeAreP2">We carry the message of knowledge and strive to spread a moderate understanding of Islam.</p>
+    </div>
+
+    <div class="text-center">
+        <h3 class="mb-4" id="whyChooseUsSubheading">Why Choose Us?</h3>
+        <p class="lead" id="introSectionText">We provide reliable Islamic guidance within the framework of British law.</p>
+        <div class="row mt-5 feature-box-wrapper justify-content-center">
+            <div class="col-md-4 mb-4">
+                <div class="feature-box p-4 h-100">
+                    <i class="fas fa-handshake fa-3x text-success mb-3"></i>
+                    <h5 id="aboutFeature1Title">Trust & Reliability</h5>
+                    <p id="aboutFeature1Text">Authentic and contemporary Islamic guidance.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="feature-box p-4 h-100">
+                    <i class="fas fa-balance-scale fa-3x text-info mb-3"></i>
+                    <h5 id="aboutFeature2Title">Fairness & Transparency</h5>
+                    <p id="aboutFeature2Text">Adhering to fairness in all procedures.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="feature-box p-4 h-100">
+                    <i class="fas fa-gavel fa-3x text-danger mb-3"></i>
+                    <h5 id="aboutFeature3Title">UK Law Adherence</h5>
+                    <p id="aboutFeature3Text">Operating in harmony with UK laws.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5" id="servicesSection">
+    <h2 class="text-center mb-5" id="servicesSectionTitle">Our Main Services</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card service-card">
+                <i class="fas fa-ring"></i>
+                <h4 id="service1Title">Islamic Marriage</h4>
+                <div class="service-description" id="service1Description">
+                    <p id="service1Text">Completing Islamic marriage contracts according to Shariah rulings.</p>
+                     <div class="collapse-content" id="service1Extra" style="display: none;">
+                        <p id="service1ExtraText">Includes documenting contracts and ensuring all conditions are met.</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="p-4 border rounded-4 bg-white shadow-sm h-100">
-                        <h5 class="text-primary mb-3"><i class="fas fa-question-circle me-2"></i><span id="fatwaQ2">Does civil divorce count as Islamic divorce?</span></h5>
-                        <p class="text-muted small" id="fatwaA2">It depends on the intention and the specific case; we recommend consulting the council.</p>
+                <a href="#" class="btn btn-outline-dark toggle-content" data-target="service1Description" data-extra="service1Extra" id="service1Btn">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card service-card">
+                <i class="fas fa-gavel"></i>
+                <h4 id="service2Title">Divorce & Khula</h4>
+                <div class="service-description" id="service2Description">
+                    <p id="service2Text">Assistance with Islamic divorce procedures and mediation.</p>
+                    <div class="collapse-content" id="service2Extra" style="display: none;">
+                         <p id="service2ExtraText">We strive to minimize disputes and protect children's interests.</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-outline-dark toggle-content" data-target="service2Description" data-extra="service2Extra" id="service2Btn">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card service-card">
+                <i class="fas fa-lightbulb"></i>
+                <h4 id="service3Title">Consultations</h4>
+                <div class="service-description" id="service3Description">
+                    <p id="service3Text">Islamic guidance on family matters and inheritance.</p>
+                    <div class="collapse-content" id="service3Extra" style="display: none;">
+                        <p id="service3ExtraText">Accurate fatwas based on Quran and Sunnah considering contemporary life.</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-outline-dark toggle-content" data-target="service3Description" data-extra="service3Extra" id="service3Btn">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+         <div class="col">
+            <div class="card service-card">
+                <i class="fas fa-book-open"></i>
+                <h4 id="service4Title">Ruqyah Shariah</h4>
+                <div class="service-description" id="service4Description">
+                    <p id="service4Text">Ruqyah sessions adhering to Quran and Sunnah.</p>
+                    <div class="collapse-content" id="service4Extra" style="display: none;">
+                        <p id="service4ExtraText">Safe environment for spiritual healing.</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-outline-dark toggle-content" data-target="service4Description" data-extra="service4Extra" id="service4Btn">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card service-card">
+                <i class="fas fa-quran"></i>
+                <h4 id="service5Title">Quran Courses</h4>
+                <div class="service-description" id="service5Description">
+                    <p id="service5Text">Advanced Tajweed courses with Ijazah possibility.</p>
+                    <div class="collapse-content" id="service5Extra" style="display: none;">
+                        <p id="service5ExtraText">Taught by authorized scholars.</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-outline-dark toggle-content" data-target="service5Description" data-extra="service5Extra" id="service5Btn">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card service-card">
+                <i class="fas fa-language"></i>
+                <h4 id="service6Title">Arabic Language</h4>
+                <div class="service-description" id="service6Description">
+                    <p id="service6Text">Comprehensive Arabic courses for all levels.</p>
+                    <div class="collapse-content" id="service6Extra" style="display: none;">
+                        <p id="service6ExtraText">Grammar, conversation, reading, and writing.</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-outline-dark toggle-content" data-target="service6Description" data-extra="service6Extra" id="service6Btn">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5" id="gallerySection">
+    <h2 class="text-center mb-5" id="gallerySectionTitle">Image Gallery</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+            <div class="card gallery-card">
+                <img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/islam4.jpg" class="card-img-top" alt="Lecture">
+                <div class="card-body">
+                    <p class="card-text" id="galleryImageCaption1">Lecture on the Family in Islam.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card gallery-card">
+                <img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/BBC.jpg" class="card-img-top" alt="BBC Interview">
+                <div class="card-body">
+                    <p class="card-text" id="galleryImageCaption2">Meeting with BBC in London.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card gallery-card">
+                <img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/jpg 5.jpg" class="card-img-top" alt="Dr. Abdullah Matroud">
+                <div class="card-body">
+                    <p class="card-text" id="galleryImageCaption3">With Dr. Abdullah Matroud.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card gallery-card">
+                <img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/2jpeg.jpeg" class="card-img-top" alt="Event in UK">
+                <div class="card-body">
+                    <p class="card-text" id="galleryImageCaption4">Event snapshot in the UK.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card gallery-card">
+                <img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/3.jpeg" class="card-img-top" alt="Marriage Contract">
+                <div class="card-body">
+                    <p class="card-text" id="galleryImageCaption5">Malaysian community marriage contract.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card gallery-card">
+                <img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/jpg6.jpg" class="card-img-top" alt="Dr. Omar Abdul Kafi">
+                <div class="card-body">
+                    <p class="card-text" id="galleryImageCaption6">Meeting with Dr. Omar Abdul Kafi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5 text-center" id="fatwasSection">
+    <h2 class="mb-4" id="fatwasSectionTitle">Latest Fatwas & Articles</h2>
+    <p class="lead mb-5" id="fatwasSectionText">Explore our growing library of fatwas and articles.</p>
+    <div class="row justify-content-center">
+        <div class="col-md-8 mb-4"> 
+            <div class="card p-4 text-start h-100">
+                <h5 class="text-primary" id="fatwaTitle2">Building a Happy Family in the West</h5>
+                <div class="fatwa-content" id="fatwaContent2">
+                    <p id="fatwaText2">Tips and guidance for addressing contemporary family challenges and maintaining Islamic identity.</p>
+                    <div class="collapse-content" id="fatwaExtra2" style="display:none;">
+                        <p id="fatwaExtraText2">Practical solutions for facing difficulties Muslim families may encounter, reconciling values with culture, and Islamic upbringing.</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-link p-0 toggle-fatwa" data-target="fatwaContent2" data-extra="fatwaExtra2" id="readMore2">Read More <i class="fas fa-arrow-right"></i></a>
+
+                <div class="mt-3 gemini-feature-container">
+                    <button class="btn btn-sm gemini-clarify-btn" data-fatwa-text-id="fatwaText2" data-fatwa-title-id="fatwaTitle2" data-response-area-id="geminiResponseFatwa2" data-loading-indicator-id="geminiLoadingFatwa2" id="geminiBtnFatwa2">
+                        ✨ <span class="gemini-btn-text" id="geminiBtnTextFatwa2">Request Clarification</span>
+                    </button>
+                    <div class="gemini-response-area mt-2" style="display: none;" id="geminiResponseFatwa2"></div>
+                    <div class="gemini-loading-indicator mt-2" style="display: none;" id="geminiLoadingFatwa2">
+                        <div class="spinner-border spinner-border-sm text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <span class="gemini-loading-text" id="geminiLoadingTextFatwa2"> Processing...</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="bg-light" id="gallerySection">
-        <div class="container text-center">
-            <h2 class="section-title" id="gallerySectionTitle">Gallery</h2>
-            <div class="row g-4">
-                <div class="col-md-4"><div class="gallery-item"><img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/islam4.jpg"></div></div>
-                <div class="col-md-4"><div class="gallery-item"><img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/BBC.jpg"></div></div>
-                <div class="col-md-4"><div class="gallery-item"><img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/jpg 5.jpg"></div></div>
-            </div>
-        </div>
-    </section>
+<section class="container my-5" id="contactSection">
+<h2 class="text-center mb-5" id="contactSectionTitle">Contact Us</h2>
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card p-4 text-center">
+            <div class="card-body">
+                <p class="lead mb-4" id="contactIntro">Contact us directly for assistance.</p>
 
-    <section id="contactSection">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-5">
-                    <h2 class="section-title text-start" id="contactSectionTitle">Contact Us</h2>
-                    <p class="text-muted" id="contactIntro">Get in touch for professional guidance.</p>
-                    <div class="mt-4">
-                        <p><i class="fas fa-phone-alt me-2 text-primary"></i> <a href="tel:+00447404949128" class="text-decoration-none text-dark">00447404949128</a></p>
-                        <p><i class="fas fa-envelope me-2 text-primary"></i> <a href="mailto:theshariacouncil@gmail.com" class="text-decoration-none text-dark">theshariacouncil@gmail.com</a></p>
-                        <a href="https://wa.me/qr/Z6LMKWNLJJF6I1" class="whatsapp-btn mt-3"><i class="fab fa-whatsapp me-2 fs-5"></i> <span id="whatsappBtnText">WhatsApp</span></a>
+                <div class="mb-3">
+                    <p class="mb-1 fs-5" id="directPhoneLabel">Contact us by phone:</p>
+                    <div class="contact-link-item">
+                        <i class="fas fa-phone-alt me-2 icon-contact"></i><a href="tel:+00447404949128" id="phone1">00447404949128</a>
+                    </div>
+                    <div class="contact-link-item">
+                        <i class="fas fa-phone-alt me-2 icon-contact"></i><a href="tel:+00447450209680" id="phone2">00447450209680</a>
                     </div>
                 </div>
-                <div class="col-lg-7">
-                    <div class="contact-form-wrapper">
-                        <form action="https://formspree.io/f/xnnvakoo" method="POST">
-                            <div class="mb-3"><input type="text" class="form-control" name="name" id="contactName" placeholder="Full Name" required></div>
-                            <div class="mb-3"><input type="email" class="form-control" name="email" id="contactEmail" placeholder="Email" required></div>
-                            <div class="mb-3"><textarea class="form-control" name="message" id="contactMessage" rows="4" placeholder="Message" required></textarea></div>
-                            <button type="submit" class="btn btn-primary w-100 py-3 rounded-pill fw-bold" id="submitFormBtn">Send Message</button>
-                        </form>
+                <div class="mb-3">
+                    <p class="mb-1 fs-5" id="directEmailLabel">Or by email:</p>
+                    <div class="contact-link-item">
+                        <i class="fas fa-envelope me-2 icon-contact"></i><a href="mailto:theshariacouncil@gmail.com" id="emailContact">theshariacouncil@gmail.com</a>
                     </div>
                 </div>
+                <div class="mb-4">
+                    <p class="mb-1 fs-5" id="whatsappLabel">Or send a message on WhatsApp:</p>
+                    <a href="https://wa.me/qr/Z6LMKWNLJJF6I1" target="_blank" class="btn whatsapp-btn">
+                        <i class="fab fa-whatsapp me-2"></i> <span id="whatsappBtnText">WhatsApp</span>
+                    </a>
+                </div>
+                
+                <hr class="my-5">
+
+                <h3 class="mb-4" id="formTitle">Send Us a Message</h3>
+                <form action="https://formspree.io/f/xnnvakoo" method="POST" id="contactForm">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="name" id="contactName" placeholder="Full Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" name="_replyto" id="contactEmail" placeholder="Email Address" required>
+                    </div>
+                    <div class="mb-3"> <input type="tel" class="form-control" name="phone" id="contactPhone" placeholder="Phone Number">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" name="message" id="contactMessage" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submitFormBtn">Send Message</button>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</div>
+</section>
 
-    <footer class="footer text-center">
-        <div class="container">
-            <p id="footerText">&copy; 2024 Shariah Council. All Rights Reserved.</p>
+<footer class="footer">
+    <div class="container text-center">
+        <p id="footerText">&copy; 2024 Shariah Council for the Muslim Family in London. All Rights Reserved.</p>
+        <div class="social-icons mt-3">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<div class="modal fade" id="geminiErrorModal" tabindex="-1" aria-labelledby="geminiErrorModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="geminiErrorModalLabel">Connection Error</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="geminiErrorModalBody">
+        Sorry, an error occurred. Please try again later.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="geminiErrorModalCloseBtn">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
