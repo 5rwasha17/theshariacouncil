@@ -1,84 +1,229 @@
+/* =========================================
+   1. Eye-Friendly & Elegant Variables
+   ========================================= */
 :root {
-    --primary: #1e5f5b;
-    --accent: #c5a065;
-    /* Light Mode - GitHub Style */
-    --bg-body: #f6f8fa;
-    --bg-card: #ffffff;
-    --text-main: #1f2328;
-    --text-muted: #656d76;
-    --border: #d0d7de;
-    --nav-bg: rgba(255, 255, 255, 0.95);
-    --icon-bg: #eff1f3;
-}
-
-[data-theme="dark"] {
-    /* GitHub Deep Dark */
-    --bg-body: #0d1117;
-    --bg-card: #161b22;
-    --text-main: #f0f6fc;
-    --text-muted: #8b949e;
-    --border: #30363d;
-    --nav-bg: rgba(13, 17, 23, 0.95);
-    --icon-bg: #21262d;
-    --accent: #d4af37;
+    /* الألوان الأساسية */
+    --primary-color: #1e5f5b; 
+    --secondary-color: #4d908e; 
+    --accent-gold: #c5a065; 
+    
+    /* ألوان الخلفية المحدثة (تم تعتيمها لراحة العين) */
+    --bg-main: #edf1f0; /* رمادي مخضر فاتح وخافت */
+    --bg-secondary: #dee5e4; /* أغمق قليلاً للتمييز */
+    
+    /* أسطح زجاجية خافتة */
+    --glass-surface: rgba(230, 235, 234, 0.96);
+    --glass-border: 1px solid rgba(0, 0, 0, 0.08);
+    
+    /* نصوص بتباين مريح */
+    --text-main: #2d3748; 
+    --text-muted: #4a5568;
+    
+    --radius-xl: 24px;
+    --radius-pill: 50px;
+    --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 20px 40px -5px rgba(30, 95, 91, 0.12);
 }
 
 body {
     font-family: 'Poppins', 'Cairo', sans-serif;
-    background-color: var(--bg-body);
+    background-color: var(--bg-main);
     color: var(--text-main);
-    transition: all 0.3s ease;
-    line-height: 1.6;
+    overflow-x: hidden;
+    line-height: 1.8;
+    transition: background-color 0.3s ease; /* انتقال ناعم عند تبديل اللغة أو السمات */
 }
 
+/* =========================================
+   2. Responsive Floating Navbar
+   ========================================= */
 .navbar {
-    background: var(--nav-bg) !important;
+    width: 92%;
+    margin: 20px auto 0;
+    border-radius: var(--radius-pill);
+    background: var(--glass-surface) !important;
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
+    -webkit-backdrop-filter: blur(10px);
+    border: var(--glass-border);
+    box-shadow: var(--shadow-soft);
+    padding: 0.6rem 2rem;
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
 }
 
-/* زر الثيم */
-.theme-toggle-btn {
-    background: var(--icon-bg);
-    border: 1px solid var(--border);
-    color: var(--text-main);
-    width: 40px; height: 40px;
-    border-radius: 8px;
-    cursor: pointer;
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-weight: 800;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-main) !important;
+    font-weight: 600;
     transition: 0.3s;
-}
-
-/* الأيقونات Squircle */
-.icon-squircle {
-    width: 70px; height: 70px;
-    line-height: 70px;
-    background: var(--icon-bg);
-    color: var(--accent);
+    padding: 8px 18px !important;
     border-radius: 20px;
-    font-size: 1.8rem;
-    margin: 0 auto 20px;
-    border: 1px solid var(--border);
-    display: inline-block;
-    text-align: center;
+    font-size: 0.95rem;
 }
 
-.card, .feature-box {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 2rem;
+.nav-link:hover, .nav-link.active {
+    background-color: var(--bg-secondary);
+    color: var(--primary-color) !important;
+}
+
+.language-toggle {
+    background-color: var(--bg-secondary);
+    color: var(--primary-color);
+    border: 1px solid transparent;
+    border-radius: 30px;
+    padding: 6px 20px;
+    font-weight: 700;
     transition: 0.3s;
+    white-space: nowrap;
+}
+
+.language-toggle:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* =========================================
+   3. Hero Section
+   ========================================= */
+.hero-section {
+    margin-top: 25px;
+    border-radius: var(--radius-xl);
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    /* خلفية داكنة للقسم العلوي لتقليل السطوع */
+    background: linear-gradient(180deg, rgba(23, 56, 53, 0.85) 0%, rgba(15, 38, 36, 0.9) 100%),
+                url('https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    padding: 0 20px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #f0fdfa;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 750px;
+    margin: 0 auto 35px;
+}
+
+.hero-section .btn {
+    background: var(--accent-gold);
+    color: white;
+    padding: 14px 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    border: none;
+    transition: 0.3s;
+}
+
+/* =========================================
+   4. Cards & Content
+   ========================================= */
+section { padding: 60px 0; }
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.feature-box, .service-card, .gallery-card, .card {
+    background: var(--glass-surface);
+    border: var(--glass-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.service-card:hover, .feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    background: white;
+}
+
+.service-card {
+    padding: 2.5rem;
     text-align: center;
 }
 
-.card:hover { border-color: var(--accent); transform: translateY(-5px); }
+.service-card i, .feature-box i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    background: rgba(77, 144, 142, 0.1);
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    display: inline-block;
+}
 
-/* نصوص واضحة */
-h1, h2, h3, h4 { color: var(--text-main); font-weight: 700; }
-p { color: var(--text-muted); }
-[data-theme="dark"] p { color: #c9d1d9; } /* وضوح إضافي في الداكن */
+.gallery-card img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
 
-.btn-gold { background: var(--accent); color: white; border-radius: 6px; padding: 10px 25px; border: none; }
+/* =========================================
+   5. Forms & RTL Support
+   ========================================= */
+input.form-control, textarea.form-control {
+    background: var(--bg-secondary);
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 12px;
+    padding: 12px;
+}
 
-[dir="rtl"] { text-align: right; }
-[dir="rtl"] .ms-auto { margin-right: auto !important; margin-left: 0 !important; }
+/* تنسيقات خاصة باللغات من اليمين لليسار (عربي / أردو) */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .ms-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .navbar-brand img {
+    margin-left: 10px;
+    margin-right: 0 !important;
+}
+
+/* =========================================
+   6. RESPONSIVE MEDIA QUERIES
+   ========================================= */
+@media (max-width: 768px) {
+    .hero-section h1 { font-size: 2rem; }
+    .hero-section { min-height: 60vh; border-radius: 0 0 30px 30px; }
+    .navbar { width: 95%; padding: 0.5rem 1rem; }
+}
