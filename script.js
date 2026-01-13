@@ -160,7 +160,7 @@ const translations = {
     }
 };
 
-// 2. دالة تطبيق الترجمة - تغير النصوص والاتجاه
+// 2. دالة تطبيق الترجمة
 function applyTranslations(lang) {
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -180,18 +180,22 @@ function applyTranslations(lang) {
     }
 }
 
-// 3. منطق الإغلاق التلقائي للقائمة (Auto-Close)
-function closeNavbar() {
-    const navbarCollapse = document.getElementById('navbarNav');
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    if (navbarCollapse.classList.contains('show')) {
-        navbarToggler.click(); // يحاكي الضغط على زر القائمة لإغلاقها
+// 3. دالة إغلاق القائمة باستخدام مكتبة Bootstrap
+function forceCloseNavbar() {
+    const navbarCollapseElement = document.getElementById('navbarNav');
+    if (navbarCollapseElement) {
+        // التحقق مما إذا كانت القائمة مفتوحة حالياً
+        if (navbarCollapseElement.classList.contains('show')) {
+            // استخدام الـ Instance الموجود أو إنشاء واحد جديد لإخفاء القائمة
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapseElement) || new bootstrap.Collapse(navbarCollapseElement);
+            bsCollapse.hide();
+        }
     }
 }
 
 // 4. تهيئة الصفحة عند التحميل
 document.addEventListener('DOMContentLoaded', () => {
-    // البدء بالإنجليزية كافتراضي
+    // البدء بالإنجليزية
     document.documentElement.lang = 'en';
     document.documentElement.dir = 'ltr';
 
@@ -202,4 +206,38 @@ document.addEventListener('DOMContentLoaded', () => {
             const currentLang = document.documentElement.lang;
             const newLang = currentLang === 'en' ? 'ar' : 'en';
             applyTranslations(newLang);
-            closeNavbar(); // إغلاق
+            forceCloseNavbar(); // إغلاق بعد التبديل
+        });
+    }
+
+    // إغلاق القائمة عند الضغط على أي رابط بداخلها
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            forceCloseNavbar();
+        });
+    });
+
+    // منطق أزرار "Learn More"
+    document.querySelectorAll('.toggle-content, .toggle-fatwa').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.dataset.target;
+            const contentContainer = document.getElementById(targetId);
+            const extraContentId = this.dataset.extra;
+            const extraContentElement = document.getElementById(extraContentId);
+            const currentLang = document.documentElement.lang;
+
+            contentContainer.classList.toggle('expanded');
+
+            if (contentContainer.classList.contains('expanded')) {
+                if(extraContentElement) extraContentElement.style.display = 'block';
+                this.innerHTML = (currentLang === 'ar' ? 'عرض أقل' : 'Show Less') + ' <i class="fas fa-arrow-up"></i>';
+            } else {
+                if(extraContentElement) extraContentElement.style.display = 'none';
+                const originalText = translations[currentLang][this.id];
+                this.innerHTML = originalText + ' <i class="fas fa-arrow-right"></i>';
+            }
+        });
+    });
+});
