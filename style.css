@@ -1,50 +1,52 @@
 /* =========================================
-   1. GLOBAL & ULTRA-MODERN VARIABLES
+   1. Eye-Friendly & Elegant Variables
    ========================================= */
 :root {
-    /* ألوان مشبعة وعصرية */
-    --primary-color: #0d5c4d; 
-    --accent-color: #00d4ff; /* سيان مشع */
-    --gold-glow: #ffb700;
+    /* الألوان الرئيسية - هادئة ومستوحاة من الطبيعة */
+    --primary-color: #1e5f5b; /* أخضر عميق مريح */
+    --secondary-color: #4d908e; /* تركواز هادئ */
+    --accent-gold: #c5a065; /* ذهبي معتق (غير لامع) */
     
-    /* الخلفيات العصرية */
-    --bg-main: #f0f2f5;
-    --glass-surface: rgba(255, 255, 255, 0.65);
-    --glass-border: 1px solid rgba(255, 255, 255, 0.8);
+    /* الخلفيات المريحة (Warm & Soft) */
+    --bg-main: #fcfdfd; /* ليس أبيض ناصعاً، بل مائل للبرودة الخفيفة */
+    --bg-secondary: #f4f7f6;
     
-    /* المسافات والأبعاد */
-    --radius-xl: 30px; /* زوايا دائرية كبيرة جداً */
-    --radius-pill: 100px;
-    --shadow-float: 0 20px 40px rgba(0, 77, 64, 0.08);
-    --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.4);
+    /* أسطح الزجاج (أكثر عتامة للقراءة) */
+    --glass-surface: rgba(255, 255, 255, 0.92); /* شفافية قليلة جداً */
+    --glass-border: 1px solid rgba(0, 0, 0, 0.04);
+    
+    /* النصوص */
+    --text-main: #2d3748; /* رمادي داكن جداً بدلاً من الأسود */
+    --text-muted: #718096;
+    
+    /* المسافات والظلال الناعمة */
+    --radius-xl: 24px;
+    --radius-pill: 50px;
+    --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.05); /* ظل خفيف جداً */
+    --shadow-hover: 0 20px 40px -5px rgba(30, 95, 91, 0.12);
 }
 
 body {
     font-family: 'Cairo', sans-serif;
     background-color: var(--bg-main);
-    color: #1a2e35;
+    color: var(--text-main);
     overflow-x: hidden;
-    /* خلفية "أورورا" ضبابية في كامل الموقع */
-    background-image: 
-        radial-gradient(circle at 10% 20%, rgba(167, 255, 235, 0.4) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 40%);
-    background-attachment: fixed;
+    line-height: 1.8;
 }
 
 /* =========================================
-   2. FLOATING NAVBAR (القائمة العائمة)
+   2. Soft Floating Navbar
    ========================================= */
 .navbar {
-    /* جعل القائمة تطفو مثل الكبسولة */
-    width: 90%;
+    width: 92%;
     margin: 20px auto 0;
     border-radius: var(--radius-pill);
-    background: rgba(255, 255, 255, 0.8) !important;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.95) !important; /* شبه معتم */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: var(--glass-border);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    padding: 0.8rem 2rem;
+    box-shadow: var(--shadow-soft);
+    padding: 0.6rem 2rem;
     position: sticky;
     top: 20px;
     z-index: 1000;
@@ -52,41 +54,49 @@ body {
 
 .navbar-brand {
     color: var(--primary-color) !important;
-    font-weight: 900;
-    font-size: 1.4rem;
+    font-weight: 800;
+    font-size: 1.3rem;
 }
 
 .nav-link {
-    color: #444 !important;
-    font-weight: 700;
+    color: var(--text-main) !important;
+    font-weight: 600;
     transition: 0.3s;
-    padding: 5px 15px !important;
+    padding: 8px 18px !important;
     border-radius: 20px;
+    font-size: 0.95rem;
 }
 
 .nav-link:hover, .nav-link.active {
-    background: rgba(13, 92, 77, 0.05);
+    background-color: var(--bg-secondary);
     color: var(--primary-color) !important;
 }
 
 .language-toggle {
-    background: var(--primary-color);
-    color: white;
-    border: none;
+    background-color: var(--bg-secondary);
+    color: var(--primary-color);
+    border: 1px solid transparent;
     border-radius: 30px;
-    padding: 8px 20px;
+    padding: 6px 20px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.language-toggle:hover {
+    background-color: var(--primary-color);
+    color: white;
 }
 
 /* =========================================
-   3. IMMERSIVE HERO (واجهة حديثة)
+   3. Calming Hero Section
    ========================================= */
 .hero-section {
-    margin-top: 20px; /* مسافة عن القائمة العائمة */
+    margin-top: 25px;
     border-radius: var(--radius-xl);
-    width: 95%;
+    width: 96%;
     margin-left: auto;
     margin-right: auto;
-    min-height: 80vh;
+    min-height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,243 +105,232 @@ body {
     overflow: hidden;
     color: white;
     
-    /* خلفية مركبة ومعقدة */
-    background: linear-gradient(180deg, rgba(0, 77, 64, 0.8) 0%, rgba(0, 40, 30, 0.9) 100%),
-                url('https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=1920&auto=format&fit=crop');
+    /* صورة مع طبقة داكنة لراحة العين عند القراءة */
+    background: linear-gradient(180deg, rgba(23, 56, 53, 0.85) 0%, rgba(15, 38, 36, 0.9) 100%),
+                url('https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=1920&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
-/* تأثير العنوان الكبير */
 .hero-section h1 {
-    font-size: 4rem; /* ضخم جداً */
-    font-weight: 900;
-    line-height: 1.2;
+    font-size: 3.2rem;
+    font-weight: 800;
     margin-bottom: 20px;
-    background: linear-gradient(to right, #fff, #a7ffeb);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* نص متدرج شفاف */
-    filter: drop-shadow(0 0 20px rgba(167, 255, 235, 0.3));
+    color: #f0fdfa; /* أبيض مائل للخضرة الخفيفة جداً */
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2); /* ظل ناعم للنص */
 }
 
 .hero-section p {
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-size: 1.3rem;
+    font-weight: 400;
     opacity: 0.9;
-    max-width: 700px;
-    margin: 0 auto 40px;
+    max-width: 750px;
+    margin: 0 auto 35px;
+    line-height: 1.6;
 }
 
 .hero-section .btn {
-    background: white;
-    color: var(--primary-color);
-    padding: 18px 45px;
-    font-size: 1.2rem;
-    font-weight: 800;
+    background: var(--accent-gold);
+    color: white;
+    padding: 14px 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
     border-radius: 50px;
     border: none;
-    box-shadow: 0 0 30px rgba(255,255,255,0.3); /* توهج */
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .hero-section .btn:hover {
-    transform: scale(1.05) translateY(-5px);
-    box-shadow: 0 0 50px rgba(255,255,255,0.5);
+    background: #d4b075;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(197, 160, 101, 0.3);
 }
 
 /* =========================================
-   4. GLASS CARDS (بطاقات زجاجية)
+   4. Matte Glass Cards (بطاقات مريحة)
    ========================================= */
-section { padding: 80px 0; }
+section { padding: 70px 0; }
 
 h2 {
-    font-size: 3rem;
-    font-weight: 900;
+    font-size: 2.4rem;
+    font-weight: 800;
     color: var(--primary-color);
     text-align: center;
     margin-bottom: 3rem;
-    letter-spacing: -1px;
 }
 
+/* بطاقات بخلفية شبه صلبة لقراءة أفضل */
 .feature-box, .service-card, .gallery-card, #fatwasSection .card {
     background: var(--glass-surface);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255,255,255,0.6);
+    border: var(--glass-border);
     border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-float);
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    overflow: visible; /* للسماح للعناصر بالخروج قليلاً */
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s ease;
+    overflow: visible;
     height: 100%;
 }
 
-/* تأثير الرفع الثلاثي الأبعاد */
 .feature-box:hover, .service-card:hover, .gallery-card:hover {
-    transform: translateY(-15px) scale(1.02);
-    background: white;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
-    z-index: 10;
-    border-color: var(--accent-color);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(30, 95, 91, 0.2);
+    background: #fff; /* يصبح أبيض تماماً عند التحويم */
 }
 
-/* أيقونات عائمة */
+/* أيقونات بألوان هادئة */
 .service-card i, .feature-box i {
-    font-size: 3.5rem;
-    background: linear-gradient(135deg, var(--primary-color), #00897b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 10px 10px rgba(0, 137, 123, 0.2));
+    font-size: 3rem;
+    color: var(--secondary-color);
     margin-bottom: 20px;
-    transition: 0.5s;
+    background: rgba(77, 144, 142, 0.1); /* خلفية باهتة للأيقونة */
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    transition: 0.4s;
 }
 
 .service-card:hover i {
-    transform: scale(1.2) rotate(10deg);
+    background: var(--primary-color);
+    color: white;
 }
 
 .service-card h4, .feature-box h5 {
-    font-weight: 800;
-    font-size: 1.5rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
 }
 
-/* الأزرار داخل البطاقات */
+.service-card p, .feature-box p {
+    color: var(--text-muted);
+}
+
+/* الأزرار الهادئة */
 .btn-outline-dark {
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    border: 1px solid var(--text-muted);
+    color: var(--text-muted);
     border-radius: 50px;
-    font-weight: 700;
-    margin-top: 20px;
+    font-weight: 600;
+    margin-top: 15px;
+    padding: 8px 25px;
 }
 .btn-outline-dark:hover {
     background: var(--primary-color);
+    border-color: var(--primary-color);
     color: white;
-    box-shadow: var(--shadow-glow);
-    border-color: transparent;
 }
 
 /* =========================================
-   5. MODERN GALLERY
+   5. Clean Gallery
    ========================================= */
 .gallery-card {
     border-radius: var(--radius-xl);
-    overflow: hidden; /* هنا نحتاج إخفاء الزوائد للصور */
+    overflow: hidden;
     border: none;
 }
 
 .gallery-card img {
-    height: 300px;
+    height: 260px;
     object-fit: cover;
-    transition: 0.7s;
+    transition: 0.5s;
 }
 
 .gallery-card:hover img {
-    transform: scale(1.15);
-    filter: brightness(1.1);
+    transform: scale(1.08);
 }
 
 .gallery-card .card-body {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    color: white;
-    padding-top: 50px;
+    background: white;
+    padding: 15px;
+    text-align: center;
 }
-.gallery-card .card-text { color: white; font-weight: 600; }
+.gallery-card .card-text { 
+    color: var(--text-main); 
+    font-weight: 600; 
+    font-size: 0.9rem;
+}
 
 /* =========================================
-   6. GEMINI & AI BUTTONS
+   6. AI & Forms (Soft Look)
    ========================================= */
 .gemini-clarify-btn {
-    background: linear-gradient(90deg, #2575fc, #6a11cb);
+    background: var(--secondary-color); /* لون هادئ بدلاً من التدرج الصارخ */
     border: none;
-    border-radius: 15px;
+    border-radius: 12px;
     color: white;
-    padding: 10px 25px;
-    font-weight: 700;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
+    padding: 8px 20px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(77, 144, 142, 0.3);
 }
 
-.gemini-clarify-btn::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(90deg, #6a11cb, #2575fc);
-    z-index: -1;
-    transition: opacity 0.5s linear;
-    opacity: 0;
-}
-
-.gemini-clarify-btn:hover::before { opacity: 1; }
 .gemini-clarify-btn:hover {
-    box-shadow: 0 0 20px rgba(106, 17, 203, 0.6);
+    background: var(--primary-color);
+    transform: translateY(-2px);
 }
 
-/* =========================================
-   7. CONTACT & FOOTER
-   ========================================= */
 #contactSection .card {
     border: none;
     background: white;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-soft);
 }
 
 .whatsapp-btn {
-    background: #25D366;
-    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+    background: #4caf50; /* أخضر طبيعي أكثر */
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
     border: none;
     border-radius: 50px;
-    padding: 15px 40px;
-    font-size: 1.1rem;
+    padding: 12px 35px;
+    color: white !important;
 }
 
 .whatsapp-btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5);
+    background: #43a047;
+    transform: translateY(-2px);
 }
 
 input.form-control, textarea.form-control {
-    background: #f8f9fa;
-    border: 2px solid transparent;
-    border-radius: 15px;
-    padding: 15px;
-    transition: 0.3s;
+    background: var(--bg-secondary);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px;
+    color: var(--text-main);
 }
 
 input.form-control:focus, textarea.form-control:focus {
     background: white;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 5px rgba(13, 92, 77, 0.1);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(77, 144, 142, 0.1);
 }
 
 #submitFormBtn {
     background: var(--primary-color);
     border-radius: 50px;
-    padding: 15px;
-    font-size: 1.2rem;
-    font-weight: 800;
+    padding: 12px;
+    font-weight: 700;
     border: none;
 }
 
+/* =========================================
+   7. Footer
+   ========================================= */
 .footer {
-    background: #051b17;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    margin-top: 50px;
-    padding: 60px 0 30px;
+    background: #143d3b; /* لون داكن جداً لراحة العين في النهاية */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-top: 60px;
+    padding: 50px 0 30px;
+    color: #e2e8f0;
 }
 
 /* =========================================
-   8. RESPONSIVE
+   8. Responsive
    ========================================= */
 @media (max-width: 768px) {
     .navbar { width: 95%; padding: 0.5rem 1rem; }
     .hero-section { border-radius: 0; width: 100%; margin-top: 0; min-height: 60vh; }
-    .hero-section h1 { font-size: 2.5rem; }
-    h2 { font-size: 2.2rem; }
+    .hero-section h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
     .feature-box, .service-card { margin-bottom: 20px; }
 }
