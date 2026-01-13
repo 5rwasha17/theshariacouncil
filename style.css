@@ -1,229 +1,127 @@
 /* =========================================
-   1. Eye-Friendly & Elegant Variables
+   1. Theme Variables & Reset
    ========================================= */
 :root {
-    /* الألوان الأساسية */
-    --primary-color: #1e5f5b; 
-    --secondary-color: #4d908e; 
-    --accent-gold: #c5a065; 
-    
-    /* ألوان الخلفية المحدثة (تم تعتيمها لراحة العين) */
-    --bg-main: #edf1f0; /* رمادي مخضر فاتح وخافت */
-    --bg-secondary: #dee5e4; /* أغمق قليلاً للتمييز */
-    
-    /* أسطح زجاجية خافتة */
-    --glass-surface: rgba(230, 235, 234, 0.96);
-    --glass-border: 1px solid rgba(0, 0, 0, 0.08);
-    
-    /* نصوص بتباين مريح */
-    --text-main: #2d3748; 
+    --primary: #1e5f5b;
+    --accent: #c5a065;
+    /* Light Mode - Dimmed for Eye Comfort */
+    --bg-body: #f4f7f6; 
+    --bg-card: #ffffff;
+    --text-main: #1a202c;
     --text-muted: #4a5568;
-    
-    --radius-xl: 24px;
-    --radius-pill: 50px;
-    --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-    --shadow-hover: 0 20px 40px -5px rgba(30, 95, 91, 0.12);
+    --border: rgba(0,0,0,0.08);
+    --icon-bg: rgba(30, 95, 91, 0.08);
+}
+
+[data-theme="dark"] {
+    /* Deep Dark Mode */
+    --bg-body: #0a0f0e;
+    --bg-card: #141d1c;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border: rgba(197, 160, 101, 0.2);
+    --icon-bg: rgba(197, 160, 101, 0.12);
+    --accent: #d4af37;
 }
 
 body {
     font-family: 'Poppins', 'Cairo', sans-serif;
-    background-color: var(--bg-main);
+    background-color: var(--bg-body);
     color: var(--text-main);
-    overflow-x: hidden;
+    transition: all 0.4s ease;
     line-height: 1.8;
-    transition: background-color 0.3s ease; /* انتقال ناعم عند تبديل اللغة أو السمات */
 }
 
 /* =========================================
-   2. Responsive Floating Navbar
+   2. UI Elements & Toggles
    ========================================= */
 .navbar {
-    width: 92%;
-    margin: 20px auto 0;
-    border-radius: var(--radius-pill);
-    background: var(--glass-surface) !important;
+    background: var(--bg-card) !important;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: var(--glass-border);
-    box-shadow: var(--shadow-soft);
-    padding: 0.6rem 2rem;
-    position: sticky;
-    top: 20px;
-    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 0.8rem 2rem;
 }
 
-.navbar-brand {
-    color: var(--primary-color) !important;
-    font-weight: 800;
-    font-size: 1.3rem;
-    display: flex;
-    align-items: center;
-}
-
-.nav-link {
-    color: var(--text-main) !important;
-    font-weight: 600;
+.theme-toggle-btn {
+    background: var(--icon-bg);
+    color: var(--accent);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    width: 42px; height: 42px;
+    cursor: pointer;
     transition: 0.3s;
-    padding: 8px 18px !important;
-    border-radius: 20px;
-    font-size: 0.95rem;
 }
 
-.nav-link:hover, .nav-link.active {
-    background-color: var(--bg-secondary);
-    color: var(--primary-color) !important;
-}
+.theme-toggle-btn:hover { transform: scale(1.1); }
 
-.language-toggle {
-    background-color: var(--bg-secondary);
-    color: var(--primary-color);
-    border: 1px solid transparent;
-    border-radius: 30px;
-    padding: 6px 20px;
-    font-weight: 700;
-    transition: 0.3s;
-    white-space: nowrap;
-}
-
-.language-toggle:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* =========================================
-   3. Hero Section
-   ========================================= */
 .hero-section {
-    margin-top: 25px;
-    border-radius: var(--radius-xl);
-    width: 96%;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    color: white;
-    /* خلفية داكنة للقسم العلوي لتقليل السطوع */
-    background: linear-gradient(180deg, rgba(23, 56, 53, 0.85) 0%, rgba(15, 38, 36, 0.9) 100%),
-                url('https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=1920&auto=format&fit=crop');
+    padding: 120px 20px;
+    background: linear-gradient(rgba(10, 15, 14, 0.85), rgba(10, 15, 14, 0.95)),
+                url('https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=1920');
     background-size: cover;
-    background-position: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-    padding: 0 20px;
-}
-
-.hero-section h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    color: #f0fdfa;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-.hero-section p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    max-width: 750px;
-    margin: 0 auto 35px;
-}
-
-.hero-section .btn {
-    background: var(--accent-gold);
     color: white;
-    padding: 14px 40px;
-    font-size: 1.1rem;
+    border-radius: 0 0 50px 50px;
+}
+
+.btn-gold {
+    background: var(--accent);
+    color: white;
+    border-radius: 30px;
+    padding: 12px 40px;
     font-weight: 700;
-    border-radius: 50px;
     border: none;
     transition: 0.3s;
 }
 
 /* =========================================
-   4. Cards & Content
+   3. Squircle Icons & Cards
    ========================================= */
-section { padding: 60px 0; }
-
-h2 {
+.feature-box i, .service-card i {
     font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.feature-box, .service-card, .gallery-card, .card {
-    background: var(--glass-surface);
-    border: var(--glass-border);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-soft);
-    transition: all 0.4s ease;
-    height: 100%;
-}
-
-.service-card:hover, .feature-box:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-    background: white;
-}
-
-.service-card {
-    padding: 2.5rem;
-    text-align: center;
-}
-
-.service-card i, .feature-box i {
-    font-size: 2.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-    background: rgba(77, 144, 142, 0.1);
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    border-radius: 50%;
+    color: var(--accent);
+    background: var(--icon-bg);
+    width: 85px; height: 85px;
+    line-height: 85px;
+    border-radius: 22px; /* Squircle Shape */
+    border: 1.5px solid var(--border);
+    margin-bottom: 25px;
     display: inline-block;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
+
+.card, .feature-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+    transition: 0.4s ease;
+}
+
+.card:hover { transform: translateY(-10px); border-color: var(--accent); }
 
 .gallery-card img {
     height: 250px;
-    width: 100%;
     object-fit: cover;
-    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    border-radius: 28px 28px 0 0;
 }
 
-/* =========================================
-   5. Forms & RTL Support
-   ========================================= */
-input.form-control, textarea.form-control {
-    background: var(--bg-secondary);
-    border: 1px solid rgba(0,0,0,0.05);
-    border-radius: 12px;
-    padding: 12px;
+/* RTL Support */
+[dir="rtl"] { text-align: right; }
+[dir="rtl"] .ms-auto { margin-right: auto !important; margin-left: 0 !important; }
+[dir="rtl"] .navbar-brand img { margin-left: 10px; margin-right: 0; }
+
+.form-control {
+    background-color: var(--bg-body);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    border-radius: 15px;
 }
 
-/* تنسيقات خاصة باللغات من اليمين لليسار (عربي / أردو) */
-[dir="rtl"] {
-    text-align: right;
-}
-
-[dir="rtl"] .ms-auto {
-    margin-right: auto !important;
-    margin-left: 0 !important;
-}
-
-[dir="rtl"] .navbar-brand img {
-    margin-left: 10px;
-    margin-right: 0 !important;
-}
-
-/* =========================================
-   6. RESPONSIVE MEDIA QUERIES
-   ========================================= */
-@media (max-width: 768px) {
-    .hero-section h1 { font-size: 2rem; }
-    .hero-section { min-height: 60vh; border-radius: 0 0 30px 30px; }
-    .navbar { width: 95%; padding: 0.5rem 1rem; }
+.form-control:focus {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    border-color: var(--accent);
+    box-shadow: none;
 }
