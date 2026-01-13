@@ -65,7 +65,6 @@ const translations = {
         fatwaText2: "Tips and guidance for addressing contemporary family challenges and maintaining Islamic identity.",
         fatwaExtraText2: "Practical solutions for facing difficulties Muslim families may encounter, reconciling values with culture, and Islamic upbringing.",
         readMore2: "Read More",
-        geminiBtnTextFatwa2: "Request Clarification",
         contactSectionTitle: "Contact Us",
         contactIntro: "Contact us directly for assistance.",
         directPhoneLabel: "Contact us by phone:",
@@ -145,7 +144,6 @@ const translations = {
         fatwaText2: "نصائح وإرشادات لمواجهة التحديات الأسرية المعاصرة والحفاظ على الهوية الإسلامية.",
         fatwaExtraText2: "حلول عملية للصعوبات التي قد تواجهها الأسر المسلمة، والتربية الإسلامية.",
         readMore2: "اقرأ المزيد",
-        geminiBtnTextFatwa2: "طلب توضيح",
         contactSectionTitle: "اتصل بنا",
         contactIntro: "تواصل معنا مباشرة للحصول على المساعدة.",
         directPhoneLabel: "اتصل بنا هاتفياً:",
@@ -162,7 +160,7 @@ const translations = {
     }
 };
 
-// 2. دالة تطبيق الترجمة
+// 2. دالة تطبيق الترجمة - تغير النصوص والاتجاه
 function applyTranslations(lang) {
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -174,7 +172,6 @@ function applyTranslations(lang) {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = data[id];
             } else {
-                // الحفاظ على الأيقونة إذا كانت موجودة داخل العنصر
                 const icon = element.querySelector('i');
                 element.textContent = data[id] + " "; 
                 if (icon) element.appendChild(icon);
@@ -183,47 +180,26 @@ function applyTranslations(lang) {
     }
 }
 
-// 3. تهيئة الموقع عند التحميل
+// 3. منطق الإغلاق التلقائي للقائمة (Auto-Close)
+function closeNavbar() {
+    const navbarCollapse = document.getElementById('navbarNav');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    if (navbarCollapse.classList.contains('show')) {
+        navbarToggler.click(); // يحاكي الضغط على زر القائمة لإغلاقها
+    }
+}
+
+// 4. تهيئة الصفحة عند التحميل
 document.addEventListener('DOMContentLoaded', () => {
-    // تعيين الإنجليزية كبداية
+    // البدء بالإنجليزية كافتراضي
     document.documentElement.lang = 'en';
     document.documentElement.dir = 'ltr';
 
-    // مستمع لزر تبديل اللغة
+    // زر تبديل اللغة
     const langToggleButton = document.getElementById('navLangToggle');
     if (langToggleButton) {
         langToggleButton.addEventListener('click', () => {
             const currentLang = document.documentElement.lang;
             const newLang = currentLang === 'en' ? 'ar' : 'en';
             applyTranslations(newLang);
-        });
-    }
-
-    // منطق أزرار "Learn More" و "Read More"
-    document.querySelectorAll('.toggle-content, .toggle-fatwa').forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.dataset.target;
-            const contentContainer = document.getElementById(targetId);
-            const extraContentId = this.dataset.extra;
-            const extraContentElement = document.getElementById(extraContentId);
-            const currentLang = document.documentElement.lang;
-
-            contentContainer.classList.toggle('expanded');
-
-            if (contentContainer.classList.contains('expanded')) {
-                if(extraContentElement) extraContentElement.style.display = 'block';
-                this.innerHTML = (currentLang === 'ar' ? 'عرض أقل' : 'Show Less') + ' <i class="fas fa-arrow-up"></i>';
-            } else {
-                if(extraContentElement) extraContentElement.style.display = 'none';
-                const originalText = translations[currentLang][this.id];
-                this.innerHTML = originalText + ' <i class="fas fa-arrow-right"></i>';
-            }
-        });
-    });
-});
-
-// دالة فارغة لتجنب أخطاء Gemini إذا لم يتم تعريفها بعد
-function handleGeminiClarify(button) {
-    console.log("Gemini feature clicked");
-}
+            closeNavbar(); // إغلاق
