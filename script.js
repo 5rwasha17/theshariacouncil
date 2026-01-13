@@ -1,11 +1,11 @@
-// 1. كائن الترجمات - يحتوي على جميع نصوص الموقع بثلاث لغات (الإنجليزية، العربية، الأردية)
+// 1. كائن الترجمات المحدث - يحتوي على نصوص النماذج بدلاً من الفتاوى
 const translations = {
     en: {
         navHome: "Home",
         navAbout: "About Us",
         navServices: "Services",
         navGallery: "Gallery",
-        navFatwas: "Fatwas & Articles",
+        navForms: "Forms", // الرابط الجديد في القائمة
         navContact: "Contact Us",
         navLangToggle: "العربية / English / اردو",
         heroTitle: "Shariah Council for the Muslim Family in London",
@@ -59,12 +59,11 @@ const translations = {
         galleryImageCaption4: "Event snapshot in the UK.",
         galleryImageCaption5: "Malaysian community marriage contract.",
         galleryImageCaption6: "Meeting with Dr. Omar Abdul Kafi.",
-        fatwasSectionTitle: "Latest Fatwas & Articles",
-        fatwasSectionText: "Explore our growing library of fatwas and articles.",
-        fatwaTitle2: "Building a Happy Family in the West",
-        fatwaText2: "Tips and guidance for addressing contemporary family challenges and maintaining Islamic identity.",
-        fatwaExtraText2: "Practical solutions for facing difficulties Muslim families may encounter, reconciling values with culture, and Islamic upbringing.",
-        readMore2: "Read More",
+        // نصوص قسم النماذج الجديد بالإنجليزية
+        formsSectionTitle: "Forms & Documents",
+        divorceFormTitle: "Divorce Application",
+        divorceFormText: "Please download the official form to begin your application process locally.",
+        divorceFormBtn: "Download Form",
         contactSectionTitle: "Contact Us",
         contactIntro: "Contact us directly for assistance.",
         directPhoneLabel: "Contact us by phone:",
@@ -84,7 +83,7 @@ const translations = {
         navAbout: "من نحن",
         navServices: "خدماتنا",
         navGallery: "معرض الصور",
-        navFatwas: "فتاوى ومقالات",
+        navForms: "النماذج",
         navContact: "اتصل بنا",
         navLangToggle: "English / العربية / اردو",
         heroTitle: "المجلس الشرعي للأسرة المسلمة في لندن",
@@ -138,12 +137,11 @@ const translations = {
         galleryImageCaption4: "لقطة من فعالية في المملكة المتحدة.",
         galleryImageCaption5: "عقد زواج للجالية الماليزية.",
         galleryImageCaption6: "لقاء مع الدكتور عمر عبد الكافي.",
-        fatwasSectionTitle: "أحدث الفتاوى والمقالات",
-        fatwasSectionText: "استكشف مكتبتنا المتنامية من الفتاوى والمقالات.",
-        fatwaTitle2: "بناء أسرة سعيدة في الغرب",
-        fatwaText2: "نصائح وإرشادات لمواجهة التحديات الأسرية المعاصرة والحفاظ على الهوية الإسلامية.",
-        fatwaExtraText2: "حلول عملية للصعوبات التي قد تواجهها الأسر المسلمة، والتربية الإسلامية.",
-        readMore2: "اقرأ المزيد",
+        // نصوص قسم النماذج الجديد بالعربية
+        formsSectionTitle: "النماذج والمستندات",
+        divorceFormTitle: "طلب الطلاق الشرعي",
+        divorceFormText: "يرجى تحميل النموذج الرسمي لبدء إجراءات الطلب مباشرة من الموقع.",
+        divorceFormBtn: "تحميل النموذج",
         contactSectionTitle: "اتصل بنا",
         contactIntro: "تواصل معنا مباشرة للحصول على المساعدة.",
         directPhoneLabel: "اتصل بنا هاتفياً:",
@@ -163,7 +161,7 @@ const translations = {
         navAbout: "ہمارے بارے میں",
         navServices: "خدمات",
         navGallery: "گیلری",
-        navFatwas: "فتاویٰ اور مضامین",
+        navForms: "فارمز",
         navContact: "رابطہ کریں",
         navLangToggle: "English / العربية / اردو",
         heroTitle: "لندن میں مسلم خاندان کے لیے شریعہ کونسل",
@@ -217,12 +215,11 @@ const translations = {
         galleryImageCaption4: "برطانیہ میں ایک تقریب کی جھلک۔",
         galleryImageCaption5: "ملائیشین کمیونٹی کے نکاح کا معاہدہ۔",
         galleryImageCaption6: "ڈاکٹر عمر عبد الکافی کے ساتھ ملاقات۔",
-        fatwasSectionTitle: "تازہ ترین فتاویٰ اور مضامین",
-        fatwasSectionText: "فتاویٰ اور مضامین کی ہماری بڑھتی ہوئی لائبریری کو دیکھیں۔",
-        fatwaTitle2: "مغرب میں ایک خوشحال خاندان کی تعمیر",
-        fatwaText2: "عصری خاندانی چیلنجوں سے نمٹنے اور اسلامی شناخت کو برقرار رکھنے کے لیے تجاویز اور رہنمائی۔",
-        fatwaExtraText2: "مسلم خاندانوں کو درپیش مشکلات کے عملی حل اور اسلامی پرورش۔",
-        readMore2: "مزید پڑھیں",
+        // نصوص قسم النماذج الجديد بالأردية
+        formsSectionTitle: "فارمز اور دستاویزات",
+        divorceFormTitle: "طلاق کی درخواست",
+        divorceFormText: "براہ کرم اپنی درخواست کا عمل شروع کرنے کے لیے آفیشل فارم ڈاؤن لوڈ کریں۔",
+        divorceFormBtn: "فارم ڈاؤن لوڈ کریں",
         contactSectionTitle: "ہم سے رابطہ کریں",
         contactIntro: "مدد کے لیے براہ راست ہم سے رابطہ کریں۔",
         directPhoneLabel: "فون کے ذریعے رابطہ کریں:",
@@ -242,7 +239,6 @@ const translations = {
 // 2. دالة تطبيق الترجمة وتغيير اتجاه الصفحة (LTR/RTL)
 function applyTranslations(lang) {
     document.documentElement.lang = lang;
-    // العربية والأردو اتجاههما من اليمين لليسار
     document.documentElement.dir = (lang === 'ar' || lang === 'ur') ? 'rtl' : 'ltr';
 
     const data = translations[lang];
@@ -273,10 +269,8 @@ function forceCloseNavbar() {
 
 // 4. تهيئة الصفحة عند التحميل
 document.addEventListener('DOMContentLoaded', () => {
-    // البدء بالإنجليزية افتراضياً
     applyTranslations('en');
 
-    // زر تبديل اللغة (يدور بين الإنجليزية -> العربية -> الأردية)
     const langToggleButton = document.getElementById('navLangToggle');
     if (langToggleButton) {
         langToggleButton.addEventListener('click', () => {
@@ -294,7 +288,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // إغلاق القائمة عند الضغط على أي رابط
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -302,8 +295,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // منطق أزرار "Learn More" و "Read More"
-    document.querySelectorAll('.toggle-content, .toggle-fatwa').forEach(button => {
+    // منطق أزرار "Learn More"
+    document.querySelectorAll('.toggle-content').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.dataset.target;
@@ -316,7 +309,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (contentContainer.classList.contains('expanded')) {
                 if(extraContentElement) extraContentElement.style.display = 'block';
-                // نصوص أزرار الإغلاق بناءً على اللغة
                 let closeText = "Show Less";
                 if (currentLang === 'ar') closeText = "عرض أقل";
                 if (currentLang === 'ur') closeText = "کم دکھائیں";
