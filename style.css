@@ -1,114 +1,44 @@
 :root {
-    --primary-teal: #004d40;
-    --accent-teal: #00796b;
-    --light-teal: #a7ffeb;
-    --gold: #d4af37;
-    --white: #ffffff;
-    --glass: rgba(255, 255, 255, 0.1);
-    --primary-gradient: linear-gradient(135deg, #004d40 0%, #00796b 100%);
+    --primary: #004d40;
+    --gold: #c5a059;
+    --dark: #1a1a1a;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-    color: #333;
-}
-
+body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
 [lang="ar"] body { font-family: 'Cairo', sans-serif; }
 
-/* Navbar Innovation */
-.navbar {
-    background: var(--primary-teal);
-    transition: 0.4s;
-    backdrop-filter: blur(10px);
-}
+.navbar { background: var(--primary); padding: 15px 0; transition: 0.5s; }
+.navbar.scrolled { padding: 10px 0; background: rgba(0, 77, 64, 0.95); backdrop-filter: blur(10px); }
 
-.navbar.scrolled {
-    padding: 10px 0;
-    background: rgba(0, 51, 44, 0.95);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
-
-/* Hero Section Upgrade */
 .hero-section {
-    height: 100vh;
-    background: url('https://source.unsplash.com/1600x900/?islamic,architecture') center/cover;
-    display: flex;
-    align-items: center;
-    color: var(--white);
-    position: relative;
-    text-align: center;
+    height: 90vh;
+    background: url('islam4.jpg') center/cover no-repeat fixed;
+    display: flex; align-items: center; color: white; position: relative;
 }
-
 .hero-overlay {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(0,77,64,0.7), rgba(0,0,0,0.8));
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(45deg, rgba(0,77,64,0.8), rgba(0,0,0,0.4));
 }
-
-.hero-section h1 {
-    font-size: 4rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    text-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-/* Custom Buttons */
-.btn-primary-custom {
-    background: var(--primary-gradient);
-    border: none;
-    color: white;
-    padding: 15px 40px;
-    border-radius: 50px;
-    box-shadow: 0 8px 20px rgba(0, 77, 64, 0.4);
-    transition: 0.3s ease;
-}
-
-.btn-primary-custom:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0, 77, 64, 0.5);
-    color: var(--light-teal);
-}
-
-.btn-outline-custom {
-    border: 2px solid var(--light-teal);
-    color: var(--light-teal);
-    padding: 15px 40px;
-    border-radius: 50px;
-    transition: 0.3s;
-}
-
-.btn-outline-custom:hover {
-    background: var(--light-teal);
-    color: var(--primary-teal);
-}
-
-/* Feature Cards */
-.feature-card {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    border-bottom: 5px solid var(--primary-teal);
-    transition: 0.3s;
-}
-
-.feature-card:hover { transform: translateY(-10px); }
 
 .section-title {
-    position: relative;
-    padding-bottom: 15px;
-    font-weight: 700;
-    color: var(--primary-teal);
-    text-align: center;
+    text-align: center; font-weight: 700; color: var(--primary);
+    position: relative; margin-bottom: 40px;
+}
+.section-title::after {
+    content: ''; width: 60px; height: 3px; background: var(--gold);
+    position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);
 }
 
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 50%;
-    transform: translateX(-50%);
-    width: 60px; height: 4px;
-    background: var(--gold);
-    border-radius: 2px;
+.btn-primary-custom {
+    background: var(--gold); border: none; color: white;
+    padding: 12px 35px; border-radius: 50px; font-weight: 600;
+    transition: 0.3s; box-shadow: 0 4px 15px rgba(197, 160, 89, 0.4);
 }
+.btn-primary-custom:hover { background: #b08d4a; transform: translateY(-3px); }
+
+.service-card {
+    background: white; padding: 30px; border-radius: 15px; text-align: center;
+    border-bottom: 4px solid var(--gold); transition: 0.4s; height: 100%;
+}
+.service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+.service-card i { font-size: 40px; color: var(--primary); margin-bottom: 20px; }
