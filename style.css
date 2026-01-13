@@ -1,122 +1,105 @@
+/* =========================================
+   1. Theme Variables & Reset
+   ========================================= */
 :root {
     --primary: #1e5f5b;
+    --secondary: #4d908e;
     --accent: #c5a065;
-    /* Light Theme (Eye-friendly) */
-    --bg-main: #f0f2f1;
+    
+    /* وضع الفاتح (Light Mode) - ألوان هادئة */
+    --bg-body: #f4f7f6;
     --bg-card: #ffffff;
+    --nav-bg: rgba(255, 255, 255, 0.95);
     --text-main: #2d3748;
     --text-muted: #4a5568;
     --border: rgba(0, 0, 0, 0.08);
-    --nav-bg: rgba(240, 242, 241, 0.95);
+    --icon-bg: rgba(30, 95, 91, 0.1);
 }
 
 [data-theme="dark"] {
-    /* Dark Theme (Deep comfort) */
-    --bg-main: #0a0f0e;
-    --bg-card: #141d1c;
-    --text-main: #f1f5f9;
-    --text-muted: #94a3b8;
-    --border: rgba(255, 255, 255, 0.1);
+    /* وضع الداكن (Dark Mode) - فخامة ووضوح */
+    --bg-body: #0a0f0e; /* أسود عميق مائل للأخضر */
+    --bg-card: #141d1c; /* خلفية الكروت */
     --nav-bg: rgba(10, 15, 14, 0.95);
-    --accent: #d4af37;
+    --text-main: #f1f5f9; /* نص أبيض ناصع لوضوح فائق */
+    --text-muted: #94a3b8;
+    --border: rgba(197, 160, 101, 0.2);
+    --icon-bg: rgba(197, 160, 101, 0.15);
+    --accent: #d4af37; /* ذهب ملكي ساطع */
 }
 
 body {
     font-family: 'Poppins', 'Cairo', sans-serif;
-    background-color: var(--bg-main);
+    background-color: var(--bg-body);
     color: var(--text-main);
     transition: all 0.4s ease;
-    overflow-x: hidden;
+    line-height: 1.8;
 }
 
-/* Navbar */
+/* =========================================
+   2. UI Elements
+   ========================================= */
 .navbar {
     background: var(--nav-bg) !important;
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    padding: 0.8rem 1rem;
-}
-
-.nav-link { color: var(--text-main) !important; font-weight: 600; }
-.nav-link:hover { color: var(--accent) !important; }
-
-/* Theme Toggle Button */
-.theme-toggle-btn {
-    background: var(--bg-card);
-    color: var(--accent);
-    border: 1px solid var(--border);
-    border-radius: 50%;
-    width: 40px; height: 40px;
-    cursor: pointer;
+    border-bottom: 1px solid var(--border);
+    padding: 0.6rem 2rem;
     transition: 0.3s;
 }
 
-/* Hero */
-.hero-section {
-    padding: 160px 0 100px;
-    background: linear-gradient(rgba(10, 15, 14, 0.8), rgba(10, 15, 14, 0.8)),
-                url('https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=1920');
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
-    text-align: center;
-    border-radius: 0 0 50px 50px;
-}
+.nav-link { color: var(--text-main) !important; font-weight: 600; }
 
-.hero-section h1 { font-size: 3rem; font-weight: 800; margin-bottom: 20px; }
-
-/* Squircle Icons */
-.squircle-icon {
-    width: 75px; height: 75px;
-    background: var(--primary);
-    color: white;
+/* زر تبديل الوضع */
+.theme-toggle-btn {
+    background: var(--icon-bg);
+    color: var(--accent);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    width: 42px; height: 42px;
+    cursor: pointer;
+    transition: 0.3s;
     display: flex; align-items: center; justify-content: center;
-    border-radius: 22px; /* Squircle */
-    font-size: 2rem;
-    margin: 0 auto 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.theme-toggle-btn:hover { transform: scale(1.1) rotate(15deg); }
+
+/* الأيقونات المحددة (Squircle) */
+.feature-box i, .service-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    background: var(--icon-bg);
+    width: 85px; height: 85px;
+    line-height: 85px;
+    border-radius: 22px; /* شكل Squircle */
+    border: 1px solid var(--border);
+    margin-bottom: 25px;
+    display: inline-block;
+    transition: 0.3s;
 }
 
-[data-theme="dark"] .squircle-icon { background: var(--accent); color: #141d1c; }
-
-/* Cards */
-.card {
+.card, .feature-box {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: 30px;
+    border-radius: 28px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     transition: 0.4s;
-    overflow: hidden;
 }
 
-.card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+.card:hover { transform: translateY(-10px); border-color: var(--accent); }
 
-/* Section Title */
-.section-title {
-    color: var(--primary);
-    font-weight: 800;
-    position: relative;
-    padding-bottom: 15px;
+/* المدخلات (Forms) */
+.form-control {
+    background: var(--bg-body);
+    border: 1px solid var(--border);
+    color: var(--text-main) !important;
+    border-radius: 15px;
 }
-
-[data-theme="dark"] .section-title { color: var(--accent); }
-
-/* Buttons */
-.btn-gold { background: var(--accent); color: white; border-radius: 30px; font-weight: 700; padding: 12px 35px; border: none; }
-.btn-gold:hover { transform: scale(1.05); filter: brightness(1.1); color: white; }
-
-.language-toggle {
-    border-radius: 25px;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    font-weight: 600;
+.form-control:focus {
+    background: var(--bg-body);
+    border-color: var(--accent);
+    box-shadow: none;
 }
 
 /* RTL Support */
 [dir="rtl"] { text-align: right; }
 [dir="rtl"] .ms-auto { margin-right: auto !important; margin-left: 0 !important; }
-
-/* Responsive */
-@media (max-width: 768px) {
-    .hero-section h1 { font-size: 1.8rem; }
-    .squircle-icon { width: 60px; height: 60px; font-size: 1.5rem; }
-}
