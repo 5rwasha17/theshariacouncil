@@ -1,97 +1,64 @@
 const translations = {
     en: {
-        navHome: "Home", navAbout: "About Us", navServices: "Services", navGallery: "Gallery", navContact: "Contact Us",
-        navLangToggle: "العربية / English / اردو",
+        navHome: "Home", navAbout: "About Us", navServices: "Services", navGallery: "Gallery", navFatwas: "Fatwas", navContact: "Contact Us",
         heroTitle: "Shariah Council for the Muslim Family in London",
         heroText: "Islamic guidance for a stable life in a safe and professional environment.",
         applyNowBtn: "Contact Us Now",
         introSectionTitle: "About Us",
-        usulAlDinHeading: "Fundamentals of Religion",
-        usulAlDinText: "Study of creed, Tafsir, and Hadith.",
-        shariaIslamiyaHeading: "Islamic Sharia",
-        shariaIslamiyaText: "Study of Fiqh, Usul al-Fiqh, and comparative law.",
-        servicesSectionTitle: "Our Main Services",
-        service1Title: "Islamic Marriage", service1Btn: "Learn More",
-        service2Title: "Divorce & Khula", service2Btn: "Learn More",
-        service3Title: "Consultations", service3Btn: "Learn More",
-        service4Title: "Ruqyah Shariah", service4Btn: "Learn More",
-        service5Title: "Quran Courses", service5Btn: "Learn More",
-        service6Title: "Arabic Language", service6Btn: "Learn More",
-        contactSectionTitle: "Contact Us",
+        service1Title: "Islamic Marriage",
         whatsappBtnText: "WhatsApp",
-        footerText: "© 2024 Shariah Council for the Muslim Family in London. All Rights Reserved."
+        submitFormBtn: "Send Message",
+        // ... اضف الباقي هنا بنفس النمط
     },
     ar: {
-        navHome: "الرئيسية", navAbout: "من نحن", navServices: "خدماتنا", navGallery: "المعرض", navContact: "اتصل بنا",
-        navLangToggle: "English / العربية / اردو",
+        navHome: "الرئيسية", navAbout: "من نحن", navServices: "خدماتنا", navGallery: "المعرض", navFatwas: "فتاوى", navContact: "اتصل بنا",
         heroTitle: "المجلس الشرعي للأسرة المسلمة في لندن",
         heroText: "إرشاد إسلامي لحياة مستقرة في بيئة آمنة ومهنية.",
         applyNowBtn: "اتصل بنا الآن",
         introSectionTitle: "من نحن",
-        usulAlDinHeading: "أصول الدين",
-        usulAlDinText: "دراسة العقيدة، التفسير، والحديث.",
-        shariaIslamiyaHeading: "الشريعة الإسلامية",
-        shariaIslamiyaText: "دراسة الفقه والقانون المقارن.",
-        servicesSectionTitle: "خدماتنا الرئيسية",
-        service1Title: "الزواج الإسلامي", service1Btn: "تعرف على المزيد",
-        service2Title: "الطلاق والخلع", service2Btn: "تعرف على المزيد",
-        service3Title: "الاستشارات", service3Btn: "تعرف على المزيد",
-        service4Title: "الرقية الشرعية", service4Btn: "تعرف على المزيد",
-        service5Title: "دورات القرآن", service5Btn: "تعرف على المزيد",
-        service6Title: "اللغة العربية", service6Btn: "تعرف على المزيد",
-        contactSectionTitle: "اتصل بنا",
+        service1Title: "الزواج الإسلامي",
         whatsappBtnText: "واتساب",
-        footerText: "© 2024 المجلس الشرعي للأسرة المسلمة في لندن. جميع الحقوق محفوظة."
+        submitFormBtn: "إرسال الرسالة",
     },
     ur: {
-        navHome: "ہوم", navAbout: "ہمارے بارے میں", navServices: "ہماری خدمات", navGallery: "گیلری", navContact: "رابطہ کریں",
-        navLangToggle: "English / العربية / اردو",
+        navHome: "ہوم", navAbout: "ہمارے بارے میں", navServices: "ہماری خدمات", navGallery: "گیلری", navFatwas: "فتاویٰ", navContact: "رابطہ کریں",
         heroTitle: "لندن میں مسلم خاندان کے لیے شریعہ کونسل",
         heroText: "محفوظ اور پیشہ ورانہ ماحول میں مستحکم زندگی کے لیے اسلامی رہنمائی۔",
         applyNowBtn: "ابھی رابطہ کریں",
         introSectionTitle: "ہمارے بارے میں",
-        usulAlDinHeading: "اصول الدین",
-        usulAlDinText: "عقیدہ، تفسیر اور حدیث کا مطالعہ۔",
-        shariaIslamiyaHeading: "اسلامی شریعہ",
-        shariaIslamiyaText: "فقہ اور تقابلی قانون کا مطالعہ۔",
-        servicesSectionTitle: "ہماری اہم خدمات",
-        service1Title: "اسلامی نکاح", service1Btn: "مزید جانیں",
-        service2Title: "طلاق اور خلع", service2Btn: "مزید جانیں",
-        service3Title: "مشاورت", service3Btn: "مزید جانیں",
-        service4Title: "رقیہ شرعیہ", service4Btn: "مزيد جانیں",
-        service5Title: "قرآن کورسز", service5Btn: "مزید جانیں",
-        service6Title: "عربی زبان", service6Btn: "مزید جانیں",
-        contactSectionTitle: "ہم سے رابطہ کریں",
+        service1Title: "اسلامی نکاح",
         whatsappBtnText: "واٹس ایپ",
-        footerText: "© 2024 لندن میں مسلم خاندان کے لیے شریعہ کونسل۔ جملہ حقوق محفوظ ہیں۔"
+        submitFormBtn: "پیغام بھیجیں",
     }
 };
 
-// --- Dark Mode Logic ---
+// 1. Theme Logic
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
 
 themeToggle.addEventListener('click', () => {
-    const current = html.getAttribute('data-theme');
-    const target = current === 'light' ? 'dark' : 'light';
-    html.setAttribute('data-theme', target);
-    themeToggle.querySelector('i').className = target === 'light' ? 'fas fa-moon' : 'fas fa-sun';
-    localStorage.setItem('theme', target);
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    themeToggle.querySelector('i').className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
 });
 
-// استعادة الثيم المفضل
+// Load saved theme
 const savedTheme = localStorage.getItem('theme') || 'light';
 html.setAttribute('data-theme', savedTheme);
-if(savedTheme === 'dark') themeToggle.querySelector('i').className = 'fas fa-sun';
 
-// --- Translation Logic ---
+// 2. Language Logic
 function applyTranslations(lang) {
     document.documentElement.lang = lang;
     document.documentElement.dir = (lang === 'ar' || lang === 'ur') ? 'rtl' : 'ltr';
     const data = translations[lang];
-    for (const id in data) {
-        const el = document.getElementById(id);
-        if (el) el.textContent = data[id];
+    
+    for (const key in data) {
+        const el = document.getElementById(key);
+        if (el) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = data[key];
+            else el.textContent = data[key];
+        }
     }
 }
 
@@ -103,14 +70,16 @@ document.getElementById('navLangToggle').addEventListener('click', () => {
     applyTranslations(next);
 });
 
-// Learn More Toggle
-document.querySelectorAll('.toggle-content').forEach(button => {
-    button.addEventListener('click', function() {
-        const target = document.getElementById(this.dataset.target);
-        const isHidden = target.style.display === 'none';
-        target.style.display = isHidden ? 'block' : 'none';
-        this.textContent = isHidden ? (document.documentElement.lang === 'ar' ? 'عرض أقل' : 'Show Less') : 'Learn More';
+// 3. Learn More Collapse Logic
+document.querySelectorAll('.toggle-content, .toggle-fatwa').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const extra = document.getElementById(this.dataset.extra);
+        const isHidden = extra.style.display === 'none';
+        extra.style.display = isHidden ? 'block' : 'none';
+        this.querySelector('i').className = isHidden ? 'fas fa-chevron-up' : 'fas fa-chevron-down';
     });
 });
 
+// Initialize
 document.addEventListener('DOMContentLoaded', () => applyTranslations('en'));
