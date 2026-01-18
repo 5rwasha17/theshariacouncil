@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white shadow-sm" id="mainNavbar">
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNavbar">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="https://github.com/5rwasha17/theshariacouncil/blob/main/theshariacouncil.png?raw=true" alt="Shariah Council Logo" width="40" height="40" class="rounded-circle me-2"> Shariah Council
@@ -38,31 +38,63 @@
 </nav>
 
 <header class="hero-section" id="heroSection">
-    <div class="container text-center">
-        <h1 id="heroTitle" class="reveal active">Shariah Council for the Muslim Family in London</h1>
-        <p id="heroText" class="reveal active">Islamic guidance for a stable life in a safe and professional environment.</p>
-        <a href="#contactSection" class="btn btn-light btn-lg reveal active" id="applyNowBtn">Contact Us Now</a>
+    <div class="container">
+        <h1 id="heroTitle">Shariah Council for the Muslim Family in London</h1>
+        <p id="heroText">Islamic guidance for a stable life in a safe and professional environment.</p>
+        <a href="#contactSection" class="btn btn-light btn-lg" id="applyNowBtn">Contact Us Now</a>
     </div>
 </header>
 
 <section class="container my-5" id="aboutSection">
-    <h2 class="text-center mb-5 reveal" id="introSectionTitle">About Us</h2>
-    <div class="text-center mb-5 reveal">
+    <h2 class="text-center mb-5" id="introSectionTitle">About Us</h2>
+
+    <div class="text-center mb-5">
         <h3 class="mb-3" id="whoWeAreSubheading">Who We Are</h3>
-        <p class="lead" id="whoWeAreP1">We are a group of scholars and Imams, graduates of Al-Azhar Al-Sharif University. We hold high degrees in distinguished Sharia specializations.</p>
-        <div class="row justify-content-center mt-4">
+        <p class="lead" id="whoWeAreP1">We are a group of scholars and Imams, graduates of Al-Azhar Al-Sharif University. We hold high degrees in distinguished Sharia specializations, including:</p>
+
+        <div class="row justify-content-center mt-4 mb-4 feature-box-wrapper">
             <div class="col-md-6 mb-4">
-                <div class="feature-box p-4 h-100 reveal">
-                    <i class="fas fa-scroll fa-3x mb-3 text-primary"></i>
+                <div class="feature-box p-4 h-100">
+                    <i class="fas fa-scroll fa-3x mb-3"></i>
                     <h5 id="usulAlDinHeading">Fundamentals of Religion</h5>
                     <p id="usulAlDinText">Study of creed, Tafsir, and Hadith.</p>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <div class="feature-box p-4 h-100 reveal">
-                    <i class="fas fa-scale-balanced fa-3x mb-3 text-primary"></i>
+                <div class="feature-box p-4 h-100">
+                    <i class="fas fa-scale-balanced fa-3x mb-3"></i>
                     <h5 id="shariaIslamiyaHeading">Islamic Sharia</h5>
                     <p id="shariaIslamiyaText">Study of Fiqh, Usul al-Fiqh, and comparative law.</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="lead" id="whoWeAreP2">We carry the message of knowledge and strive to spread a moderate understanding of Islam.</p>
+    </div>
+
+    <div class="text-center">
+        <h3 class="mb-4" id="whyChooseUsSubheading">Why Choose Us?</h3>
+        <p class="lead" id="introSectionText">We provide reliable Islamic guidance within the framework of British law.</p>
+        <div class="row mt-5 feature-box-wrapper justify-content-center">
+            <div class="col-md-4 mb-4">
+                <div class="feature-box p-4 h-100">
+                    <i class="fas fa-handshake fa-3x text-success mb-3"></i>
+                    <h5 id="aboutFeature1Title">Trust & Reliability</h5>
+                    <p id="aboutFeature1Text">Authentic and contemporary Islamic guidance.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="feature-box p-4 h-100">
+                    <i class="fas fa-balance-scale fa-3x text-info mb-3"></i>
+                    <h5 id="aboutFeature2Title">Fairness & Transparency</h5>
+                    <p id="aboutFeature2Text">Adhering to fairness in all procedures.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="feature-box p-4 h-100">
+                    <i class="fas fa-gavel fa-3x text-danger mb-3"></i>
+                    <h5 id="aboutFeature3Title">UK Law Adherence</h5>
+                    <p id="aboutFeature3Text">Operating in harmony with UK laws.</p>
                 </div>
             </div>
         </div>
@@ -70,173 +102,255 @@
 </section>
 
 <section class="container my-5" id="servicesSection">
-    <h2 class="text-center mb-5 reveal" id="servicesSectionTitle">Our Main Services</h2>
+    <h2 class="text-center mb-5" id="servicesSectionTitle">Our Main Services</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
-        
         <div class="col">
-            <div class="card service-card reveal">
-                <div class="custom-icon mb-3">
-                    <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto;">
-                        <path d="M12 2V5" stroke-width="2.5"/><path d="M12 5C10 5 8 5.5 7 7"/><path d="M12 5C14 5 16 5.5 17 7"/>
-                        <circle cx="9" cy="15" r="3"/><circle cx="15" cy="15" r="3"/>
-                    </svg>
-                </div>
+            <div class="card service-card">
+                <i class="fas fa-ring"></i>
                 <h4 id="service1Title">Islamic Marriage</h4>
                 <div class="service-description" id="service1Description">
                     <p id="service1Text">Completing Islamic marriage contracts according to Shariah rulings.</p>
+                     <div class="collapse-content" id="service1Extra" style="display: none;">
+                        <p id="service1ExtraText">Includes documenting contracts and ensuring all conditions are met.</p>
+                    </div>
                 </div>
                 <a href="#" class="btn btn-outline-dark toggle-content" data-target="service1Description" data-extra="service1Extra" id="service1Btn">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
-
         <div class="col">
-            <div class="card service-card reveal">
-                <div class="custom-icon mb-3">
-                    <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto;">
-                        <path d="M12 2V6" stroke-width="2.5"/><path d="M12 6H6M12 6H18"/><path d="M6 6L4 12H8L6 6ZM18 6L16 12H20L18 6Z"/>
-                    </svg>
-                </div>
+            <div class="card service-card">
+                <i class="fas fa-gavel"></i>
                 <h4 id="service2Title">Divorce & Khula</h4>
                 <div class="service-description" id="service2Description">
                     <p id="service2Text">Assistance with Islamic divorce procedures and mediation.</p>
+                    <div class="collapse-content" id="service2Extra" style="display: none;">
+                         <p id="service2ExtraText">We strive to minimize disputes and protect children's interests.</p>
+                    </div>
                 </div>
                 <a href="#" class="btn btn-outline-dark toggle-content" data-target="service2Description" data-extra="service2Extra" id="service2Btn">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
-
         <div class="col">
-            <div class="card service-card reveal">
-                <div class="custom-icon mb-3">
-                    <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto;">
-                        <path d="M12 2V6" stroke-width="2.5"/><circle cx="12" cy="11" r="3"/><path d="M7 21C7 18 9 16 12 16C15 16 17 18 17 21"/>
-                    </svg>
-                </div>
+            <div class="card service-card">
+                <i class="fas fa-lightbulb"></i>
                 <h4 id="service3Title">Consultations</h4>
                 <div class="service-description" id="service3Description">
                     <p id="service3Text">Islamic guidance on family matters and inheritance.</p>
+                    <div class="collapse-content" id="service3Extra" style="display: none;">
+                        <p id="service3ExtraText">Accurate fatwas based on Quran and Sunnah considering contemporary life.</p>
+                    </div>
                 </div>
                 <a href="#" class="btn btn-outline-dark toggle-content" data-target="service3Description" data-extra="service3Extra" id="service3Btn">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
-
         <div class="col">
-            <div class="card service-card reveal">
-                <div class="custom-icon mb-3">
-                    <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto;">
-                        <path d="M12 2V6" stroke-width="2.5"/><path d="M4 19C4 19 6 17 10 17H14C18 17 20 19 20 19V6C20 6 18 4 14 4H10C6 4 4 6 4 6V19Z" />
-                    </svg>
-                </div>
+            <div class="card service-card">
+                <i class="fas fa-book-open"></i>
                 <h4 id="service4Title">Ruqyah Shariah</h4>
                 <div class="service-description" id="service4Description">
                     <p id="service4Text">Ruqyah sessions adhering to Quran and Sunnah.</p>
+                    <div class="collapse-content" id="service4Extra" style="display: none;">
+                        <p id="service4ExtraText">Safe environment for spiritual healing.</p>
+                    </div>
                 </div>
                 <a href="#" class="btn btn-outline-dark toggle-content" data-target="service4Description" data-extra="service4Extra" id="service4Btn">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
-
         <div class="col">
-            <div class="card service-card reveal">
-                <div class="custom-icon mb-3">
-                    <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto;">
-                        <path d="M12 2V5" stroke-width="2.5"/><rect x="6" y="7" width="12" height="14" rx="1" /><path d="M9 11H15M9 14H15"/>
-                    </svg>
-                </div>
+            <div class="card service-card">
+                <i class="fas fa-quran"></i>
                 <h4 id="service5Title">Quran Courses</h4>
                 <div class="service-description" id="service5Description">
                     <p id="service5Text">Advanced Tajweed courses with Ijazah possibility.</p>
+                    <div class="collapse-content" id="service5Extra" style="display: none;">
+                        <p id="service5ExtraText">Taught by authorized scholars.</p>
+                    </div>
                 </div>
                 <a href="#" class="btn btn-outline-dark toggle-content" data-target="service5Description" data-extra="service5Extra" id="service5Btn">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
-
         <div class="col">
-            <div class="card service-card reveal">
-                <div class="custom-icon mb-3">
-                    <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto;">
-                        <path d="M12 2V6" stroke-width="2.5"/><path d="M18.5 2.5L12 9L11 13L15 12L21.5 5.5L18.5 2.5Z" /><path d="M4 20H20" stroke-width="1.5"/>
-                    </svg>
-                </div>
+            <div class="card service-card">
+                <i class="fas fa-language"></i>
                 <h4 id="service6Title">Arabic Language</h4>
                 <div class="service-description" id="service6Description">
                     <p id="service6Text">Comprehensive Arabic courses for all levels.</p>
+                    <div class="collapse-content" id="service6Extra" style="display: none;">
+                        <p id="service6ExtraText">Grammar, conversation, reading, and writing.</p>
+                    </div>
                 </div>
                 <a href="#" class="btn btn-outline-dark toggle-content" data-target="service6Description" data-extra="service6Extra" id="service6Btn">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="col">
-            <div class="card service-card reveal">
-                <div class="custom-icon mb-3">
-                    <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto;">
-                        <path d="M12 2V5" stroke-width="2.5"/><circle cx="12" cy="14" r="5" /><path d="M9 14H15M12 11V17" /><path d="M8 19C8 19 9 21 12 21C15 21 16 19 16 19" />
-                    </svg>
-                </div>
+            <div class="card service-card">
+                <i class="fas fa-baby"></i>
                 <h4 id="service7Title">Circumcision Services</h4>
                 <div class="service-description" id="service7Description">
-                    <p id="service7Text">Circumcision for newborns and new Muslims by specialists.</p>
+                    <p id="service7Text">Circumcision services for newborns and new Muslims by certified specialist doctors.</p>
+                    <div class="collapse-content" id="service7Extra" style="display: none;">
+                        <p id="service7ExtraText">Safe medical procedures performed by licensed professionals following health standards.</p>
+                    </div>
                 </div>
                 <a href="#" class="btn btn-outline-dark toggle-content" data-target="service7Description" data-extra="service7Extra" id="service7Btn">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
 
         <div class="col">
-            <div class="card service-card reveal">
-                <div class="custom-icon mb-3">
+            <div class="card service-card">
+                <div class="hijama-icon-wrapper mb-3" style="color: #2c3e50;">
                     <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto;">
                         <path d="M6 14C6 14 6 7 12 7C18 7 18 14 18 14" stroke-width="1.5"/>
                         <path d="M6 14H18" stroke-width="1.5"/>
-                        <path d="M12 2V5" stroke-width="2.5"/><path d="M12 5C10 5 8 5.5 7 7"/><path d="M12 5C14 5 16 5.5 17 7"/>
-                    </svg>
+                        <path d="M12 2V5" stroke-width="2.5"/> <path d="M12 5C10 5 8 5.5 7 7" /> <path d="M12 5C14 5 16 5.5 17 7" /> <path d="M10 3L9 5" /> <path d="M14 3L15 5" /> </svg>
                 </div>
                 <h4 id="service8Title">Cupping Therapy (Hijama)</h4>
                 <div class="service-description" id="service8Description">
-                    <p id="service8Text">Professional cupping for men and women by experts.</p>
+                    <p id="service8Text">Professional cupping for men and women with licensed specialists and certified practitioners.</p>
+                    <div class="collapse-content" id="service8Extra" style="display: none;">
+                        <p id="service8ExtraText">We provide a hygienic environment and expert practitioners for both genders.</p>
+                    </div>
                 </div>
                 <a href="#" class="btn btn-outline-dark toggle-content" data-target="service8Description" data-extra="service8Extra" id="service8Btn">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="container my-5" id="gallerySection">
+    <h2 class="text-center mb-5" id="gallerySectionTitle">Image Gallery</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+            <div class="card gallery-card">
+                <img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/islam4.jpg" class="card-img-top" alt="Lecture">
+                <div class="card-body">
+                    <p class="card-text" id="galleryImageCaption1">Lecture on the Family in Islam.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card gallery-card">
+                <img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/BBC.jpg" class="card-img-top" alt="BBC Interview">
+                <div class="card-body">
+                    <p class="card-text" id="galleryImageCaption2">Meeting with BBC in London.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card gallery-card">
+                <img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/jpg 5.jpg" class="card-img-top" alt="Dr. Abdullah Matroud">
+                <div class="card-body">
+                    <p class="card-text" id="galleryImageCaption3">With Dr. Abdullah Matroud.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card gallery-card">
+                <img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/2jpeg.jpeg" class="card-img-top" alt="Event in UK">
+                <div class="card-body">
+                    <p class="card-text" id="galleryImageCaption4">Event snapshot in the UK.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card gallery-card">
+                <img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/3.jpeg" class="card-img-top" alt="Marriage Contract">
+                <div class="card-body">
+                    <p class="card-text" id="galleryImageCaption5">Malaysian community marriage contract.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card gallery-card">
+                <img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/jpg6.jpg" class="card-img-top" alt="Dr. Omar Abdul Kafi">
+                <div class="card-body">
+                    <p class="card-text" id="galleryImageCaption6">Meeting with Dr. Omar Abdul Kafi.</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="container my-5 reveal" id="gallerySection">
-    <h2 class="text-center mb-5" id="gallerySectionTitle">Image Gallery</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        <div class="col"><div class="card gallery-card h-100"><img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/islam4.jpg" class="card-img-top" alt="Lecture"><div class="card-body"><p id="galleryImageCaption1">Lecture on the Family in Islam.</p></div></div></div>
-        <div class="col"><div class="card gallery-card h-100"><img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/BBC.jpg" class="card-img-top" alt="BBC Interview"><div class="card-body"><p id="galleryImageCaption2">Meeting with BBC in London.</p></div></div></div>
-        <div class="col"><div class="card gallery-card h-100"><img src="https://raw.githubusercontent.com/5rwasha17/theshariacouncil/main/jpg 5.jpg" class="card-img-top" alt="Dr. Abdullah Matroud"><div class="card-body"><p id="galleryImageCaption3">With Dr. Abdullah Matroud.</p></div></div></div>
-    </div>
-</section>
-
-<section class="container my-5 text-center reveal" id="fatwasSection">
+<section class="container my-5 text-center" id="fatwasSection">
     <h2 class="mb-4" id="fatwasSectionTitle">Latest Fatwas & Articles</h2>
-    <div class="card p-4 text-start reveal">
-        <h5 class="text-primary" id="fatwaTitle2">Building a Happy Family in the West</h5>
-        <p id="fatwaText2">Tips and guidance for addressing contemporary family challenges and maintaining Islamic identity.</p>
-        <a href="#" class="btn btn-link p-0" id="readMore2">Read More <i class="fas fa-arrow-right"></i></a>
+    <p class="lead mb-5" id="fatwasSectionText">Explore our growing library of fatwas and articles.</p>
+    <div class="row justify-content-center">
+        <div class="col-md-8 mb-4"> 
+            <div class="card p-4 text-start h-100">
+                <h5 class="text-primary" id="fatwaTitle2">Building a Happy Family in the West</h5>
+                <div class="fatwa-content" id="fatwaContent2">
+                    <p id="fatwaText2">Tips and guidance for addressing contemporary family challenges and maintaining Islamic identity.</p>
+                    <div class="collapse-content" id="fatwaExtra2" style="display:none;">
+                        <p id="fatwaExtraText2">Practical solutions for facing difficulties Muslim families may encounter, reconciling values with culture, and Islamic upbringing.</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-link p-0 toggle-fatwa" data-target="fatwaContent2" data-extra="fatwaExtra2" id="readMore2">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="container my-5 reveal" id="contactSection">
-    <h2 class="text-center mb-5" id="contactSectionTitle">Contact Us</h2>
-    <div class="card p-4 text-center">
-        <p class="lead mb-4" id="contactIntro">Contact us directly for assistance.</p>
-        <div class="mb-3"><i class="fas fa-phone me-2"></i><a href="tel:+00447404949128">00447404949128</a></div>
-        <div class="mb-3"><i class="fas fa-envelope me-2"></i><a href="mailto:theshariacouncil@gmail.com">theshariacouncil@gmail.com</a></div>
-        <a href="https://wa.me/qr/Z6LMKWNLJJF6I1" target="_blank" class="btn btn-success mt-3"><i class="fab fa-whatsapp me-2"></i> <span id="whatsappBtnText">WhatsApp</span></a>
-        
-        <hr class="my-5">
-        <form id="contactForm" action="https://formspree.io/f/xnnvakoo" method="POST" class="text-start">
-            <input type="text" class="form-control mb-3" name="name" id="contactName" placeholder="Full Name" required>
-            <input type="email" class="form-control mb-3" name="email" id="contactEmail" placeholder="Email Address" required>
-            <textarea class="form-control mb-3" name="message" id="contactMessage" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn btn-primary w-100" id="submitFormBtn">Send Message</button>
-        </form>
+<section class="container my-5" id="contactSection">
+<h2 class="text-center mb-5" id="contactSectionTitle">Contact Us</h2>
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card p-4 text-center">
+            <div class="card-body">
+                <p class="lead mb-4" id="contactIntro">Contact us directly for assistance.</p>
+                <div class="mb-3">
+                    <p class="mb-1 fs-5" id="directPhoneLabel">Contact us by phone:</p>
+                    <div class="contact-link-item">
+                        <i class="fas fa-phone-alt me-2 icon-contact"></i><a href="tel:+00447404949128" id="phone1">00447404949128</a>
+                    </div>
+                    <div class="contact-link-item">
+                        <i class="fas fa-phone-alt me-2 icon-contact"></i><a href="tel:+00447450209680" id="phone2">00447450209680</a>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <p class="mb-1 fs-5" id="directEmailLabel">Or by email:</p>
+                    <div class="contact-link-item">
+                        <i class="fas fa-envelope me-2 icon-contact"></i><a href="mailto:theshariacouncil@gmail.com" id="emailContact">theshariacouncil@gmail.com</a>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <p class="mb-1 fs-5" id="whatsappLabel">Or send a message on WhatsApp:</p>
+                    <a href="https://wa.me/qr/Z6LMKWNLJJF6I1" target="_blank" class="btn whatsapp-btn">
+                        <i class="fab fa-whatsapp me-2"></i> <span id="whatsappBtnText">WhatsApp</span>
+                    </a>
+                </div>
+                <hr class="my-5">
+                <h3 class="mb-4" id="formTitle">Send Us a Message</h3>
+                <form action="https://formspree.io/f/xnnvakoo" method="POST" id="contactForm">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="name" id="contactName" placeholder="Full Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" name="_replyto" id="contactEmail" placeholder="Email Address" required>
+                    </div>
+                    <div class="mb-3"> <input type="tel" class="form-control" name="phone" id="contactPhone" placeholder="Phone Number">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" name="message" id="contactMessage" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submitFormBtn">Send Message</button>
+                </form>
+            </div>
+        </div>
     </div>
+</div>
 </section>
 
-<footer class="footer py-4 bg-light">
+<footer class="footer">
     <div class="container text-center">
         <p id="footerText">&copy; 2024 Shariah Council for the Muslim Family in London. All Rights Reserved.</p>
+        <div class="social-icons mt-3">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
     </div>
 </footer>
 
@@ -244,3 +358,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
