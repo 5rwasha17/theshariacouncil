@@ -1,22 +1,19 @@
 /* =========================================
-   1. Eye-Friendly & Elegant Variables (Updated for Lightness)
+   1. Eye-Friendly & Elegant Variables
    ========================================= */
 :root {
-    /* الألوان الأساسية */
+    /* الألوان الأساسية - وضع النهار */
     --primary-color: #1e5f5b; 
     --secondary-color: #4d908e; 
     --accent-gold: #c5a065; 
     --word-blue: #2b5797; /* لون وورد الرسمي للمستندات */
     
-    /* ألوان الخلفية المحدثة (درجات فاتحة جداً ومريحة) */
-    --bg-main: #f8faf9; /* لون أوف وايت بلمسة خضراء خفيفة جداً مريح للعين */
-    --bg-secondary: #f0f4f3; /* درجة هادئة جداً لتمييز بعض العناصر */
+    --bg-main: #f8faf9; 
+    --bg-secondary: #f0f4f3; 
     
-    /* أسطح زجاجية ناعمة */
     --glass-surface: rgba(255, 255, 255, 0.95);
     --glass-border: 1px solid rgba(0, 0, 0, 0.05);
     
-    /* نصوص بتباين مريح (رمادي داكن بدلاً من الأسود الحاد) */
     --text-main: #2d3748; 
     --text-muted: #4a5568;
     
@@ -26,13 +23,24 @@
     --shadow-hover: 0 15px 35px rgba(30, 95, 91, 0.08);
 }
 
+/* متغيرات وضع الليل (Dark Mode) */
+body.dark-mode {
+    --bg-main: #1a202c;
+    --bg-secondary: #2d3748;
+    --text-main: #f7fafc;
+    --text-muted: #e2e8f0;
+    --glass-surface: rgba(45, 55, 72, 0.95);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+    --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
 body {
     font-family: 'Poppins', 'Cairo', sans-serif;
     background-color: var(--bg-main);
     color: var(--text-main);
     overflow-x: hidden;
     line-height: 1.8;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 /* =========================================
@@ -82,8 +90,7 @@ body {
     margin-top: 25px;
     border-radius: var(--radius-xl);
     width: 96%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 25px auto;
     min-height: 70vh;
     display: flex;
     align-items: center;
@@ -92,7 +99,6 @@ body {
     position: relative;
     overflow: hidden;
     color: white;
-    /* تخفيف حدة تدرج الخلفية لتكون مريحة أكثر */
     background: linear-gradient(180deg, rgba(23, 56, 53, 0.75) 0%, rgba(15, 38, 36, 0.8) 100%),
                 url('https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=1920&auto=format&fit=crop');
     background-size: cover;
@@ -123,29 +129,27 @@ h2 {
 }
 
 .feature-box, .service-card, .gallery-card, .card {
-    background: white; /* استخدام الأبيض الصافي للبطاقات فوق الخلفية الفاتحة لزيادة الراحة */
+    background: var(--glass-surface);
     border: var(--glass-border);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-soft);
     transition: all 0.4s ease;
     height: 100%;
+    color: var(--text-main);
 }
 
-.service-card:hover, .feature-box:hover {
+.service-card:hover, .feature-box:hover, .card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
 }
 
-.service-card {
-    padding: 2.5rem;
-    text-align: center;
-}
+.service-card { padding: 2.5rem; text-align: center; }
 
-.service-card i, .feature-box i {
+.service-card i, .feature-box i, #formsSection .card i {
     font-size: 2.5rem;
     color: var(--secondary-color);
     margin-bottom: 20px;
-    background: rgba(77, 144, 142, 0.08); /* تخفيف خلفية الأيقونة */
+    background: rgba(77, 144, 142, 0.1);
     width: 80px;
     height: 80px;
     line-height: 80px;
@@ -153,23 +157,45 @@ h2 {
     display: inline-block;
 }
 
-#formsSection .service-card i {
+/* تمييز أيقونة قسم النماذج بلون مستندات وورد */
+#formsSection .card i {
     color: var(--word-blue);
-    background: rgba(43, 87, 151, 0.08);
+    background: rgba(43, 87, 151, 0.1);
+}
+
+#formsSection .card {
+    border-bottom: 4px solid var(--word-blue) !important;
 }
 
 /* =========================================
    5. Buttons & Forms
    ========================================= */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
 .btn-outline-dark {
     border-radius: 30px;
     padding: 10px 25px;
     font-weight: 600;
+    color: var(--text-main);
+    border-color: var(--text-main);
 }
 
 input.form-control, textarea.form-control {
     background: var(--bg-secondary);
-    border: 1px solid rgba(0,0,0,0.03);
+    border: 1px solid var(--glass-border);
+    color: var(--text-main);
     border-radius: 12px;
 }
 
@@ -181,11 +207,6 @@ input.form-control, textarea.form-control {
 
 @media (max-width: 768px) {
     .hero-section h1 { font-size: 2rem; }
-    .navbar { width: 95%; padding: 0.5rem 1rem; }
+    .navbar { width: 95%; padding: 0.5rem 1rem; top: 10px; }
     .service-card { padding: 1.5rem; }
-}
-
-/* تمييز قسم النماذج */
-#formsSection .card {
-    border-bottom: 4px solid var(--word-blue) !important;
 }
