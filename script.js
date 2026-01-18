@@ -1,13 +1,13 @@
-// 1. كائن الترجمات المحدث - يحتوي على نصوص النماذج والمستندات بدلاً من الفتاوى
+// 1. كائن الترجمات - يحتوي على الإنجليزية والعربية والأوردو
 const translations = {
     en: {
         navHome: "Home",
         navAbout: "About Us",
         navServices: "Services",
         navGallery: "Gallery",
-        navForms: "Forms", // الرابط الجديد في القائمة العلوية
+        navFatwas: "Fatwas & Articles",
         navContact: "Contact Us",
-        navLangToggle: "العربية / English / اردو",
+        navLangToggle: "English / العربية / اردو",
         heroTitle: "Shariah Council for the Muslim Family in London",
         heroText: "Islamic guidance for a stable life in a safe and professional environment.",
         applyNowBtn: "Contact Us Now",
@@ -52,6 +52,16 @@ const translations = {
         service6Text: "Comprehensive Arabic courses for all levels.",
         service6ExtraText: "Grammar, conversation, reading, and writing.",
         service6Btn: "Learn More",
+        // الخدمات الجديدة
+        service7Title: "Circumcision Services",
+        service7Text: "Circumcision for newborns and new Muslims by specialist doctors.",
+        service7ExtraText: "Safe medical procedures performed by licensed professionals following health standards.",
+        service7Btn: "Learn More",
+        service8Title: "Cupping Therapy (Hijama)",
+        service8Text: "Professional cupping for men and women by licensed specialists.",
+        service8ExtraText: "We provide a hygienic environment and expert practitioners for both genders.",
+        service8Btn: "Learn More",
+        
         gallerySectionTitle: "Image Gallery",
         galleryImageCaption1: "Lecture on the Family in Islam.",
         galleryImageCaption2: "Meeting with BBC in London.",
@@ -59,11 +69,12 @@ const translations = {
         galleryImageCaption4: "Event snapshot in the UK.",
         galleryImageCaption5: "Malaysian community marriage contract.",
         galleryImageCaption6: "Meeting with Dr. Omar Abdul Kafi.",
-        // نصوص قسم النماذج الجديد بالإنجليزية
-        formsSectionTitle: "Forms & Documents",
-        divorceFormTitle: "Divorce Application",
-        divorceFormText: "Please download the official form to begin your application process locally.",
-        divorceFormBtn: "Download Form",
+        fatwasSectionTitle: "Latest Fatwas & Articles",
+        fatwasSectionText: "Explore our growing library of fatwas and articles.",
+        fatwaTitle2: "Building a Happy Family in the West",
+        fatwaText2: "Tips and guidance for addressing contemporary family challenges and maintaining Islamic identity.",
+        fatwaExtraText2: "Practical solutions for facing difficulties Muslim families may encounter, reconciling values with culture, and Islamic upbringing.",
+        readMore2: "Read More",
         contactSectionTitle: "Contact Us",
         contactIntro: "Contact us directly for assistance.",
         directPhoneLabel: "Contact us by phone:",
@@ -76,14 +87,15 @@ const translations = {
         contactPhone: "Phone Number",
         contactMessage: "Your Message",
         submitFormBtn: "Send Message",
-        footerText: "© 2024 Shariah Council for the Muslim Family in London. All Rights Reserved."
+        footerText: "© 2024 Shariah Council for the Muslim Family in London. All Rights Reserved.",
+        showLess: "Show Less"
     },
     ar: {
         navHome: "الرئيسية",
         navAbout: "من نحن",
         navServices: "خدماتنا",
         navGallery: "معرض الصور",
-        navForms: "النماذج",
+        navFatwas: "فتاوى ومقالات",
         navContact: "اتصل بنا",
         navLangToggle: "English / العربية / اردو",
         heroTitle: "المجلس الشرعي للأسرة المسلمة في لندن",
@@ -130,6 +142,16 @@ const translations = {
         service6Text: "دورات شاملة في اللغة العربية لجميع المستويات.",
         service6ExtraText: "النحو، المحادثة، القراءة والكتابة.",
         service6Btn: "تعرف على المزيد",
+        // الخدمات الجديدة
+        service7Title: "خدمات الختان",
+        service7Text: "ختان حديثي الولادة والمسلمين الجدد على يد أطباء متخصصين.",
+        service7ExtraText: "إجراءات طبية آمنة ينفذها متخصصون مرخصون وفق المعايير الصحية.",
+        service7Btn: "تعرف على المزيد",
+        service8Title: "الحجامة الشرعية",
+        service8Text: "حجامة احترافية للرجال والنساء على يد أخصائيين مرخصين.",
+        service8ExtraText: "نوفر بيئة صحية معقمة وأخصائيين ذوي خبرة لكلا الجنسين.",
+        service8Btn: "تعرف على المزيد",
+
         gallerySectionTitle: "معرض الصور",
         galleryImageCaption1: "محاضرة عن الأسرة في الإسلام.",
         galleryImageCaption2: "لقاء مع قناة BBC في لندن.",
@@ -137,11 +159,12 @@ const translations = {
         galleryImageCaption4: "لقطة من فعالية في المملكة المتحدة.",
         galleryImageCaption5: "عقد زواج للجالية الماليزية.",
         galleryImageCaption6: "لقاء مع الدكتور عمر عبد الكافي.",
-        // نصوص قسم النماذج الجديد بالعربية
-        formsSectionTitle: "النماذج والمستندات",
-        divorceFormTitle: "طلب الطلاق الشرعي",
-        divorceFormText: "يرجى تحميل النموذج الرسمي لبدء إجراءات الطلب مباشرة من الموقع.",
-        divorceFormBtn: "تحميل النموذج",
+        fatwasSectionTitle: "أحدث الفتاوى والمقالات",
+        fatwasSectionText: "استكشف مكتبتنا المتنامية من الفتاوى والمقالات.",
+        fatwaTitle2: "بناء أسرة سعيدة في الغرب",
+        fatwaText2: "نصائح وإرشادات لمواجهة التحديات الأسرية المعاصرة والحفاظ على الهوية الإسلامية.",
+        fatwaExtraText2: "حلول عملية للصعوبات التي قد تواجهها الأسر المسلمة، والتربية الإسلامية.",
+        readMore2: "اقرأ المزيد",
         contactSectionTitle: "اتصل بنا",
         contactIntro: "تواصل معنا مباشرة للحصول على المساعدة.",
         directPhoneLabel: "اتصل بنا هاتفياً:",
@@ -154,39 +177,40 @@ const translations = {
         contactPhone: "رقم الهاتف",
         contactMessage: "رسالتك",
         submitFormBtn: "إرسال الرسالة",
-        footerText: "© 2024 المجلس الشرعي للأسرة المسلمة في لندن. جميع الحقوق محفوظة."
+        footerText: "© 2024 المجلس الشرعي للأسرة المسلمة في لندن. جميع الحقوق محفوظة.",
+        showLess: "عرض أقل"
     },
     ur: {
         navHome: "ہوم",
         navAbout: "ہمارے بارے میں",
         navServices: "خدمات",
         navGallery: "گیلری",
-        navForms: "فارمز",
+        navFatwas: "فتاویٰ اور مضامین",
         navContact: "رابطہ کریں",
         navLangToggle: "English / العربية / اردو",
-        heroTitle: "لندن میں مسلم خاندان کے لیے شریعہ کونسل",
-        heroText: "محفوظ اور پیشہ ورانہ ماحول میں مستحکم زندگی کے لیے اسلامی رہنمائی۔",
-        applyNowBtn: "ابھی ہم سے رابطہ کریں",
+        heroTitle: "لندن میں مسلم خاندان کے لیے شرعی کونسل",
+        heroText: "ایک محفوظ اور پیشہ ورانہ ماحول میں مستحکم زندگی کے لیے اسلامی رہنمائی۔",
+        applyNowBtn: "ابھی رابطہ کریں",
         introSectionTitle: "ہمارے بارے میں",
         whoWeAreSubheading: "ہم کون ہیں",
         whoWeAreP1: "ہم علماء اور ائمہ کا ایک گروپ ہیں، جو جامعہ الازہر الشریف سے فارغ التحصیل ہیں۔ ہم ممتاز شرعی تخصصات میں اعلیٰ ڈگریاں رکھتے ہیں، بشمول:",
-        usulAlDinHeading: "اصول الدین",
+        usulAlDinHeading: "اصول دین",
         usulAlDinText: "عقیدہ، تفسیر اور حدیث کا مطالعہ۔",
         shariaIslamiyaHeading: "اسلامی شریعہ",
         shariaIslamiyaText: "فقہ، اصول فقہ اور تقابلی قانون کا مطالعہ۔",
-        whoWeAreP2: "ہم علم کا پیغام لے کر چلتے ہیں اور اسلام کی معتدل تفہیم کو عام کرنے کی کوشش کرتے ہیں۔",
+        whoWeAreP2: "ہم علم کا پیغام لے کر چلتے ہیں اور اسلام کی اعتدال پسند سمجھ بوجھ کو پھیلانے کی کوشش کرتے ہیں۔",
         whyChooseUsSubheading: "ہمیں کیوں منتخب کریں؟",
-        introSectionText: "ہم برطانوی قانون کے دائرے میں قابل اعتماد اسلامی رہنمائی فراہم کرتے ہیں۔",
-        aboutFeature1Title: "اعتماد اور ساکھ",
+        introSectionText: "ہم برطانوی قانون کے دائرہ کار میں قابل اعتماد اسلامی رہنمائی فراہم کرتے ہیں۔",
+        aboutFeature1Title: "اعتماد اور بھروسہ",
         aboutFeature1Text: "مستند اور عصری اسلامی رہنمائی۔",
         aboutFeature2Title: "انصاف اور شفافیت",
-        aboutFeature2Text: "تمام طریقہ کار میں انصاف پر عمل پیرا ہونا۔",
-        aboutFeature3Title: "برطانوی قانون کی پاسداری",
-        aboutFeature3Text: "برطانوی قوانین کے ساتھ ہم آہنگی میں کام کرنا۔",
+        aboutFeature2Text: "تمام طریقہ کار میں انصاف کی پابندی۔",
+        aboutFeature3Title: "یوکے قانون کی پابندی",
+        aboutFeature3Text: "یوکے کے قوانین کے مطابق کام کرنا۔",
         servicesSectionTitle: "ہماری اہم خدمات",
         service1Title: "اسلامی نکاح",
         service1Text: "شرعی احکام کے مطابق اسلامی نکاح کے معاہدوں کی تکمیل۔",
-        service1ExtraText: "معاہدوں کی دستاویزی شکل دینا اور تمام شرائط کی تکمیل کو یقینی بنانا شامل ہے۔",
+        service1ExtraText: "اس میں معاہدوں کی دستاویز سازی اور تمام شرائط کی تکمیل کو یقینی بنانا شامل ہے۔",
         service1Btn: "مزید جانیں",
         service2Title: "طلاق اور خلع",
         service2Text: "اسلامی طلاق کے طریقہ کار اور ثالثی میں مدد۔",
@@ -197,48 +221,61 @@ const translations = {
         service3ExtraText: "عصری زندگی کو مدنظر رکھتے ہوئے قرآن و سنت کی روشنی میں درست فتاویٰ۔",
         service3Btn: "مزید جانیں",
         service4Title: "رقیہ شرعیہ",
-        service4Text: "قرآن و سنت کے مطابق رقیہ سیشنز۔",
+        service4Text: "قرآن و سنت کے مطابق رقیہ کے سیشن۔",
         service4ExtraText: "روحانی شفاء کے لیے محفوظ ماحول۔",
         service4Btn: "مزید جانیں",
         service5Title: "قرآن کورسز",
-        service5Text: "اجازہ کے امکان کے ساتھ ایڈوانس تجوید کورسز۔",
-        service5ExtraText: "مجاز علماء کے زیر نگرانی تدریس۔",
+        service5Text: "اجازہ کے امکان کے ساتھ تجوید کے جدید کورسز۔",
+        service5ExtraText: "مستند علماء کے ذریعے پڑھایا جاتا ہے۔",
         service5Btn: "مزید جانیں",
         service6Title: "عربی زبان",
-        service6Text: "تمام سطحوں کے لیے جامع عربی کورسز۔",
-        service6ExtraText: "گرامر، گفتگو، پڑھنا اور لکھنا۔",
+        service6Text: "تمام سطحوں کے لیے عربی زبان کے جامع کورسز۔",
+        service6ExtraText: "گرائمر، گفتگو، پڑھنا اور لکھنا۔",
         service6Btn: "مزید جانیں",
-        gallerySectionTitle: "تصویری گیلری",
+        // الخدمات الجديدة بالأوردو
+        service7Title: "ختنہ کی خدمات",
+        service7Text: "نوزائیدہ بچوں اور نئے مسلمانوں کے لیے ماہر ڈاکٹروں کے ذریعے ختنہ کی خدمات۔",
+        service7ExtraText: "صحت کے معیار کے مطابق لائسنس یافتہ پیشہ ور افراد کے ذریعے محفوظ طبی طریقہ کار۔",
+        service7Btn: "مزید جانیں",
+        service8Title: "حجامہ تھراپی",
+        service8Text: "لائسنس یافتہ ماہرین کے ذریعے مردوں اور عورتوں کے لیے پیشہ ورانہ حجامہ۔",
+        service8ExtraText: "ہم دونوں جنسوں کے لیے صحت بخش ماحول اور ماہر معالج فراہم کرتے ہیں۔",
+        service8Btn: "مزيد جانیں",
+
+        gallerySectionTitle: "گیلری",
         galleryImageCaption1: "اسلام میں خاندان پر لیکچر۔",
         galleryImageCaption2: "لندن میں بی بی سی کے ساتھ ملاقات۔",
         galleryImageCaption3: "ڈاکٹر عبداللہ مطرود کے ساتھ۔",
         galleryImageCaption4: "برطانیہ میں ایک تقریب کی جھلک۔",
         galleryImageCaption5: "ملائیشین کمیونٹی کے نکاح کا معاہدہ۔",
         galleryImageCaption6: "ڈاکٹر عمر عبد الکافی کے ساتھ ملاقات۔",
-        // نصوص قسم النماذج الجديد بالأردية
-        formsSectionTitle: "فارمز اور دستاویزات",
-        divorceFormTitle: "طلاق کی درخواست",
-        divorceFormText: "برائے مہربانی اپنی درخواست کا عمل شروع کرنے کے لیے آفیشل فارم ڈاؤن لوڈ کریں۔",
-        divorceFormBtn: "فارم ڈاؤن لوڈ کریں",
-        contactSectionTitle: "ہم سے رابطہ کریں",
+        fatwasSectionTitle: "تازہ ترین فتاویٰ اور مضامین",
+        fatwasSectionText: "ہمارے فتاویٰ اور مضامین کی بڑھتی ہوئی لائبریری کو دیکھیں۔",
+        fatwaTitle2: "مغرب میں خوشحال خاندان کی تعمیر",
+        fatwaText2: "خاندانی چیلنجز سے نمٹنے اور اسلامی شناخت برقرار رکھنے کے لیے تجاویز۔",
+        fatwaExtraText2: "مسلم خاندانوں کو درپیش مشکلات کے عملی حل اور اسلامی تربیت۔",
+        readMore2: "مزید پڑھیں",
+        contactSectionTitle: "رابطہ کریں",
         contactIntro: "مدد کے لیے براہ راست ہم سے رابطہ کریں۔",
         directPhoneLabel: "فون کے ذریعے رابطہ کریں:",
         directEmailLabel: "یا ای میل کے ذریعے:",
         whatsappLabel: "یا واٹس ایپ پر پیغام بھیجیں:",
         whatsappBtnText: "واٹس ایپ",
         formTitle: "ہمیں پیغام بھیجیں",
-        contactName: "مکمل نام",
+        contactName: "پورا نام",
         contactEmail: "ای میل ایڈریس",
         contactPhone: "فون نمبر",
         contactMessage: "آپ کا پیغام",
         submitFormBtn: "پیغام بھیجیں",
-        footerText: "© 2024 لندن میں مسلم خاندان کے لیے شریعہ کونسل۔ جملہ حقوق محفوظ ہیں۔"
+        footerText: "© 2024 لندن میں مسلم خاندان کے لیے شرعی کونسل۔ جملہ حقوق محفوظ ہیں۔",
+        showLess: "کم دکھائیں"
     }
 };
 
-// 2. دالة تطبيق الترجمة وتغيير اتجاه الصفحة (LTR/RTL)
+// 2. دالة تطبيق الترجمة
 function applyTranslations(lang) {
     document.documentElement.lang = lang;
+    // العربية والأوردو يحتاجان اتجاه من اليمين لليسار
     document.documentElement.dir = (lang === 'ar' || lang === 'ur') ? 'rtl' : 'ltr';
 
     const data = translations[lang];
@@ -248,7 +285,7 @@ function applyTranslations(lang) {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = data[id];
             } else {
-                // الحفاظ على الأيقونات داخل العناصر أثناء تبديل النص
+                // الحفاظ على الأيقونات عند تغيير النص
                 const icon = element.querySelector('i');
                 element.textContent = data[id] + " "; 
                 if (icon) element.appendChild(icon);
@@ -257,50 +294,42 @@ function applyTranslations(lang) {
     }
 }
 
-// 3. دالة إغلاق القائمة في الموبايل عند الضغط
+// 3. دالة إغلاق القائمة
 function forceCloseNavbar() {
     const navbarCollapseElement = document.getElementById('navbarNav');
-    if (navbarCollapseElement) {
-        if (navbarCollapseElement.classList.contains('show')) {
-            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapseElement) || new bootstrap.Collapse(navbarCollapseElement);
-            bsCollapse.hide();
-        }
+    if (navbarCollapseElement && navbarCollapseElement.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapseElement) || new bootstrap.Collapse(navbarCollapseElement);
+        bsCollapse.hide();
     }
 }
 
-// 4. تهيئة الصفحة عند التحميل
+// 4. تهيئة الصفحة
 document.addEventListener('DOMContentLoaded', () => {
     // البدء بالإنجليزية افتراضياً
     applyTranslations('en');
 
-    // زر تبديل اللغة (يدور بين الإنجليزية -> العربية -> الأردية)
+    // زر تبديل اللغة (تتابعي: En -> Ar -> Ur -> En)
     const langToggleButton = document.getElementById('navLangToggle');
     if (langToggleButton) {
         langToggleButton.addEventListener('click', () => {
             const currentLang = document.documentElement.lang;
             let nextLang;
-            if (currentLang === 'en') {
-                nextLang = 'ar';
-            } else if (currentLang === 'ar') {
-                nextLang = 'ur';
-            } else {
-                nextLang = 'en';
-            }
+            if (currentLang === 'en') nextLang = 'ar';
+            else if (currentLang === 'ar') nextLang = 'ur';
+            else nextLang = 'en';
+
             applyTranslations(nextLang);
             forceCloseNavbar();
         });
     }
 
-    // إغلاق القائمة عند الضغط على أي رابط تنقل
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            forceCloseNavbar();
-        });
+    // إغلاق القائمة عند الضغط على الروابط
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+        link.addEventListener('click', forceCloseNavbar);
     });
 
-    // منطق أزرار "Learn More" (إظهار المزيد / إظهار أقل)
-    document.querySelectorAll('.toggle-content').forEach(button => {
+    // منطق أزرار "Learn More / المزيد"
+    document.querySelectorAll('.toggle-content, .toggle-fatwa').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.dataset.target;
@@ -313,17 +342,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (contentContainer.classList.contains('expanded')) {
                 if(extraContentElement) extraContentElement.style.display = 'block';
-                
-                // نصوص أزرار الإغلاق بناءً على اللغة الحالية
-                let closeText = "Show Less";
-                if (currentLang === 'ar') closeText = "عرض أقل";
-                if (currentLang === 'ur') closeText = "کم دکھائیں";
-                
-                this.innerHTML = closeText + ' <i class="fas fa-arrow-up"></i>';
+                this.innerHTML = translations[currentLang].showLess + ' <i class="fas fa-arrow-up"></i>';
             } else {
                 if(extraContentElement) extraContentElement.style.display = 'none';
-                
-                // استعادة النص الأصلي من كائن الترجمة بناءً على الـ ID الخاص بالزر
                 const originalText = translations[currentLang][this.id];
                 this.innerHTML = originalText + ' <i class="fas fa-arrow-right"></i>';
             }
